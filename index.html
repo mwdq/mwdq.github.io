@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+    content="Discover the leader in electrical equipment manufacturers: Mingway provides high-quality, reliable electrical equipment solutions to meet your needs.">
+    <title>Reliable Energy Solutions Provider | MINGWAY</title>
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            color: #333;
+            animation: fadeIn 1.5s ease;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            background-color: transparent;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            animation: slideDown 1.5s ease forwards;
+            transition: transform 0.5s ease;
+        }
+        @keyframes slideDown {
+            from {
+                top: -100px;
+            }
+            to {
+                top: 0;
+            }
+        }
+        .navbar.hide {
+            transform: translateY(-100%);
+        }
+        .navbar.scrolled {
+            background-color: #fff;
+        }
+        .navbar:hover {
+            background-color: #fff;
+        }
+        .navbar-brand img {
+            max-height: 40px;
+            transition: transform 0.3s ease;
+        }
+        .navbar-brand img:hover {
+            transform: scale(1.1);
+        }
+        .navbar-nav {
+            margin-left: auto;
+        }
+        .navbar-nav .nav-link {
+            color: #333 !important;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            padding: 10px 0;
+            margin: 0 36px;
+            position: relative;
+            transition: color 0.3s ease;
+            display: inline-block;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ff0000 !important;
+        }
+        .navbar-nav .nav-link::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #ff0000;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease;
+        }
+        .navbar-nav .nav-link:hover::before {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        .navbar-toggler {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .navbar-toggler-icon {
+            font-size: 24px;
+            color: #fff;
+            transition: transform 0.3s ease;
+        }
+        .navbar-toggler-icon .bar {
+            display: block;
+            width: 30px;
+            height: 4px;
+            background-color: #000;
+            margin: 6px auto;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon .bar:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+        }
+        .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon .bar:nth-child(2) {
+            opacity: 0;
+        }
+        .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon .bar:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+        .navbar-toggler[aria-expanded="false"] .navbar-toggler-icon .bar:nth-child(1),
+        .navbar-toggler[aria-expanded="false"] .navbar-toggler-icon .bar:nth-child(3) {
+            transform: translateY(0);
+        }
+        .navbar-toggler[aria-expanded="false"] .navbar-toggler-icon .bar:nth-child(2) {
+            opacity: 1;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 45.8%;
+            overflow: hidden;
+        }
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+        .scroll-down-btn {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease;
+        }
+        .arrow {
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 15px solid #ff0000;
+            animation: arrowMove 1s infinite;
+        }
+        .scroll-down-btn:hover .arrow {
+            border-top-color: #0000ff;
+        }
+        @keyframes arrowMove {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .content {
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #333;
+            text-transform: uppercase;
+        }
+
+        .video-button {
+            display: inline-block;
+            background-color: transparent;
+            padding: 10px 20px;
+            border: 2px solid #007bff;
+            border-radius: 30px;
+            transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            color: #007bff;
+        }
+        .video-button:hover {
+            background-color: #007bff;
+            color: #fff;
+            transform: scale(1.05);
+        }
+        .video-button:active {
+            transform: scale(0.95);
+        }
+        .video-button i {
+            margin-right: 5px;
+        }
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        .play-text {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 1rem;
+        }
+        .video-link {
+            text-decoration: none;
+        }
+
+        .featured-products {
+          padding: 50px 0;
+          background-color: #f9f9f9;
+          text-align: center;
+          animation: fadeIn 1s ease;
+        }
+        .featured-products .container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+        }
+        .featured-products h2 {
+          font-size: 28px;
+          margin-bottom: 20px;
+        }
+        .product-card {
+          display: inline-block;
+          margin: 20px;
+          max-width: 300px;
+          transition: transform 0.3s ease;
+        }
+        .product-card:hover {
+          transform: scale(1.05);
+        }
+        .product-card img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 10px;
+          display: block;
+          margin: 0 auto;
+        }
+        .product-card h3 {
+          font-size: 20px;
+          margin-top: 10px;
+        }
+
+        .owl-prev,
+        .owl-next {        
+            position: absolute;
+            top: 35%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.7);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .owl-prev:hover,
+        .owl-next:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        .owl-prev {
+            left: 10px;
+        }
+        .owl-next {
+            right: 10px;
+        }
+        
+        .service {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .service:hover {
+            transform: scale(1.05);
+        }
+        .service i {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+        .service h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .service p {
+            font-size: 16px;
+            margin-bottom: 0;
+            color: #666;
+        }
+
+        .faq-section {
+            background-color: #f9f9f9;
+            padding: 50px 0;
+            text-align: center;
+            animation: fadeIn 1s ease;
+        }
+        .faq-section h2 {
+            margin-bottom: 20px;
+        }
+        .card-header {
+            background-color: #f9f9f9;
+        }
+        .card-body {
+            background-color: #fff;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #141E30, #243B55);
+            color: #ddd;
+            text-align: center;
+            padding: 60px 20px;
+            position: relative;
+            z-index: 1000;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        .footer h4 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        .footer p, .footer a {
+            color: #ddd;
+            text-decoration: none;
+            font-size: 16px;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+        .footer a:hover {
+            color: #ffc107;
+        }
+        .footer .contact-info, .footer .business-hours, .footer .quick-links, .footer .social-media {
+            margin-bottom: 30px;
+        }
+        .footer .quick-links ul {
+            padding: 0;
+            list-style: none;
+        }
+        .footer .quick-links li {
+            margin-bottom: 10px;
+        }
+        .footer .social-media .list-inline-item {
+            margin-right: 15px;
+        }
+        .footer .social-media .list-inline-item a {
+            color: #fff;
+            font-size: 26px;
+            padding: 10px;
+            border-radius: 50%;
+            background-color: #444;
+            display: inline-block;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .footer .social-media .list-inline-item a:hover {
+            background-color: #ffc107;
+            transform: scale(1.2);
+        }
+        .footer-logo {
+            margin-bottom: 20px;
+        }
+        .footer-logo img {
+            max-width: 200px;
+        }
+        .footer-slogan {
+            margin-bottom: 30px;
+            font-size: 18px;
+            font-style: italic;
+            color: #aaa;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 10px;
+            right: 20px;
+            background-color: #007bff;
+            color: #333;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            z-index: 1000;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .back-to-top:hover {
+            background-color: #0056b3;
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 991px) {
+            .navbar-nav {
+                text-align: center;
+            }
+            .navbar-nav .nav-item {
+                display: inline-block;
+                float: none;
+            }
+
+            .video-container {
+                height: auto;
+            }
+            .video-container video {
+                height: auto;
+            }
+
+            .col-md-6 {
+                margin-bottom: 20px;
+            }
+            #contact .col-md-6:last-child {
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .navbar-nav .nav-link {
+                margin: 0;
+            }
+
+            .scroll-down-btn {
+                bottom: 5px;
+            }
+
+            .footer h4 {
+                font-size: 20px;
+            }
+            .footer p, .footer a {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="img/logo.png" alt="MWE Logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Background video -->
+    <div class="video-container" itemscope itemtype="http://schema.org/VideoObject">
+    <meta itemprop="name" content="Background Video">
+    <meta itemprop="description" content="This is a background video for the homepage">
+    <meta itemprop="thumbnailUrl" content="img/background-video-thumbnail.jpg">
+    <meta itemprop="uploadDate" content="2024-05-18T00:00:00+00:00">
+    <video autoplay muted loop itemprop="contentUrl" title="Congratulations on finding an electrical expert!">
+        <source src="img/background-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <a href="#about" class="scroll-down-btn" aria-label="Read more about Mingway">
+        <div class="arrow"></div>
+    </a>
+    </div>
+
+    <!-- About us -->
+    <div id="about" class="content active">
+        <div class="container">
+            <h2 class="section-title">About MWE</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="img/company.png" alt="About MWE" class="img-fluid">
+                    <p style="text-align: justify;">
+                      <br>Ningbo Mingway Electric Co., Ltd. (hereinafter referred to as "MINGWAY")
+                      is a leading smart energy solutions provider, which is located in
+                      Ningbo City, Zhejiang, China, 315000.</p>
+                </div>
+                <div class="col-md-6">
+                    <p style="text-align: justify;">
+                      Over the past 25 years in the industry, MINGWAY has been adhering to the
+                      business policy of "Growth", "Quality", "Efficiency", and "Innovation".
+                      At present, the company has more than 50,000 sqm of modern manufacturing bases in
+                      Wenzhou and Ningbo with over 600 employees, including over 60 R&D and
+                      technical personnel, with its business covering more than 80 countries
+                      and regions.<br><br>MINGWAY has multiple production workshops for mold design, parts manufacturing, welding, and assembly.
+                      OEM, ODM, OBM, SKD, CKD and other business cooperation models are supported.<br>
+                      We provide customers with a full range of services covering market cultivation, technical training,
+                      and factory construction. We will be committed to becoming a globally renowned manufacturer in the power
+                      distribution and electrical industry, safeguarding the power safety of global customers, and helping the development
+                      of green and digital energy.
+                    </p>
+                    <a href="https://drive.google.com/file/d/18N9Gqdi5_XoMcFFPCtyJXtNbmFNlB3Ls/view?usp=sharing" target="_blank" class="video-link">
+                        <div class="video-button">
+                            <span class="play-text">Play <i class="fas fa-play-circle"></i> Video</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured products -->
+    <div class="featured-products">
+      <div class="container">
+          <h2>Featured Products</h2>
+      </div>
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <div class="product-card">
+            <a href="https://www.nbmwele.com/MC6V.html"><img src="img/product/Voltage Monitor.png" alt="Product 1" /></a>
+            <h3>Voltage Monitor</h3>
+          </div>
+        </div>
+        <div class="item">
+          <div class="product-card">
+            <a href="https://www.nbmwele.com/CS1.html"><img src="img/product/Panel Meter.png" alt="Product 2" /></a>
+            <h3>Panel Meter</h3>
+          </div>
+        </div>
+        <div class="item">
+          <div class="product-card">
+            <a href="https://www.nbmwele.com/MCS6.html"><img src="img/product/Surge Protector.png" alt="Product 3" /></a>
+            <h3>Surge Protector</h3>
+          </div>
+        </div>
+        <div class="item">
+          <div class="product-card">
+            <a href="https://www.nbmwele.com/RCB1.html"><img src="img/product/RCCB.png" alt="Product 4" /></a>
+            <h3>RCCB</h3>
+          </div>
+        </div>
+        <div class="item">
+          <div class="product-card">
+            <a href="https://www.nbmwele.com/XCM1.html"><img src="img/product/MCCB.png" alt="Product 5" /></a>
+            <h3>MCCB</h3>
+          </div>
+        </div>
+        <div class="item">
+          <div class="product-card">
+            <a href="https://www.nbmwele.com/CJX2.html"><img src="img/product/AC Contactor.png" alt="Product 6" /></a>
+            <h3>AC Contactor</h3>
+          </div>
+        </div>
+        <div class="item">
+          <div class="product-card">
+            <a href="https://www.nbmwele.com/XCS1.html"><img src="img/product/ATS.png" alt="Product 7" /></a>
+            <h3>ATS</h3>
+          </div>
+        </div>
+        <div class="item">
+          <div class="product-card">
+            <a href="https://www.nbmwele.com/XCB1000.html"><img src="img/product/VFD.png" alt="Product 8" /></a>
+            <h3>VFD</h3>
+          </div>
+        </div>
+        <div class="item">
+          <div class="product-card">
+            <a href="https://www.nbmwele.com/CS1.html"><img src="img/product/Metal Enclosure.png" alt="Product 9" /></a>
+            <h3>Metal Enclosure</h3>
+          </div>
+        </div>
+        <div class="item">
+          <div class="product-card">
+            <a href="https://www.nbmwele.com/CS1.html"><img src="img/product/Waterproof Box.png" alt="Product 10" /></a>
+            <h3>Waterproof Box</h3>
+          </div>
+        </div>
+        <!-- Add more product items here -->
+      </div>
+    </div>
+
+    <!-- Services -->
+    <div id="services" class="content">
+    <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="service">
+                    <i class="fas fa-lightbulb fa-3x"></i>
+                    <h3>Electrical Solutions</h3>
+                    <p>Comprehensive electrical solutions for industrial and commercial applications.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service">
+                    <i class="fas fa-cogs fa-3x"></i>
+                    <h3>Automation Services</h3>
+                    <p>Advanced automation services to optimize manufacturing processes.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service">
+                    <i class="fas fa-solar-panel fa-3x"></i>
+                    <h3>Solar Energy Solutions</h3>
+                    <p>Integrated solar energy solutions for sustainable power generation.</p>
+                </div>
+            </div>
+            <!-- Add more services below -->
+            <div class="col-md-4">
+                <div class="service">
+                    <i class="fas fa-bolt fa-3x"></i>
+                    <h3>Power Distribution</h3>
+                    <p>Efficient power distribution systems for industrial and residential sectors.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service">
+                    <i class="fas fa-sync-alt fa-3x"></i>
+                    <h3>Energy Management</h3>
+                    <p>Comprehensive energy management solutions for improved efficiency.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service">
+                    <i class="fas fa-globe fa-3x"></i>
+                    <h3>Smart Grid Technologies</h3>
+                    <p>Advanced smart grid technologies for efficient energy distribution.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Faq -->
+    <div class="faq-section">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="accordion" id="faqAccordion">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h3 class="mb-0">
+                <button
+                  class="btn btn-link collapsed"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseOne"
+                  aria-expanded="false"
+                  aria-controls="collapseOne"
+                >
+                  Could you please send me the catalog and price list?
+                </button>
+              </h3>
+            </div>
+            <div
+              id="collapseOne"
+              class="collapse"
+              aria-labelledby="headingOne"
+              data-parent="#faqAccordion"
+            >
+              <div class="card-body" style="text-align: justify">
+                You can view and download the product catalog on the product
+                page. If you see a product you are interested in, we will
+                provide a corresponding quote.
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h3 class="mb-0">
+                <button
+                  class="btn btn-link collapsed"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  Can you provide free samples for testing?
+                </button>
+              </h3>
+            </div>
+            <div
+              id="collapseTwo"
+              class="collapse"
+              aria-labelledby="headingTwo"
+              data-parent="#faqAccordion"
+            >
+              <div class="card-body" style="text-align: justify">
+                Of course, we can provide free samples. We understand the
+                concerns of customers very well, and we are very confident in
+                our products.
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h3 class="mb-0">
+                <button
+                  class="btn btn-link collapsed"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  Is it possible to put our own label on the product?
+                </button>
+              </h3>
+            </div>
+            <div
+              id="collapseThree"
+              class="collapse"
+              aria-labelledby="headingThree"
+              data-parent="#faqAccordion"
+            >
+              <div class="card-body" style="text-align: justify">
+                No problem, most of our products support customers' trademarks.
+                To be honest, we hope to jointly promote the MINGWAY brand.
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingFour">
+              <h3 class="mb-0">
+                <button
+                  class="btn btn-link collapsed"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseFour"
+                  aria-expanded="false"
+                  aria-controls="collapseFour"
+                >
+                  How to become a distributor in my country?
+                </button>
+              </h3>
+            </div>
+            <div
+              id="collapseFour"
+              class="collapse"
+              aria-labelledby="headingFour"
+              data-parent="#faqAccordion"
+            >
+              <div class="card-body" style="text-align: justify">
+                Generally, we hope that dealers can meet the following
+                qualifications: 1. There are some local sales networks; 2. Good
+                technical solution skills; 3. Keep inventory to meet fast
+                delivery time; 4. Have a dedicated team to sell and promote. You
+                are very welcome to tell us your thoughts on the above matters;
+                We also very much hope to create value for you through our
+                products.
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingFive">
+              <h3 class="mb-0">
+                <button
+                  class="btn btn-link collapsed"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseFive"
+                  aria-expanded="false"
+                  aria-controls="collapseFive"
+                >
+                  What are your shipping options?
+                </button>
+              </h3>
+            </div>
+            <div
+              id="collapseFive"
+              class="collapse"
+              aria-labelledby="headingFive"
+              data-parent="#faqAccordion"
+            >
+              <div class="card-body" style="text-align: justify">
+                We offer various shipping options including standard, expedited,
+                and express shipping. You can choose the option that best suits
+                you during checkout.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact" class="content">
+    <div class="container">
+        <h2 class="section-title">Contact MWE</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <p>If you have any questions or would like to discuss potential collaborations, please feel free to contact us using the form below.</p>
+                <form id="contactForm" onsubmit="sendEmail(event)">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.579540920728!2d121.51816908015424!3d29.934004559301002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x344d646d01069b03%3A0xce82e39e14088333!2z5Lit5Zu95rWZ5rGf55yB5a6B5rOi5biC5rGf5YyX5Yy65rSq5YW06LevIOmCruaUv-e8lueggTogMzE1MDMz!5e0!3m2!1szh-CN!2s!4v1692450215352!5m2!1szh-CN!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" title="mapFrame"></iframe>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Company Logo and Slogan -->
+                <div class="col-12 footer-logo">
+                    <img src="img/logo.png" alt="Mingway Logo">
+                </div>
+                <div class="col-12 footer-slogan">
+                    <p>"Empowering the Future with Advanced Electrical Solutions"</p>
+                </div>
+                <!-- Contact Information -->
+                <div class="col-md-4 contact-info">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 7 Hung Hing Road, Ningbo, China</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@nbmwele.com">info@nbmwele.com</a></p>
+                    <p><i class="fas fa-phone"></i> 86-574-3560921</p>
+                </div>
+                <!-- Schedule -->
+                <div class="col-md-4 business-hours">
+                    <h4>Business Hours</h4>
+                    <p><i class="fas fa-clock"></i> Monday - Friday: 9:00 AM - 5:00 PM</p>
+                    <p><i class="fas fa-clock"></i> Saturday: 10:00 AM - 3:00 PM</p>
+                    <p><i class="fas fa-clock"></i> Sunday: Closed</p>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-md-4 quick-links">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html#">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Social Media Links -->
+            <div class="row">
+                <div class="col-12 social-media">
+                    <h4>Follow Us</h4>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=100085752237804" aria-label="Follow Mingway by Facebook"><i class="fab fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.x.com/nbmwele" aria-label="Follow Mingway by Twitter"><i class="fab fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.linkedin.com/in/nbmwele" aria-label="Follow Mingway by LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.instagram.com/nbmwele" aria-label="Follow Mingway by Instagram"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Copyright -->
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>&copy; 2024 Ningbo Mingway Electric Co., Ltd. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms_of_service.html">Terms of Service</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- Back to Top Button -->
+        <a href="#" class="back-to-top" id="back-to-top"><i class="fas fa-arrow-up"></i></a>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <script>
+        // Automatically close navbar collapse when scrolling down on mobile
+        window.addEventListener("scroll", function() {
+            if (window.innerWidth < 992) {
+                var navbarCollapse = document.querySelector('.navbar-collapse');
+                var navbarToggler = document.querySelector('.navbar-toggler');
+                if (navbarCollapse.classList.contains('show')) {
+                    navbarCollapse.classList.remove('show');
+                    navbarToggler.setAttribute('aria-expanded', 'false');
+                }
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+        var lastScrollTop = 0;
+        var navbar = document.querySelector('.navbar');
+
+        window.addEventListener("scroll", function() {
+            var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (currentScroll > lastScrollTop) {
+                // Scroll down
+                navbar.classList.add('hide');
+                navbar.classList.remove('scrolled');
+            } else {
+                // Scroll up
+                navbar.classList.remove('hide');
+                navbar.classList.add('scrolled');
+            }
+            // Add class to change background color when scrolled
+            if (currentScroll <= 0) {
+                navbar.classList.remove('scrolled');
+            }
+            lastScrollTop = currentScroll;
+            });
+        });
+
+        // Owl Carousel
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          margin: 10,
+          nav: true,
+          navText: [
+            '<i class="fas fa-chevron-left"></i>',
+            '<i class="fas fa-chevron-right"></i>'
+          ],
+          autoplay: true,
+          autoplayTimeout: 2000,
+          autoplayHoverPause: true,
+          responsive: {
+            0: { items: 1 },
+            600: { items: 3 },
+            1000: { items: 5 },
+          },
+        });
+
+        // Scroll to top
+        document.addEventListener("DOMContentLoaded", function() {
+            var backToTopButton = document.getElementById('back-to-top');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 2000) {
+                    backToTopButton.style.display = 'block';
+                } else {
+                    backToTopButton.style.display = 'none';
+                }
+            });
+
+            backToTopButton.addEventListener('click', function(event) {
+                event.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("hBK__tKlC5mftY_An");
+        })();
+
+        function sendEmail(event) {
+            event.preventDefault();
+
+            var templateParams = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                subject: document.getElementById("subject").value,
+                message: document.getElementById("message").value
+            };
+
+            emailjs.send('service_i851fp8', 'template_qdjp48r', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert("Submit successfully");
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert("Failed to send email. Please try again later.");
+                });
+        }
+    </script>
+</body>
+</html>

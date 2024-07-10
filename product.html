@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+    content="Quality Electrical Equipment Manufacturer: Mingway is always committed to producing high-performance, reliable and durable electrical equipment that meets the needs of various industries.">
+    <title>Product Center | MINGWAY</title>
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            color: #333;
+            animation: fadeIn 1.5s ease;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            background-color: transparent;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            animation: slideDown 1.5s ease forwards;
+            transition: transform 0.5s ease;
+        }
+        @keyframes slideDown {
+            from {
+                top: -100px;
+            }
+            to {
+                top: 0;
+            }
+        }
+        .navbar.hide {
+            transform: translateY(-100%);
+        }
+        .navbar.scrolled {
+            background-color: #fff;
+        }
+        .navbar:hover {
+            background-color: #fff;
+        }
+        .navbar-brand img {
+            max-height: 40px;
+            transition: transform 0.3s ease;
+        }
+        .navbar-brand img:hover {
+            transform: scale(1.1);
+        }
+        .navbar-nav {
+            margin-left: auto;
+        }
+        .navbar-nav .nav-link {
+            color: #333 !important;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            padding: 10px 0;
+            margin: 0 36px;
+            position: relative;
+            transition: color 0.3s ease;
+            display: inline-block;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ff0000 !important;
+        }
+        .navbar-nav .nav-link::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #ff0000;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease;
+        }
+        .navbar-nav .nav-link:hover::before {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        .navbar-toggler {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .navbar-toggler-icon {
+            font-size: 24px;
+            color: #fff;
+            transition: transform 0.3s ease;
+        }
+        .navbar-toggler-icon .bar {
+            display: block;
+            width: 30px;
+            height: 4px;
+            background-color: #000;
+            margin: 6px auto;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon .bar:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+        }
+        .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon .bar:nth-child(2) {
+            opacity: 0;
+        }
+        .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon .bar:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+        .navbar-toggler[aria-expanded="false"] .navbar-toggler-icon .bar:nth-child(1),
+        .navbar-toggler[aria-expanded="false"] .navbar-toggler-icon .bar:nth-child(3) {
+            transform: translateY(0);
+        }
+        .navbar-toggler[aria-expanded="false"] .navbar-toggler-icon .bar:nth-child(2) {
+            opacity: 1;
+        }
+
+        .content {
+            padding: 50px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #333;
+            text-transform: uppercase;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .carousel {
+            width: 100%;
+        }
+        .carousel-inner img {
+            width: 100%;
+            height: auto;
+        }
+        .carousel-indicators {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 15;
+        }
+        .carousel-indicators li {
+            background-color: rgba(255, 255, 255, 0.5);
+            border: 1px solid #fff;
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .carousel-indicators .active {
+            background-color: #fff;
+        }
+
+        .features-container {
+            background-color: #f9f9f9;
+            text-align: center;
+            padding: 40px 0;
+        }
+        .feature-icon {
+            font-size: 36px;
+            color: #ff0000;
+            margin-bottom: 20px;
+        }
+        .feature-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .feature-description {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .sidebar {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 18px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .sidebar:hover {
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
+        }
+        .sidebar .search-container {
+            position: relative;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .sidebar .search-container .toggle-button {
+            display: none;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            color: #999;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+        .sidebar .search-container .search-icon {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            color: #999;
+            transition: color 0.3s ease;
+        }
+        .sidebar h3 {
+            margin-top: 0;
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+        }
+        .sidebar input[type="text"] {
+            background-color: #f2f2f2;
+            width: 100%;
+            padding: 10px 10px 10px 40px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            transition: border-color 0.3s ease;
+        }
+        .sidebar input[type="text"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar ul li {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+        .sidebar ul li a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .sidebar ul li a:hover {
+            color: #fff;
+            background-color: #007bff;
+        }
+        .sidebar ul li.active a {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .product-item {
+            position: relative;
+            overflow: hidden;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+            margin-bottom: 35px;
+        }
+        .product-item:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        .product-img {
+            position: relative;
+            overflow: hidden;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .product-img img {
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+        .product-img .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.3s ease;
+        }
+        .product-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .product-img .overlay a {
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .product-img .overlay a:hover {
+            text-decoration: underline;
+        }
+        .product-img .overlay a:hover .fas {
+            color: blue;
+            transition: color 0.3s ease;
+        }
+
+        .product-name {
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 5px 0;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+        }
+        .pagination-link {
+            color: #007bff;
+            background-color: #fff;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            padding: 8px 16px;
+            margin: 0 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .pagination-link:hover {
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+        }
+        .pagination-item.active .pagination-link {
+            background-color: #007bff;
+            color: #fff;
+            border-color: #007bff;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .flex-column {
+            flex-direction: column;
+        }
+        .flex-grow-1 {
+            flex-grow: 1;
+        }
+
+        .counter-section {
+            background-color: #f9f9f9;
+            padding: 50px 0;
+        }
+        .counter-box {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .counter-box h3 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .counter-box p {
+            color: #777;
+            font-size: 18px;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .catalog-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 30px;
+            padding: 0 20px;
+        }
+        .catalog-item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            background: linear-gradient(135deg, #56ccf2, #2f80ed);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            flex: none;
+        }
+        .catalog-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        .catalog-item h3 {
+            margin-top: 20px;
+            color: #fff;
+            text-align: center;
+            font-size: 1.8em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+            animation: gradientShift 8s ease infinite;
+        }
+        .catalog-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            text-align: center;
+            border-radius: 0 0 15px 15px;
+            transition: transform 0.3s;
+        }
+        .catalog-item:hover .catalog-content {
+            transform: translateY(-50px);
+        }
+        .catalog-item p {
+            margin-bottom: 20px;
+            color: #333;
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+            background-color: transparent;
+            color: #007bff;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+            color: #fff;
+        }
+
+        .coming-soon-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 2px solid #999;
+            border-radius: 5px;
+            background-color: #999;
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            cursor: not-allowed;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+        .coming-soon-btn:hover {
+            background-color: #999;
+            color: #fff;
+            pointer-events: none;
+        }
+
+        .floating-button {
+            position: fixed;
+            font-size: 28px;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1001;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 54px;
+            height: 54px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease, opacity 0.5s ease;
+            animation: slideUp 1.5s ease forwards, rotateButton 3s linear infinite;
+        }
+        @keyframes slideUp {
+            from {
+                bottom: -100px;
+            }
+            to {
+                bottom: 20px;
+            }
+        }
+        @keyframes rotateButton {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .floating-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+            animation-play-state: paused;
+        }
+
+        .contact-card {        
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            z-index: 1001;
+            color: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            opacity: 0;
+            transform: translateY(100%);
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, blue, grey, red);
+        }
+        .contact-card.active {        
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .close-button {        
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 24px;
+            transition: transform 0.3s ease;
+            animation: fadeIn 0.5s ease forwards;
+            opacity: 0;
+        }
+        .close-button:hover {        
+            transform: rotate(90deg) scale(1.2);
+        }
+
+        .contact-card.active .close-button {        
+            opacity: 1;
+        }
+        .contact-info p {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        .contact-info p i {
+            margin-right: 10px;
+        }
+        .contact-card h3 {
+            margin-top: 0;
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .contact-card p {        
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .whatsapp-button {
+            margin-top: 20px;
+            background-color: transparent;
+            color: #25D366;
+            padding: 12px 24px;
+            border: 1px solid #25D366;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 23px;
+            transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        .whatsapp-button:hover {
+            color: #fff;
+            background-color: #25D366;
+            text-decoration: none;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #141E30, #243B55);
+            color: #ddd;
+            text-align: center;
+            padding: 60px 20px;
+            position: relative;
+            z-index: 1000;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        .footer h4 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        .footer p, .footer a {
+            color: #ddd;
+            text-decoration: none;
+            font-size: 16px;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+        .footer a:hover {
+            color: #ffc107;
+        }
+        .footer .contact-info, .footer .business-hours, .footer .quick-links, .footer .social-media {
+            margin-bottom: 30px;
+        }
+        .footer .quick-links ul {
+            padding: 0;
+            list-style: none;
+        }
+        .footer .quick-links li {
+            margin-bottom: 10px;
+        }
+        .footer .social-media .list-inline-item {
+            margin-right: 15px;
+        }
+        .footer .social-media .list-inline-item a {
+            color: #fff;
+            font-size: 26px;
+            padding: 10px;
+            border-radius: 50%;
+            background-color: #444;
+            display: inline-block;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .footer .social-media .list-inline-item a:hover {
+            background-color: #ffc107;
+            transform: scale(1.2);
+        }
+        .footer-logo {
+            margin-bottom: 20px;
+        }
+        .footer-logo img {
+            max-width: 200px;
+        }
+        .footer-slogan {
+            margin-bottom: 30px;
+            font-size: 18px;
+            font-style: italic;
+            color: #aaa;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 88px;
+            right: 20px;
+            background-color: #007bff;
+            color: #333;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            z-index: 1000;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .back-to-top:hover {
+            background-color: #0056b3;
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 991px) {
+            .navbar-nav {
+                text-align: center;
+            }
+            .navbar-nav .nav-item {
+                display: inline-block;
+                float: none;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .navbar-nav .nav-link {
+                margin: 0;
+            }
+    
+            .carousel-inner img {
+                height: 180px;
+                object-fit: cover;
+            }
+            
+            .sidebar {
+                text-align: center;
+                padding-bottom: 1px;
+            }
+            .sidebar .search-container .toggle-button {
+                display:block
+            }
+            .sidebar ul, .sidebar h3 {
+                display: none;
+            }
+            .sidebar.show-links ul, .sidebar.show-links h3 {
+                display: block;
+                position: absolute;
+                background: rgba(255, 255, 255, 0.9);
+                z-index: 10;
+                width: 100%;
+                left: 0;
+                top: 75px;
+            }
+
+            .product-item {
+                margin-bottom: 15px;
+            }
+            .product-img .overlay a {
+                font-size: 20px;
+            }
+            .pagination-link {
+                padding: 6px 12px;
+                font-size: 14px;
+            }
+            
+            .contact-card {
+                left: 50%;
+                transform: translate(-50%, 100%);
+                width: 90%;
+                max-width: 300px;
+                background: linear-gradient(135deg, blue, grey, red);
+                transition: opacity 0.5s ease, transform 0.5s ease;
+            }
+            .contact-card.active {
+                transform: translate(-50%, 0);
+                opacity: 1;
+            }
+            .floating-button {
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .footer h4 {
+                font-size: 20px;
+            }
+            .footer p, .footer a {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="img/logo.png" alt="MWE Logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#catalog">Catalog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+    <div class="carousel-container">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleSlidesOnly" data-slide-to="1"></li>
+                <li data-target="#carouselExampleSlidesOnly" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/slider/slide1.jpg" class="d-block w-100" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/slider/slide2.jpg" class="d-block w-100" alt="Slide 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/slider/slide3.jpg" class="d-block w-100" alt="Slide 3">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Feature -->
+    <div class="features-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <i class="fas fa-shield-alt feature-icon"></i>
+                    <h3 class="feature-title">Quality Assurance</h3>
+                    <p class="feature-description">Our products undergo rigorous quality checks to ensure durability and reliability.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-money-bill feature-icon"></i>
+                    <h3 class="feature-title">Cost Saving</h3>
+                    <p class="feature-description">We offer competitive prices to help you save on your purchases.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-shopping-cart feature-icon"></i>
+                    <h3 class="feature-title">One-Stop Procurement</h3>
+                    <p class="feature-description">Find all your industrial needs in one place, making procurement hassle-free.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Gallery -->
+    <div class="main-content">
+        <div id="gallery" class="content">
+            <div class="container">
+                <h2 class="section-title">Product Gallery</h2>
+                <div class="row">
+                    <div class="col-md-3 sidebar">
+                        <div class="search-container">
+                            <i class="fas fa-search search-icon"></i>
+                            <i class="fas fa-bars toggle-button"></i>
+                            <input type="text" id="search-box" placeholder="Search Product...">
+                        </div>
+                        <ul>
+                            <li><a href="#gallery" onclick="filterProducts('all')">All Products</a></li>
+                            <li><a href="#gallery" onclick="filterProducts('Modular DIN Rail')">Modular DIN Rail</a></li>
+                            <li><a href="#gallery" onclick="filterProducts('Power Distribution')">Power Distribution</a></li>
+                            <li><a href="#gallery" onclick="filterProducts('Motor Control and Protection')">Motor Control and Protection</a></li>
+                            <li><a href="#gallery" onclick="filterProducts('Industrial Switch and Relay')">Industrial Switch and Relay</a></li>
+                            <li><a href="#gallery" onclick="filterProducts('Power Supply and Control')">Power Supply and Control</a></li>
+                            <li><a href="#gallery" onclick="filterProducts('Instruments and Meters')">Instruments and Meters</a></li>
+                            <li><a href="#gallery" onclick="filterProducts('Power T&D and Substation')">Power T&D and Substation</a></li>
+                            <li><a href="#gallery" onclick="filterProducts('PV and DC Equipments')">PV and DC Equipments</a></li>
+                            <li><a href="#gallery" onclick="filterProducts('Electrical Accessories')">Electrical Accessories</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9 flex-grow-1">
+                        <div class="row product-row" id="product-row">
+                            <!-- Products will be dynamically inserted here -->
+                        </div>
+                        <div class="text-center mt-3">
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination" id="pagination">
+                                    <!-- Pagination will be dynamically inserted here -->
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Company Strengths -->
+    <div class="counter-section">
+       <div class="container">
+          <h2 class="section-title">Company Strength</h2>
+            <div class="row">
+              <div class="col-md-3 col-sm-6">
+                <div class="counter-box">
+                  <h3 class="counter" data-count="25">0</h3>
+                  <p>Years of Industry Experience</p>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="counter-box">
+                  <h3 class="counter" data-count="600">0</h3>
+                  <p>Number of Employees</p>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="counter-box">
+                  <h3 class="counter" data-count="60">0</h3>
+                  <p>Technical Personnel</p>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="counter-box">
+                  <h3 class="counter" data-count="50000">0</h3>
+                  <p>Production Base Area (sq. m)</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-3 col-sm-6">
+                  <div class="counter-box">
+                    <h3 class="counter" data-count="80">0</h3>
+                    <p>Global Coverage Regions</p>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                  <div class="counter-box">
+                    <h3 class="counter" data-count="100">0</h3>
+                    <p>Patents Owned</p>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                  <div class="counter-box">
+                    <h3 class="counter" data-count="36">0</h3>
+                    <p>ISO Certifications</p>
+                  </div>
+                </div>
+               <div class="col-md-3 col-sm-6">
+                  <div class="counter-box">
+                    <h3 class="counter" data-count="95">0</h3>
+                    <p>Customer Satisfaction Rate (%)</p>
+                  </div>
+                </div>
+            </div>
+       </div>
+    </div>
+
+    <!-- Product Catalog -->
+    <div id="catalog" class="content">
+        <div class="container">
+            <h2 class="section-title">Product Catalogs</h2>
+            <div class="catalog-container">
+                <div class="catalog-item">
+                    <h3>Modular DIN Rail</h3>
+                    <div class="catalog-content">
+                        <p>Terminal Blocks, Surge Protectors, Contact Rails, Industrial Relays, Power Supplies, Connectors, Fuses, Control Panels, Panel Meters, Timers, Safety Switches, DIN Connectors.</p>
+                        <a href="https://drive.google.com/file/d/1Ed0Ck29EPCZk4mbbtyMovVtepbfXtOuN/view?usp=sharing" download class="btn">View & Download</a>
+                    </div>
+                </div>
+
+                <div class="catalog-item">
+                    <h3>Power Distribution</h3>
+                    <div class="catalog-content">
+                        <p>Distribution Panels, Switchgears, Isolators, Distribution Boards, Busbar Systems, Current Transformers, Voltage Transformers, Lightning Arresters, Power Capacitors, Power Factor Controllers, Surge Arresters, Disconnect Switches.</p>
+                        <a href="https://drive.google.com/file/d/1GMjxRFST9q7hGFnwT8Ji6T5Nm0AkEgGE/view?usp=sharing" download class="btn">View & Download</a>
+                    </div>
+                </div>
+
+                <div class="catalog-item">
+                    <h3>Motor Protection</h3>
+                    <div class="catalog-content">
+                        <p>Contactors, Overload Relays, Motor Starters, Motor Circuit Protectors, Soft Starters, Variable Frequency Drives, Encoders, Braking Resistors, Servo Motors, Stepper Motors, Electric Brakes, Pump Controllers.</p>
+                        <a href="https://drive.google.com/file/d/1M7icXn6Og2G-Aih0MrRIyM8FXr6zuTSX/view?usp=sharing" download class="btn">View & Download</a>
+                    </div>
+                </div>
+
+                <div class="catalog-item">
+                    <h3>Instruments & Meters</h3>
+                    <div class="catalog-content">
+                        <p>Multimeters, Energy Meters, Power Quality Analyzers, Temperature Controllers, Flow Meters, Pressure Transmitters, Level Sensors, Data Loggers, pH Meters, Conductivity Meters, Humidity Sensors, Tachometers.</p>
+                        <a href="https://drive.google.com/file/d/1ftKzkSMPtGufWyy9NkX9dwcw_BYLQyL6/view?usp=sharing" download class="btn">View & Download</a>
+                    </div>
+                </div>
+
+                <div class="catalog-item">
+                    <h3>Industrial Equipments</h3>
+                    <div class="catalog-content">
+                        <p>PLCs, Industrial Switches, Industrial Power Supplies, Industrial Ethernet, HMI Panels, Industrial Robots, Machine Vision Systems, Motion Controllers, Industrial Cameras, Power Inverters, Conveyor Systems, Industrial Fans.</p>
+                        <a href="https://drive.google.com/file/d/1LfS3b4moek1YNyUqGyp7ZKAetkcR4naR/view?usp=sharing" download class="btn">View & Download</a>
+                    </div>
+                </div>
+
+                <div class="catalog-item">
+                    <h3>Electrical Accessories</h3>
+                    <div class="catalog-content">
+                        <p>Cable Glands, Cable Ties, Junction Boxes, Electrical Enclosures, Conduit Fittings, Cable Ladders, Cable Tray Systems, Terminal Lugs, Insulation Tape, Busbars, Heat Shrink Tubes, Cable Cleats.</p>
+                        <a href="https://drive.google.com/file/d/1rO2BxkkQczh4wN5v8cmYd2MvNfw4wcQP/view?usp=sharing" download class="btn">View & Download</a>
+                    </div>
+                </div>
+
+                <div class="catalog-item">
+                    <h3>Power T&D Products</h3>
+                    <div class="catalog-content">
+                        <p>Transformers, Capacitors, High Voltage Switches, Power Cables, Substation Equipment, Power Factor Correction Systems, Reactors, Lightning Protection Devices, GIS Systems, Insulators, Switch Disconnectors, Grounding Systems.</p>
+                        <a href="#" download class="btn coming-soon-btn">Coming Soon</a>
+                    </div>
+                </div>
+
+                <div class="catalog-item">
+                    <h3>PV & New Energy</h3>
+                    <div class="catalog-content">
+                        <p>Solar Panels, Solar Inverters, Solar Charge Controllers, Energy Storage Systems, PV Mounting Systems, Wind Turbines, Hydroelectric Generators, Geothermal Heat Pumps, Biomass Power Plants, Tidal Power Systems, Microgrid Systems, Solar Batteries.</p>
+                        <a href="#" download class="btn coming-soon-btn">Coming Soon</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating button for contact card -->
+    <button class="floating-button" id="contactButton" onclick="toggleContactCard()"><i class="fas fa-address-card"></i></button>
+
+    <!-- Contact card -->
+    <div class="contact-card" id="contactCard">
+        <h3>Get In Touch</h3>
+        <div class="contact-info">
+            <p><i class="fas fa-map-marker-alt"></i>7 Hung Hing Road, Ningbo, China</p>
+            <p><i class="fas fa-envelope"></i>info@nbmwele.com<br>support@nbmwele.com</p>
+            <p><i class="fas fa-phone"></i>86-574-3560921</p>
+        </div>
+        <a href="https://wa.me/8617357442663" target="_blank" class="whatsapp-button">Start <i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <div class="close-button" onclick="toggleContactCard()"><i class="fas fa-times"></i></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Company Logo and Slogan -->
+                <div class="col-12 footer-logo">
+                    <img src="img/logo.png" alt="Mingway Logo">
+                </div>
+                <div class="col-12 footer-slogan">
+                    <p>"Empowering the Future with Advanced Electrical Solutions"</p>
+                </div>
+                <!-- Contact Information -->
+                <div class="col-md-4 contact-info">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 7 Hung Hing Road, Ningbo, China</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@nbmwele.com">info@nbmwele.com</a></p>
+                    <p><i class="fas fa-phone"></i> 86-574-3560921</p>
+                </div>
+                <!-- Schedule -->
+                <div class="col-md-4 business-hours">
+                    <h4>Business Hours</h4>
+                    <p><i class="fas fa-clock"></i> Monday - Friday: 9:00 AM - 5:00 PM</p>
+                    <p><i class="fas fa-clock"></i> Saturday: 10:00 AM - 3:00 PM</p>
+                    <p><i class="fas fa-clock"></i> Sunday: Closed</p>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-md-4 quick-links">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="product.html#gallery">Gallery</a></li>
+                        <li><a href="product.html#catalog">Catalog</a></li>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Social Media Links -->
+            <div class="row">
+                <div class="col-12 social-media">
+                    <h4>Follow Us</h4>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=100085752237804" aria-label="Follow Mingway by Facebook"><i class="fab fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.x.com/nbmwele" aria-label="Follow Mingway by Twitter"><i class="fab fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.linkedin.com/in/nbmwele" aria-label="Follow Mingway by LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.instagram.com/nbmwele" aria-label="Follow Mingway by Instagram"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Copyright -->
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>&copy; 2024 Ningbo Mingway Electric Co., Ltd. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms_of_service.html">Terms of Service</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- Back to Top Button -->
+        <button class="back-to-top" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <script>
+        // Automatically close navbar collapse when scrolling down on mobile
+        window.addEventListener("scroll", function() {
+            if (window.innerWidth < 992) {
+                var navbarCollapse = document.querySelector('.navbar-collapse');
+                var navbarToggler = document.querySelector('.navbar-toggler');
+                if (navbarCollapse.classList.contains('show')) {
+                    navbarCollapse.classList.remove('show');
+                    navbarToggler.setAttribute('aria-expanded', 'false');
+                }
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+        var lastScrollTop = 0;
+        var navbar = document.querySelector('.navbar');
+
+        window.addEventListener("scroll", function() {
+            var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (currentScroll > lastScrollTop) {
+                // Scroll down
+                navbar.classList.add('hide');
+                navbar.classList.remove('scrolled');
+            } else {
+                // Scroll up
+                navbar.classList.remove('hide');
+                navbar.classList.add('scrolled');
+            }
+            // Add class to change background color when scrolled
+            if (currentScroll <= 0) {
+                navbar.classList.remove('scrolled');
+            }
+            lastScrollTop = currentScroll;
+            });
+        });
+
+        // Initialize Bootstrap carousel
+        $('.carousel').carousel({
+           interval: 2500
+        });
+
+        // Function to toggle contact card visibility
+        function toggleContactCard() {
+            var contactCard = document.getElementById('contactCard');
+            var contactButton = document.getElementById('contactButton');
+            if (contactCard.classList.contains('active')) {
+                contactCard.classList.remove('active');
+                setTimeout(function() {
+                    contactCard.style.display = 'none';
+                }, 500); // Delay hiding to match transition duration
+                contactButton.style.opacity = 1;
+            } else {
+                contactCard.style.display = 'block';
+                setTimeout(function() {
+                    contactCard.classList.add('active');
+                }, 10); // Delay showing to allow display block to take effect
+                contactButton.style.opacity = 0;
+            }
+        }
+        
+        // Show/hide back-to-top button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 2000) {
+                $('.back-to-top').fadeIn();
+            } else {
+                $('.back-to-top').fadeOut();
+            }
+        });
+
+        // Smooth scroll to top
+        function scrollToTop() {
+            $('html, body').animate({ scrollTop: 0 }, 600);
+        }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script>
+      // Update counters when scrolled into view
+      $('.counter-section').waypoint(function() {
+        startCounting();
+        this.destroy(); // Destroy the waypoint to ensure it only triggers once
+      }, { offset: '80%' }); // Adjust the offset as per your layout
+
+      // Initialize counters
+      function startCounting() {
+        $('.counter').each(function() {
+          var $this = $(this);
+          var countTo = $this.attr('data-count');
+
+          $({ countNum: $this.text() }).animate({
+            countNum: countTo
+          }, {
+            duration: 2000, // Change the duration as per your requirement
+            easing: 'swing',
+            step: function() {
+              $this.text(Math.floor(this.countNum));
+            },
+            complete: function() {
+              $this.text(this.countNum);
+            }
+          });
+        });
+      }
+    </script>
+
+    <script>
+        const toggleButton = document.querySelector('.toggle-button');
+        const sidebar = document.querySelector('.sidebar');
+
+        toggleButton.addEventListener('click', () => {
+            sidebar.classList.toggle('show-links');
+        });
+
+        document.querySelectorAll('.sidebar ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (sidebar.classList.contains('show-links')) {
+                    sidebar.classList.remove('show-links');
+                }
+            });
+        });
+        var products = [
+            { name: 'DZ47-63 MCB', image: 'Modular DIN/MCB/DZ47-63/1.jpg', link: 'DZ47-63.html', category: 'Modular DIN Rail' },
+            { name: 'MCB1-125 MCB', image: 'Modular DIN/MCB/MCB1-125/1.jpg', link: 'MCB1-125.html', category: 'Modular DIN Rail' },
+            { name: 'MCB3-125 MCB', image: 'Modular DIN/MCB/MCB3-125/1.jpg', link: 'MCB3-125.html', category: 'Modular DIN Rail' },
+            { name: 'MCB6-40N MCB', image: 'Modular DIN/MCB/MCB6-40N/1.jpg', link: 'MCB6-40N.html', category: 'Modular DIN Rail' },
+
+            { name: 'MCB6R-100 RCCB', image: 'Modular DIN/RCCB/MCB6R-100/1.jpg', link: 'MCB6R-100.html', category: 'Modular DIN Rail' },
+            { name: 'MCB7R-100 RCCB', image: 'Modular DIN/RCCB/MCB7R-100/1.jpg', link: 'MCB7R-100.html', category: 'Modular DIN Rail' },
+            { name: 'MCB8R-100 RCCB', image: 'Modular DIN/RCCB/MCB8R-100/1.jpg', link: 'MCB8R-100.html', category: 'Modular DIN Rail' },
+            { name: 'MCB9R-100 RCCB', image: 'Modular DIN/RCCB/MCB9R-100/1.jpg', link: 'MCB9R-100.html', category: 'Modular DIN Rail' },
+
+            { name: 'MCB1L-100 RCBO', image: 'Modular DIN/RCBO/MCB1L-100/1.jpg', link: 'MCB1L-100.html', category: 'Modular DIN Rail' },
+            { name: 'MCB3L-40 RCBO', image: 'Modular DIN/RCBO/MCB3L-40/1.jpg', link: 'MCB3L-40.html', category: 'Modular DIN Rail' },
+            { name: 'MCB6L-40N RCBO', image: 'Modular DIN/RCBO/MCB6L-40N/1.jpg', link: 'MCB6L-40N.html', category: 'Modular DIN Rail' },
+
+            { name: 'AFD7-63 AFDD', image: 'Modular DIN/AFDD/AFD7-63/1.jpg', link: 'AFD7-63.html', category: 'Modular DIN Rail' },
+            { name: 'AFD9-40N AFDD', image: 'Modular DIN/AFDD/AFD9-40N/1.jpg', link: 'AFD9-40N.html', category: 'Modular DIN Rail' },
+
+            { name: 'MSD1-125 ISOLATOR', image: 'Modular DIN/ISOLATOR/MSD1-125/1.jpg', link: 'MSD1-125.html', category: 'Modular DIN Rail' },
+            { name: 'MSD3-125 ISOLATOR', image: 'Modular DIN/ISOLATOR/MSD3-125/1.jpg', link: 'MSD3-125.html', category: 'Modular DIN Rail' },
+            { name: 'MSD6-40N ISOLATOR', image: 'Modular DIN/ISOLATOR/MSD6-40N/1.jpg', link: 'MSD6-40N.html', category: 'Modular DIN Rail' },
+
+            { name: 'MCS1-125 CHANGEOVER', image: 'Modular DIN/CHANGEOVER/MCS1-125/1.jpg', link: 'MCS1-125.html', category: 'Modular DIN Rail' },
+            { name: 'MCS6-40N CHANGEOVER', image: 'Modular DIN/CHANGEOVER/MCS6-40N/1.jpg', link: 'MCS6-40N.html', category: 'Modular DIN Rail' },
+
+            { name: 'MSP1-B/C/D SPD', image: 'Modular DIN/SPD/1.jpg', link: 'MSP1.html', category: 'Modular DIN Rail' },
+
+            { name: 'MCH1-100 CONTACTOR', image: 'Modular DIN/CONTACTOR/1.jpg', link: 'MCH1-100.html', category: 'Modular DIN Rail' },
+
+            { name: 'MV3 Voltage Meter', image: 'Modular DIN/Voltage Meter/1.jpg', link: 'MV3.html', category: 'Modular DIN Rail' },
+
+            { name: 'MSL3 Signal Lamp', image: 'Modular DIN/Signal Lamp/1.jpg', link: 'MSL3.html', category: 'Modular DIN Rail' },
+
+            { name: 'MVC1-63 Voltage Monitor', image: 'Modular DIN/Voltage Monitor/MVC1-63/1.jpg', link: 'MVC1-63.html', category: 'Modular DIN Rail' },
+            { name: 'MVC3-63 Voltage Monitor', image: 'Modular DIN/Voltage Monitor/MVC3-63/1.jpg', link: 'MVC3-63.html', category: 'Modular DIN Rail' },
+            { name: 'MVC6-63 Voltage Monitor', image: 'Modular DIN/Voltage Monitor/MVC6-63/1.jpg', link: 'MVC6-63.html', category: 'Modular DIN Rail' },
+            { name: 'MVC9-100 Voltage Monitor', image: 'Modular DIN/Voltage Monitor/MVC9-100/1.jpg', link: 'MVC9-100.html', category: 'Modular DIN Rail' },
+
+            { name: 'MSV1-100 Voltage Protector', image: 'Modular DIN/Voltage Protector/MSV1-100/1.jpg', link: 'MSV1-100.html', category: 'Modular DIN Rail' },
+            { name: 'MSV3-100 Voltage Protector', image: 'Modular DIN/Voltage Protector/MSV3-100/1.jpg', link: 'MSV3-100.html', category: 'Modular DIN Rail' },
+
+            { name: 'RT18-32/63/125 FUSE', image: 'Modular DIN/FUSE/1.jpg', link: 'RT18.html', category: 'Modular DIN Rail' },
+
+            { name: 'KG316T Time Relay', image: 'Modular DIN/Time Relay/KG316T/1.jpg', link: 'KG316T.html', category: 'Modular DIN Rail' },
+            { name: 'TP8A16 Time Relay', image: 'Modular DIN/Time Relay/TP8A16/1.jpg', link: 'TP8A16.html', category: 'Modular DIN Rail' },
+            { name: 'SUL180a Time Relay', image: 'Modular DIN/Time Relay/SUL180a/1.jpg', link: 'SUL180a.html', category: 'Modular DIN Rail' },
+            { name: 'SUL181d Time Relay', image: 'Modular DIN/Time Relay/SUL181d/1.jpg', link: 'SUL181d.html', category: 'Modular DIN Rail' },
+            { name: 'SUL181h Time Relay', image: 'Modular DIN/Time Relay/SUL181h/1.jpg', link: 'SUL181h.html', category: 'Modular DIN Rail' },
+            { name: 'MRT8 Time Relay', image: 'Modular DIN/Time Relay/MRT8/1.jpg', link: 'MRT8.html', category: 'Modular DIN Rail' },
+
+            { name: 'MRV8 Voltage Relay', image: 'Modular DIN/Voltage Relay/1.jpg', link: 'MRV8.html', category: 'Modular DIN Rail' },
+
+            { name: 'MIR-16 Impulse Relay', image: 'Modular DIN/Impulse Relay/1.jpg', link: 'MIR-16.html', category: 'Modular DIN Rail' },
+
+            { name: 'XJ3-D Phase Protector', image: 'Modular DIN/Phase Protector/1.jpg', link: 'XJ3-D.html', category: 'Modular DIN Rail' },
+
+            { name: 'TMS5/AD/AC SOCKET', image: 'Modular DIN/SOCKET/1.jpg', link: 'TMS5.html', category: 'Modular DIN Rail' },
+
+            { name: 'DIN Rail', image: 'Modular DIN/DIN Rail/1.jpg', link: 'DIN-Rail.html', category: 'Modular DIN Rail' },
+
+            { name: 'Copper Busbar', image: 'Modular DIN/Copper Busbar/1.jpg', link: 'Busbar.html', category: 'Modular DIN Rail' },
+
+            { name: 'Metal Enclosure', image: 'Modular DIN/Distribution Box/Metal Enclosure/1.jpg', link: 'MBOX.html', category: 'Modular DIN Rail' },
+
+            { name: 'Waterproof Junction Box', image: 'Modular DIN/Junction Box/1.jpg', link: 'JBOX.html', category: 'Modular DIN Rail' },
+
+            { name: 'Plastic Distribution Box', image: 'Modular DIN/Distribution Box/Plastic Box/1.jpg', link: 'PBOX.html', category: 'Modular DIN Rail' },
+
+            { name: 'Waterproof Distribution Box', image: 'Modular DIN/Distribution Box/Waterproof Box/1.jpg', link: 'WBOX.html', category: 'Modular DIN Rail' },
+
+            { name: 'HA IP65 Waterproof Box', image: 'Modular DIN/Distribution Box/HA IP65 Box/1.jpg', link: 'HBOX.html', category: 'Modular DIN Rail' },
+
+            { name: 'Lighting Box', image: 'Modular DIN/Distribution Box/Lighting Box/1.jpg', link: 'LBOX.html', category: 'Modular DIN Rail' },
+
+            { name: 'Mini Auto-Transfer Switch', image: 'ATS/XCQ2/1.jpg', link: 'XCQ2.html', category: 'Power Distribution' },
+            { name: 'coming-soon', image: 'Circuit Breaker/MCB/1.jpg', link: 'MCB1.html', category: 'Motor Control and Protection' },
+            { name: 'coming-soon', image: 'Circuit Breaker/RCCB/1.jpg', link: 'RCB1.html', category: 'Industrial Switch and Relay' },
+            { name: 'coming-soon', image: 'Circuit Breaker/AFDD/1.jpg', link: 'AFD6.html', category: 'Power Supply and Control' },
+            { name: 'coming-soon', image: 'Circuit Breaker/VCB/1.jpg', link: 'VS1.html', category: 'Instruments and Meters' },
+            { name: 'coming-soon', image: 'Voltage Monitor/MC6V/1.jpg', link: 'MC6V.html', category: 'Power T&D and Substation' },
+            { name: 'coming-soon', image: 'Starter/XCQ7/1.jpg', link: 'XCQ7.html', category: 'PV and DC Equipments' },
+            { name: 'coming-soon', image: 'VFD/1.jpg', link: 'XCB1000.html', category: 'Electrical Accessories' },
+        ];
+        var productsPerPage = 6;
+
+        function displayProducts(productsArray, page) {
+            var startIndex = (page - 1) * productsPerPage;
+            var endIndex = startIndex + productsPerPage;
+            var productRow = document.getElementById('product-row');
+            productRow.innerHTML = '';
+            for (var i = startIndex; i < Math.min(endIndex, productsArray.length); i++) {
+                var product = productsArray[i];
+                var productHTML = `
+                    <div class="col-md-4 mb-4">
+                        <div class="product-item" onmouseover="changeTextColor(this, 'red')" onmouseout="resetTextColor(this)">
+                            <div class="product-img">
+                                <img src="${product.image}" class="img-fluid" alt="${product.name}">
+                                <div class="overlay">
+                                    <a href="${product.link}"><i class="fas fa-eye"></i></a>
+                                </div>
+                            </div>
+                            <div class="product-name">
+                                ${product.name}
+                            </div>
+                        </div>
+                    </div>
+                `;
+                productRow.insertAdjacentHTML('beforeend', productHTML);
+            }
+            displayPagination(productsArray, page);
+        }
+
+        function displayPagination(productsArray, currentPage) {
+            var numPages = Math.ceil(productsArray.length / productsPerPage);
+            var pagination = document.getElementById('pagination');
+            pagination.innerHTML = '';
+
+            if (currentPage > 1) {
+                var prevPage = document.createElement('li');
+                prevPage.classList.add('page-item');
+                var prevLink = document.createElement('a');
+                prevLink.classList.add('page-link', 'pagination-link');
+                prevLink.href = '#';
+                prevLink.innerHTML = '&laquo; Prev';
+                prevPage.appendChild(prevLink);
+                prevPage.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    displayProducts(productsArray, currentPage - 1);
+                            document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
+                });
+                pagination.appendChild(prevPage);
+            }
+
+            for (var i = 1; i <= numPages; i++) {
+                var li = document.createElement('li');
+                li.classList.add('page-item', 'pagination-item');
+                if (i === currentPage) {
+                    li.classList.add('active');
+                }
+                var link = document.createElement('a');
+                link.classList.add('page-link', 'pagination-link');
+                link.href = '#';
+                link.textContent = i;
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    displayProducts(productsArray, parseInt(this.textContent));
+                            document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
+                });
+                li.appendChild(link);
+                pagination.appendChild(li);
+            }
+
+            if (currentPage < numPages) {
+                var nextPage = document.createElement('li');
+                nextPage.classList.add('page-item');
+                var nextLink = document.createElement('a');
+                nextLink.classList.add('page-link', 'pagination-link');
+                nextLink.href = '#';
+                nextLink.innerHTML = 'Next &raquo;';
+                nextPage.appendChild(nextLink);
+                nextPage.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    displayProducts(productsArray, currentPage + 1);
+                            document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
+                });
+                pagination.appendChild(nextPage);
+            }
+        }
+
+        function changeTextColor(element, color) {
+            element.querySelector('.product-name').style.color = color;
+        }
+
+        function resetTextColor(element) {
+            element.querySelector('.product-name').style.color = '';
+        }
+
+        function filterProducts(category) {
+            var filteredProducts = products.filter(function(product) {
+                return category === 'all' || product.category === category;
+            });
+            displayProducts(filteredProducts, 1);
+        }
+
+        document.getElementById('search-box').addEventListener('focus', function() {
+            document.querySelector('.search-icon').style.color = 'red';
+        });
+
+        document.getElementById('search-box').addEventListener('blur', function() {
+            document.querySelector('.search-icon').style.color = '';
+        });
+
+        document.getElementById('search-box').addEventListener('input', function() {
+            var searchTerm = this.value.toLowerCase();
+            var filteredProducts = products.filter(function(product) {
+                return product.name.toLowerCase().includes(searchTerm);
+            });
+            displayProducts(filteredProducts, 1);
+        });
+
+        displayProducts(products, 1);
+    </script>
+</body>
+</html>
