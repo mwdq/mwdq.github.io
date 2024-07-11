@@ -1343,28 +1343,63 @@
                 prevPage.addEventListener('click', function(e) {
                     e.preventDefault();
                     displayProducts(productsArray, currentPage - 1);
-                            document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
+                    document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
                 });
                 pagination.appendChild(prevPage);
             }
 
-            for (var i = 1; i <= numPages; i++) {
-                var li = document.createElement('li');
-                li.classList.add('page-item', 'pagination-item');
-                if (i === currentPage) {
-                    li.classList.add('active');
-                }
-                var link = document.createElement('a');
-                link.classList.add('page-link', 'pagination-link');
-                link.href = '#';
-                link.textContent = i;
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    displayProducts(productsArray, parseInt(this.textContent));
+            var maxPagesToShow = window.innerWidth <= 767 ? 3 : 5; // Adjust max pages to show based on screen width
+            var halfPagesToShow = Math.floor(maxPagesToShow / 2);
+
+            if (window.innerWidth <= 767) {
+                // Mobile view: Only show prev, current, next
+                for (var i = currentPage - 1; i <= currentPage + 1; i++) {
+                    if (i > 0 && i <= numPages) {
+                        var li = document.createElement('li');
+                        li.classList.add('page-item', 'pagination-item');
+                        if (i === currentPage) {
+                            li.classList.add('active');
+                        }
+                        var link = document.createElement('a');
+                        link.classList.add('page-link', 'pagination-link');
+                        link.href = '#';
+                        link.textContent = i;
+                        link.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            displayProducts(productsArray, parseInt(this.textContent));
                             document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
-                });
-                li.appendChild(link);
-                pagination.appendChild(li);
+                        });
+                        li.appendChild(link);
+                        pagination.appendChild(li);
+                    }
+                }
+            } else {
+                // Desktop view: Show full pagination with ellipsis
+                for (var i = 1; i <= numPages; i++) {
+                    if (i == 1 || i == numPages || (i >= currentPage - halfPagesToShow && i <= currentPage + halfPagesToShow)) {
+                        var li = document.createElement('li');
+                        li.classList.add('page-item', 'pagination-item');
+                        if (i === currentPage) {
+                            li.classList.add('active');
+                        }
+                        var link = document.createElement('a');
+                        link.classList.add('page-link', 'pagination-link');
+                        link.href = '#';
+                        link.textContent = i;
+                        link.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            displayProducts(productsArray, parseInt(this.textContent));
+                            document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
+                        });
+                        li.appendChild(link);
+                        pagination.appendChild(li);
+                    } else if (i == currentPage - halfPagesToShow - 1 || i == currentPage + halfPagesToShow + 1) {
+                        var ellipsis = document.createElement('li');
+                        ellipsis.classList.add('page-item');
+                        ellipsis.innerHTML = '<span class="page-link">...</span>';
+                        pagination.appendChild(ellipsis);
+                    }
+                }
             }
 
             if (currentPage < numPages) {
@@ -1378,7 +1413,7 @@
                 nextPage.addEventListener('click', function(e) {
                     e.preventDefault();
                     displayProducts(productsArray, currentPage + 1);
-                            document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
+                    document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
                 });
                 pagination.appendChild(nextPage);
             }
