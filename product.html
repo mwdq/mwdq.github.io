@@ -140,6 +140,10 @@
         .content {
             padding: 50px 0;
         }
+
+        .gradient-background {
+            background: linear-gradient(to right, #2c3e50, #4ca1af);
+        }
         
         .section-title {
             text-align: center;
@@ -324,7 +328,7 @@
 
         .product-img .overlay a {
             color: #fff;
-            font-size: 24px;
+            font-size: 20px;
             text-decoration: none;
             transition: color 0.3s ease;
         }
@@ -339,7 +343,7 @@
         .product-name {
             text-align: center;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 13px;
             padding: 5px 0;
             color: #333;
             transition: color 0.3s ease;
@@ -716,6 +720,7 @@
             }
             
             .sidebar {
+                background: rgba(255, 255, 255, 0.9);
                 text-align: center;
                 padding-bottom: 1px;
             }
@@ -739,11 +744,14 @@
                 margin-bottom: 15px;
             }
             .product-img .overlay a {
-                font-size: 20px;
+                font-size: 30px;
             }
             .pagination-link {
                 padding: 6px 12px;
                 font-size: 14px;
+            }
+            .product-name {
+                font-size: 23px;
             }
             
             .contact-card {
@@ -842,10 +850,10 @@
     </div>
 
     <!-- Product Gallery -->
-    <div class="main-content">
+    <div class="gradient-background">
         <div id="gallery" class="content">
             <div class="container">
-                <h2 class="section-title">Product Gallery</h2>
+                <h2 class="section-title" style="color: #fff;">Product Gallery</h2>
                 <div class="row">
                     <div class="col-md-3 sidebar">
                         <div class="search-container">
@@ -1314,7 +1322,7 @@
             { name: 'coming-soon', image: 'XCQ7/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
             { name: 'coming-soon', image: 'VFD/1.jpg', link: '#gallery', category: 'Electrical Accessories' },
         ];
-        var productsPerPage = 6;
+        var productsPerPage = 12;
 
         function displayProducts(productsArray, page) {
             var startIndex = (page - 1) * productsPerPage;
@@ -1324,7 +1332,7 @@
             for (var i = startIndex; i < Math.min(endIndex, productsArray.length); i++) {
                 var product = productsArray[i];
                 var productHTML = `
-                    <div class="col-md-4 mb-4">
+                    <div class="col-md-3 mb-3">
                         <div class="product-item" onmouseover="changeTextColor(this, 'red')" onmouseout="resetTextColor(this)">
                             <div class="product-img">
                                 <img src="${product.image}" class="img-fluid" alt="${product.name}">
@@ -1368,8 +1376,8 @@
             var halfPagesToShow = Math.floor(maxPagesToShow / 2);
 
             if (window.innerWidth <= 767) {
-                // Mobile view: Only show prev, current, next
-                for (var i = currentPage - 1; i <= currentPage + 1; i++) {
+                // Mobile view: Only show prev, current, next 2 pages
+                for (var i = currentPage - 1; i <= currentPage + 2; i++) {
                     if (i > 0 && i <= numPages) {
                         var li = document.createElement('li');
                         li.classList.add('page-item', 'pagination-item');
