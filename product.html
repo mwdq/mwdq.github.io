@@ -684,8 +684,8 @@
             position: fixed;
             bottom: 88px;
             right: 20px;
-            background-color: #007bff;
-            color: #333;
+            background-color: #ffc107;
+            color: white;
             border: none;
             padding: 15px 20px;
             border-radius: 50%;
@@ -695,7 +695,7 @@
             transition: background-color 0.3s, transform 0.3s;
         }
         .back-to-top:hover {
-            background-color: #0056b3;
+            background-color: #ff9800;
             transform: scale(1.2);
         }
 
@@ -1095,7 +1095,7 @@
             </div>
         </div>
         <!-- Back to Top Button -->
-        <button class="back-to-top" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+        <div class="back-to-top" id="back-to-top"><i class="fas fa-arrow-up"></i></div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -1163,19 +1163,20 @@
             }
         }
         
-        // Show/hide back-to-top button
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 2000) {
-                $('.back-to-top').fadeIn();
+        // Show back to top button
+        window.onscroll = function() {
+            var backToTopButton = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 2000 || document.documentElement.scrollTop > 200) {
+                backToTopButton.style.display = "block";
             } else {
-                $('.back-to-top').fadeOut();
+                backToTopButton.style.display = "none";
             }
-        });
+        };
 
-        // Smooth scroll to top
-        function scrollToTop() {
-            $('html, body').animate({ scrollTop: 0 }, 600);
-        }
+        // Scroll to top functionality
+        document.getElementById("back-to-top").addEventListener("click", function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
