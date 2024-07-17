@@ -594,7 +594,9 @@
                 navbar.classList.add('scrolled');
             }
             // Add class to change background color when scrolled
-            if (currentScroll <= 0) {
+            if (currentScroll > 0) {
+            navbar.classList.add('scrolled');
+            } else {
                 navbar.classList.remove('scrolled');
             }
             lastScrollTop = currentScroll;

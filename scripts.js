@@ -28,7 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
       navbar.classList.add("scrolled");
     }
     // Add class to change background color when scrolled
-    if (currentScroll <= 0) {
+    if (currentScroll > 0) {
+      navbar.classList.add("scrolled");
+    } else {
       navbar.classList.remove("scrolled");
     }
     lastScrollTop = currentScroll;
@@ -44,10 +46,10 @@ $(window).scroll(function () {
   }
 });
 
-// Smooth scroll to top
-function scrollToTop() {
-  $("html, body").animate({ scrollTop: 0 }, 600);
-}
+// Scroll to top functionality
+document.getElementById("back-to-top").addEventListener("click", function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
 // 在文档加载完毕后执行
 $(document).ready(function () {
