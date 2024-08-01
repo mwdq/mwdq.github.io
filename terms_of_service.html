@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
         body {
           font-family: Arial, sans-serif;
           line-height: 1.6;
@@ -36,9 +37,8 @@
             width: 100%;
             z-index: 1000;
             animation: slideDown 1.5s ease forwards;
-            transition: transform 0.5s ease, background-color 0.3s ease;
+            transition: transform 0.5s ease;
         }
-
         @keyframes slideDown {
             from {
                 top: -100px;
@@ -47,32 +47,31 @@
                 top: 0;
             }
         }
-
         .navbar.hide {
             transform: translateY(-100%);
         }
-
         .navbar.scrolled {
             background-color: #fff;
         }
-
         .navbar:hover {
             background-color: #fff;
         }
-
+        .navbar-brand {
+            margin-right: 0;
+            padding: 0 36px;
+        }
         .navbar-brand img {
             max-height: 40px;
             transition: transform 0.3s ease;
         }
-
         .navbar-brand img:hover {
             transform: scale(1.1);
         }
-
         .navbar-nav {
             margin-left: auto;
+            display: flex;
+            align-items: center;
         }
-
         .navbar-nav .nav-link {
             color: #333 !important;
             font-size: 1.1rem;
@@ -81,13 +80,10 @@
             margin: 0 36px;
             position: relative;
             transition: color 0.3s ease;
-            display: inline-block;
         }
-
         .navbar-nav .nav-link:hover {
             color: #ff0000 !important;
         }
-
         .navbar-nav .nav-link::before {
             content: '';
             position: absolute;
@@ -100,12 +96,10 @@
             transform-origin: bottom right;
             transition: transform 0.3s ease;
         }
-
         .navbar-nav .nav-link:hover::before {
             transform: scaleX(1);
             transform-origin: bottom left;
         }
-
         .navbar-toggler {
             background-color: transparent;
             border: none;
@@ -113,13 +107,11 @@
             cursor: pointer;
             transition: transform 0.3s ease;
         }
-
         .navbar-toggler-icon {
             font-size: 24px;
             color: #fff;
             transition: transform 0.3s ease;
         }
-
         .navbar-toggler-icon .bar {
             display: block;
             width: 30px;
@@ -128,24 +120,19 @@
             margin: 6px auto;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
-
         .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon .bar:nth-child(1) {
             transform: translateY(9px) rotate(45deg);
         }
-
         .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon .bar:nth-child(2) {
             opacity: 0;
         }
-
         .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon .bar:nth-child(3) {
             transform: translateY(-9px) rotate(-45deg);
         }
-
         .navbar-toggler[aria-expanded="false"] .navbar-toggler-icon .bar:nth-child(1),
         .navbar-toggler[aria-expanded="false"] .navbar-toggler-icon .bar:nth-child(3) {
             transform: translateY(0);
         }
-
         .navbar-toggler[aria-expanded="false"] .navbar-toggler-icon .bar:nth-child(2) {
             opacity: 1;
         }
@@ -179,74 +166,143 @@
        }
 
        .footer {
-            background: linear-gradient(135deg, #141E30, #243B55);
-            color: #ddd;
-            text-align: center;
-            padding: 60px 20px;
+            background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+            color: #ffffff;
+            padding: 60px 0;
+            font-family: 'Montserrat', sans-serif;
             position: relative;
-            z-index: 1000;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            z-index: 1;
+            animation: backgroundAnimation 10s infinite alternate;
         }
+
+        @keyframes backgroundAnimation {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        .footer-logo {
+            width: auto;
+            transition: transform 0.3s ease-in-out;
+            animation: logoBounce 3s infinite;
+        }
+
+        @keyframes logoBounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .footer-slogan {
+            font-style: italic;
+            font-size: 1.2em;
+            color: #f0c040;
+            margin-bottom: 20px;
+            transition: color 0.3s ease-in-out;
+            animation: textFade 5s infinite;
+        }
+
+        @keyframes textFade {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
         .footer h4 {
             margin-bottom: 20px;
-            font-size: 24px;
-            color: #fff;
-            text-transform: uppercase;
-        }
-        .footer p, .footer a {
-            color: #ddd;
-            text-decoration: none;
-            font-size: 16px;
-            margin-bottom: 10px;
-            transition: color 0.3s;
-        }
-        .footer a:hover {
-            color: #ffc107;
-        }
-        .footer .contact-info, .footer .business-hours, .footer .quick-links, .footer .social-media {
-            margin-bottom: 30px;
-        }
-        .footer .quick-links ul {
-            padding: 0;
-            list-style: none;
-        }
-        .footer .quick-links li {
-            margin-bottom: 10px;
-        }
-        .footer .social-media .list-inline-item {
-            margin-right: 15px;
-        }
-        .footer .social-media .list-inline-item a {
-            color: #fff;
-            font-size: 26px;
-            padding: 10px;
-            border-radius: 50%;
-            background-color: #444;
+            font-size: 1.5em;
+            color: #f0c040;
+            position: relative;
             display: inline-block;
-            transition: background-color 0.3s, transform 0.3s;
+            transition: color 0.3s ease-in-out;
+            animation: textGlow 3s infinite;
         }
-        .footer .social-media .list-inline-item a:hover {
-            background-color: #ffc107;
-            transform: scale(1.2);
+
+        @keyframes textGlow {
+            0%, 100% { text-shadow: 0 0 10px #f0c040; }
+            50% { text-shadow: 0 0 20px #f0c040; }
         }
-        .footer-logo {
-            margin-bottom: 20px;
+
+        .footer h4::after {
+            content: '';
+            display: block;
+            width: 50%;
+            height: 3px;
+            background: #f0c040;
+            margin-top: 5px;
+            transition: width 0.3s ease-in-out;
         }
-        .footer-logo img {
-            max-width: 200px;
+
+        .footer h4:hover {
+            color: #ffffff;
         }
-        .footer-slogan {
-            margin-bottom: 30px;
-            font-size: 18px;
-            font-style: italic;
-            color: #aaa;
+
+        .footer h4:hover::after {
+            width: 100%;
         }
+
+        .footer p, .footer a {
+            font-size: 1em;
+            color: #cccccc;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .footer a:hover {
+            color: #f0c040;
+            text-decoration: none;
+        }
+
+        .footer ul {
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .footer ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer ul li a {
+            color: #cccccc;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .footer ul li a:hover {
+            color: #f0c040;
+        }
+
+        .footer .social-media ul {
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .footer .social-media ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .footer .social-media ul li a {
+            font-size: 1.5em;
+            color: #cccccc;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .footer .social-media ul li a:hover {
+            color: #f0c040;
+        }
+
+        #footer-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+        }
+
         .back-to-top {
             position: fixed;
             bottom: 20px;
             right: 20px;
             background-color: #ffc107;
-            color: #333;
+            color: white;
             border: none;
             padding: 15px 20px;
             border-radius: 50%;
@@ -263,10 +319,15 @@
        @media (max-width: 991px) {
             .navbar-nav {
                 text-align: center;
+                margin-left: 0;
             }
             .navbar-nav .nav-item {
                 display: inline-block;
                 float: none;
+                margin: 0 20px;
+            }
+            .navbar-brand {
+                padding-left: 12px;
             }
        }
 
@@ -284,12 +345,8 @@
            .header-title {
                font-size: 36px;
            }
-
-            .footer h4 {
-                font-size: 20px;
-            }
             .footer p, .footer a {
-                font-size: 14px;
+                font-size: 15px;
             }
        }
     </style>
@@ -309,10 +366,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="index.html#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="product.html#gallery">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="product.html#catalog">Catalog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
                 </ul>
             </div>
         </div>
@@ -419,63 +476,114 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <!-- Company Logo and Slogan -->
-                <div class="col-12 footer-logo">
-                    <img src="img/logo.png" alt="Mingway Logo">
-                </div>
-                <div class="col-12 footer-slogan">
-                    <p>"Empowering the Future with Advanced Electrical Solutions"</p>
-                </div>
-                <!-- Contact Information -->
-                <div class="col-md-4 contact-info">
-                    <h4>Contact Us</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> 7 Hung Hing Road, Ningbo, China</p>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@nbmwele.com">info@nbmwele.com</a></p>
-                    <p><i class="fas fa-phone"></i> 86-574-3560921</p>
-                </div>
-                <!-- Schedule -->
-                <div class="col-md-4 business-hours">
-                    <h4>Business Hours</h4>
-                    <p><i class="fas fa-clock"></i> Monday - Friday: 9:00 AM - 5:00 PM</p>
-                    <p><i class="fas fa-clock"></i> Saturday: 10:00 AM - 3:00 PM</p>
-                    <p><i class="fas fa-clock"></i> Sunday: Closed</p>
-                </div>
-                <!-- Quick Links -->
-                <div class="col-md-4 quick-links">
-                    <h4>Quick Links</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#about">About Us</a></li>
-                        <li><a href="product.html#gallery">Gallery</a></li>
-                        <li><a href="product.html#catalog">Catalog</a></li>
-                        <li><a href="index.html#contact">Contact Us</a></li>
-                    </ul>
-                </div>
+    <div class="container">
+        <div class="row justify-content-between text-center text-md-left mb-5">
+            <div class="col-md-3 mb-5">
+                <img src="img/logo.png" alt="Mingway Logo" class="footer-logo mb-3">
+                <p class="footer-slogan">"Empowering the Future with Advanced Electrical Solutions"</p>
             </div>
-            <!-- Social Media Links -->
-            <div class="row">
-                <div class="col-12 social-media">
-                    <h4>Follow Us</h4>
-                    <ul class="list-inline">
-                        <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=100085752237804" aria-label="Follow Mingway by Facebook"><i class="fab fa-facebook"></i></a></li>
-                        <li class="list-inline-item"><a href="https://www.x.com/nbmwele" aria-label="Follow Mingway by Twitter"><i class="fab fa-twitter"></i></a></li>
-                        <li class="list-inline-item"><a href="https://www.linkedin.com/in/nbmwele" aria-label="Follow Mingway by LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-                        <li class="list-inline-item"><a href="https://www.instagram.com/nbmwele" aria-label="Follow Mingway by Instagram"><i class="fab fa-instagram"></i></a></li>
-                    </ul>
-                </div>
+            <div class="col-md-3 mb-5">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 7 Hung Hing Road, Ningbo, Zhejiang, China</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:info@nbmwele.com">info@nbmwele.com</a></p>
+                <p><i class="fas fa-phone"></i> 86-574-3560921</p>
             </div>
-            <!-- Copyright -->
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p>&copy; 2024 Ningbo Mingway Electric Co., Ltd. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms_of_service.html">Terms of Service</a></p>
-                </div>
+            <div class="col-md-4 mb-5">
+                <h4>Business Hours</h4>
+                <p><i class="fas fa-clock"></i> Monday - Friday: 9:00 AM - 5:00 PM</p>
+                <p><i class="fas fa-clock"></i> Saturday: 10:00 AM - 3:00 PM</p>
+                <p><i class="fas fa-clock"></i> Sunday: Closed</p>
+            </div>
+            <div class="col-md-2 mb-5">
+                <h4>Quick Links</h4>
+                <ul class="list-unstyled">
+                    <li><a href="index.html#">Home</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="index.html#contact">Contact Us</a></li>
+                </ul>
             </div>
         </div>
-        <!-- Back to Top Button -->
-        <button class="back-to-top" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+        <div class="row justify-content-center mb-5">
+            <div class="col-12 text-center">
+                <h4>Follow Us</h4>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=100085752237804" aria-label="Follow Mingway by Facebook"><i class="fab fa-facebook"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.x.com/nbmwele" aria-label="Follow Mingway by Twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.linkedin.com/in/nbmwele" aria-label="Follow Mingway by LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.instagram.com/nbmwele" aria-label="Follow Mingway by Instagram"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <p>&copy; 2024 Ningbo Mingway Electric Co., Ltd. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms_of_service.html">Terms of Service</a></p>
+            </div>
+        </div>
+    </div>
+        <canvas id="footer-canvas"></canvas>
+        <div class="back-to-top" id="back-to-top"><i class="fas fa-arrow-up"></i></div>
     </footer>
+
+    <script>
+        const canvas = document.getElementById('footer-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        canvas.width = window.innerWidth;
+        canvas.height = document.querySelector('.footer').offsetHeight;
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                 this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 3 + 1;
+                this.speedX = Math.random() * 1 - 0.5;
+                 this.speedY = Math.random() * 1 - 0.5;
+            }
+
+            update() {
+               this.x += this.speedX;
+                this.y += this.speedY;
+
+                if (this.size > 0.2) this.size -= 0.1;
+            }
+
+            draw() {
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.closePath();
+                ctx.fill();
+             }
+        }
+
+        function init() {
+              particles = [];
+             for (let i = 0; i < 100; i++) {
+                 particles.push(new Particle());
+             }
+        }
+
+        function animate() {
+           ctx.clearRect(0, 0, canvas.width, canvas.height);
+              particles.forEach(particle => {
+                 particle.update();
+                 particle.draw();
+            });
+             requestAnimationFrame(animate);
+        }
+
+        init();
+        animate();
+
+        window.addEventListener('resize', function() {
+             canvas.width = window.innerWidth;
+             canvas.height = document.querySelector('.footer').offsetHeight;
+             init();
+        });
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
