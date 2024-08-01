@@ -339,12 +339,12 @@
                 font-size: 36px;
             }
             
-           .navbar-nav .nav-link {
-               margin: 0;
-           }
-           .header-title {
-               font-size: 36px;
-           }
+            .navbar-nav .nav-link {
+                margin: 0;
+            }
+            .header-title {
+                font-size: 36px;
+            }
             .footer p, .footer a {
                 font-size: 15px;
             }
@@ -625,20 +625,21 @@
             lastScrollTop = currentScroll;
             });
         });
-        
-        // Show/hide back-to-top button
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 1000) {
-                $('.back-to-top').fadeIn();
-            } else {
-                $('.back-to-top').fadeOut();
-            }
-        });
 
-        // Smooth scroll to top
-        function scrollToTop() {
-            $('html, body').animate({ scrollTop: 0 }, 600);
-        }
+        // Show back to top button
+        window.onscroll = function() {
+            var backToTopButton = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 2000 || document.documentElement.scrollTop > 200) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        // Scroll to top functionality
+        document.getElementById("back-to-top").addEventListener("click", function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     </script>
   </body>
 </html>
