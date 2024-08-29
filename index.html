@@ -362,11 +362,58 @@
         .faq-section h2 {
             margin-bottom: 20px;
         }
-        .card-header {
-            background-color: #f9f9f9;
+
+        .card {
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
         }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-header {
+            background-color: #333;
+            color: #fff;
+            padding: 0;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .btn-link {
+            color: #fff;
+            text-decoration: none !important;
+            font-weight: bold;
+            width: 100%;
+            text-align: left;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .btn-link:hover {
+            color: #11ff00;
+        }
+
+        .btn-link:after {
+            content: '\f078'; /* FontAwesome down arrow */
+            font-family: 'FontAwesome';
+            font-size: 16px;
+        }
+
+        .btn-link.collapsed:after {
+            content: '\f054'; /* FontAwesome right arrow */
+        }
+
         .card-body {
             background-color: #fff;
+            text-align: justify;
+            font-size: 16px;
+            line-height: 1.6;
+            padding: 20px;
+            border-radius: 0 0 10px 10px;
         }
 
         .footer {
@@ -867,7 +914,7 @@
     <!-- Faq -->
     <div class="faq-section">
       <div class="container">
-        <h2>Frequently Asked Questions</h2>
+        <h2>Frequently Asked Questions (FAQ)</h2>
         <div class="accordion" id="faqAccordion">
           <div class="card">
             <div class="card-header" id="headingOne">
@@ -880,7 +927,7 @@
                   aria-expanded="false"
                   aria-controls="collapseOne"
                 >
-                  Could you please send me the catalog and price list?
+                  1. What types of products does the Super Factory offer?
                 </button>
               </h3>
             </div>
@@ -890,10 +937,8 @@
               aria-labelledby="headingOne"
               data-parent="#faqAccordion"
             >
-              <div class="card-body" style="text-align: justify">
-                You can view and download the product catalog on the product
-                page. If you see a product you are interested in, we will
-                provide a corresponding quote.
+              <div class="card-body">
+                We specialize in a wide range of electronic components, including capacitors, resistors, relays, switches, and connectors. All our products meet international quality standards and are designed for various industrial and commercial applications.
               </div>
             </div>
           </div>
@@ -909,7 +954,7 @@
                   aria-expanded="false"
                   aria-controls="collapseTwo"
                 >
-                  Can you provide free samples for testing?
+                  2. How can I place an order?
                 </button>
               </h3>
             </div>
@@ -919,10 +964,8 @@
               aria-labelledby="headingTwo"
               data-parent="#faqAccordion"
             >
-              <div class="card-body" style="text-align: justify">
-                Of course, we can provide free samples. We understand the
-                concerns of customers very well, and we are very confident in
-                our products.
+              <div class="card-body">
+                Orders can be placed directly through our website, where you can browse our product catalog and select items. Alternatively, you can contact our sales team for personalized assistance. We accept multiple payment methods, including wire transfers and credit cards.
               </div>
             </div>
           </div>
@@ -938,7 +981,7 @@
                   aria-expanded="false"
                   aria-controls="collapseThree"
                 >
-                  Is it possible to put our own label on the product?
+                  3. What is the minimum order quantity (MOQ)?
                 </button>
               </h3>
             </div>
@@ -948,9 +991,8 @@
               aria-labelledby="headingThree"
               data-parent="#faqAccordion"
             >
-              <div class="card-body" style="text-align: justify">
-                No problem, most of our products support customers' trademarks.
-                To be honest, we hope to jointly promote the MINGWAY brand.
+              <div class="card-body">
+                The MOQ varies depending on the product. Generally, there is a minimum order requirement for most items. Specific details are available on the product pages or by contacting our sales team.
               </div>
             </div>
           </div>
@@ -966,7 +1008,7 @@
                   aria-expanded="false"
                   aria-controls="collapseFour"
                 >
-                  How to become a distributor in my country?
+                  4. What are the lead times for delivery?
                 </button>
               </h3>
             </div>
@@ -976,14 +1018,8 @@
               aria-labelledby="headingFour"
               data-parent="#faqAccordion"
             >
-              <div class="card-body" style="text-align: justify">
-                Generally, we hope that dealers can meet the following
-                qualifications: 1. There are some local sales networks; 2. Good
-                technical solution skills; 3. Keep inventory to meet fast
-                delivery time; 4. Have a dedicated team to sell and promote. You
-                are very welcome to tell us your thoughts on the above matters;
-                We also very much hope to create value for you through our
-                products.
+              <div class="card-body">
+                Standard products typically have a lead time of 5-7 business days. For custom orders, the lead time may be longer, and we will provide an estimated delivery date when you place your order.
               </div>
             </div>
           </div>
@@ -999,7 +1035,7 @@
                   aria-expanded="false"
                   aria-controls="collapseFive"
                 >
-                  What are your shipping options?
+                  5. Do you offer international shipping?
                 </button>
               </h3>
             </div>
@@ -1009,10 +1045,271 @@
               aria-labelledby="headingFive"
               data-parent="#faqAccordion"
             >
-              <div class="card-body" style="text-align: justify">
-                We offer various shipping options including standard, expedited,
-                and express shipping. You can choose the option that best suits
-                you during checkout.
+              <div class="card-body">
+               Yes, we provide global shipping services. We partner with leading logistics companies to ensure your products are delivered safely and promptly. Shipping costs and times vary based on the destination.
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingSix">
+              <h3 class="mb-0">
+                <button
+                  class="btn btn-link collapsed"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseSix"
+                  aria-expanded="false"
+                  aria-controls="collapseSix"
+                >
+                  6. What is the warranty period for your products?
+                </button>
+              </h3>
+            </div>
+            <div
+              id="collapseSix"
+              class="collapse"
+              aria-labelledby="headingSix"
+              data-parent="#faqAccordion"
+            >
+              <div class="card-body">
+               All our products come with at least a one-year warranty. Should any issues arise within the warranty period, we offer free repair or replacement services.              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingSeven">
+              <h3 class="mb-0">
+                <button
+                  class="btn btn-link collapsed"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseSeven"
+                  aria-expanded="false"
+                  aria-controls="collapseSeven"
+                >
+                  7. What should I do if I'm not satisfied with the product I received?
+                </button>
+              </h3>
+            </div>
+            <div
+              id="collapseSeven"
+              class="collapse"
+              aria-labelledby="headingSeven"
+              data-parent="#faqAccordion"
+            >
+              <div class="card-body">
+               If you're not satisfied with your purchase, please contact us within 7 days of receiving the product. We offer return and exchange services based on the situation.              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingEight">
+              <h3 class="mb-0">
+                <button
+                  class="btn btn-link collapsed"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseEight"
+                  aria-expanded="false"
+                  aria-controls="collapseEight"
+                >
+                  8. Do you provide technical support?
+                </button>
+              </h3>
+            </div>
+            <div
+              id="collapseEight"
+              class="collapse"
+              aria-labelledby="headingEight"
+              data-parent="#faqAccordion"
+            >
+              <div class="card-body">
+               Absolutely. Our dedicated technical support team is here to help you with any product-related issues. You can reach out to us for prompt assistance and solutions.              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingNine">
+              <h3 class="mb-0">
+                <button
+                  class="btn btn-link collapsed"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseNine"
+                  aria-expanded="false"
+                  aria-controls="collapseNine"
+                >
+                  9. How can I access technical documentation for the products?
+                </button>
+              </h3>
+            </div>
+            <div
+              id="collapseNine"
+              class="collapse"
+              aria-labelledby="headingNine"
+              data-parent="#faqAccordion"
+            >
+              <div class="card-body">
+               Technical documentation, including datasheets and user manuals, is available for download on our website. You can find these resources on each product's dedicated page.              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingTen">
+              <h3 class="mb-0">
+                <button
+                  class="btn btn-link collapsed"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseTen"
+                  aria-expanded="false"
+                  aria-controls="collapseTen"
+                >
+                  10. How can I contact you?
+                </button>
+              </h3>
+            </div>
+            <div
+              id="collapseTen"
+              class="collapse"
+              aria-labelledby="headingTen"
+              data-parent="#faqAccordion"
+            >
+              <div class="card-body">
+               You can reach us via phone, email, or through our online customer service. Visit our "Contact Us" page on the website for detailed contact information.              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingEleven">
+              <h3 class="mb-0">
+                <button
+                  class="btn btn-link collapsed"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseEleven"
+                  aria-expanded="false"
+                  aria-controls="collapseEleven"
+                >
+                  11. What certifications do your products have?
+                </button>
+              </h3>
+            </div>
+            <div
+              id="collapseEleven"
+              class="collapse"
+              aria-labelledby="headingEleven"
+              data-parent="#faqAccordion"
+            >
+              <div class="card-body">
+               Our products are certified to meet international standards such as ISO, CE, RoHS, and more, depending on the specific product. Certification details are available on the product pages or upon request.              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingTwelve">
+              <h3 class="mb-0">
+                <button
+                  class="btn btn-link collapsed"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseTwelve"
+                  aria-expanded="false"
+                  aria-controls="collapseTwelve"
+                >
+                  12. Can I request samples before placing a bulk order?
+                </button>
+              </h3>
+            </div>
+            <div
+              id="collapseTwelve"
+              class="collapse"
+              aria-labelledby="headingTwelve"
+              data-parent="#faqAccordion"
+            >
+              <div class="card-body">
+               Yes, we offer sample requests for most products so you can evaluate the quality before committing to a larger order. Please contact our sales team to discuss sample availability.              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingThirteen">
+              <h3 class="mb-0">
+                <button
+                  class="btn btn-link collapsed"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseThirteen"
+                  aria-expanded="false"
+                  aria-controls="collapseThirteen"
+                >
+                  13. Do you offer customized solutions?
+                </button>
+              </h3>
+            </div>
+            <div
+              id="collapseThirteen"
+              class="collapse"
+              aria-labelledby="headingThirteen"
+              data-parent="#faqAccordion"
+            >
+              <div class="card-body">
+               We provide tailored solutions to meet specific customer requirements. Whether it's a custom design, material, or packaging, we work closely with our clients to deliver the best solutions.              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingFourteen">
+              <h3 class="mb-0">
+                <button
+                  class="btn btn-link collapsed"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseFourteen"
+                  aria-expanded="false"
+                  aria-controls="collapseFourteen"
+                >
+                  14. What are your payment terms for international customers?
+                </button>
+              </h3>
+            </div>
+            <div
+              id="collapseFourteen"
+              class="collapse"
+              aria-labelledby="headingFourteen"
+              data-parent="#faqAccordion"
+            >
+              <div class="card-body">
+               For international customers, we offer flexible payment terms including advance payment, letters of credit, and other secure options. Please contact our finance department for more details.
+
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingFifteen">
+              <h3 class="mb-0">
+                <button
+                  class="btn btn-link collapsed"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseFifteen"
+                  aria-expanded="false"
+                  aria-controls="collapseFifteen"
+                >
+                  15. How to become your brand distributor in our country?
+                </button>
+              </h3>
+            </div>
+            <div
+              id="collapseFifteen"
+              class="collapse"
+              aria-labelledby="headingFifteen"
+              data-parent="#faqAccordion"
+            >
+              <div class="card-body">
+               Generally, we hope that dealers can meet the following qualifications: 1. There are some local sales networks; 2. Good technical solution skills; 3. Keep inventory to meet fast delivery time; 4. Have a dedicated team to sell and promote. You are very welcome to tell us your thoughts on the above matters; We also very much hope to create value for you through our products.
               </div>
             </div>
           </div>
@@ -1023,7 +1320,7 @@
     <!-- Contact -->
     <div id="contact" class="content">
     <div class="container">
-        <h2 class="section-title">Contact MWE</h2>
+        <h2 class="section-title">Contact MINGWAY</h2>
         <div class="row">
             <div class="col-md-6">
                 <p>If you have any questions or would like to discuss potential collaborations, please feel free to contact us using the form below.</p>
