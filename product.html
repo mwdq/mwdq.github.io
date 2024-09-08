@@ -835,17 +835,21 @@
                 display:block
             }
             .sidebar ul, .sidebar h3 {
-                display: none;
-            }
-            .sidebar.show-links ul, .sidebar.show-links h3 {
-                display: block;
                 position: absolute;
                 background: rgba(255, 255, 255, 0.9);
                 z-index: 10;
                 width: 100%;
                 left: 0;
-                padding-top: 20px;
                 top: 60px;
+                padding-top: 15px;
+                max-height: 0;
+                opacity: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            }
+            .sidebar.show-links ul, .sidebar.show-links h3 {
+                opacity: 1;
+                transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
             }
             .sidebar ul li a {
                 padding: 6px;
@@ -973,8 +977,8 @@
                             <li><a href="#gallery" onclick="filterProducts('Industrial Switch and Indicator')">Industrial Switch and Indicator</a></li>
                             <li><a href="#gallery" onclick="filterProducts('Power Supply and Relay')">Power Supply and Relay</a></li>
                             <li><a href="#gallery" onclick="filterProducts('Instruments and Meters')">Instruments and Meters</a></li>
-                            <li><a href="#gallery" onclick="filterProducts('Power T&D and Substation')">Power T&D and Substation</a></li>
                             <li><a href="#gallery" onclick="filterProducts('PV and DC Equipments')">PV and DC Equipments</a></li>
+                            <li><a href="#gallery" onclick="filterProducts('Power T&D and Substation')">Power T&D and Substation</a></li>
                             <li><a href="#gallery" onclick="filterProducts('Electrical Accessories')">Electrical Accessories</a></li>
                             <li><a href="#gallery" onclick="filterProducts('Other Products')">Other Products</a></li>
                         </ul>
@@ -1405,26 +1409,6 @@
     </script>
 
     <script>
-        const toggleButton = document.querySelector('.toggle-button');
-        const sidebar = document.querySelector('.sidebar');
-
-        toggleButton.addEventListener('click', () => {
-            sidebar.classList.toggle('show-links');
-        });
-
-        document.addEventListener('click', function(e) {
-            if (!sidebar.contains(e.target) && !toggleButton.contains(e.target)) {
-                sidebar.classList.remove('show-links');
-            }
-        });
-
-        document.querySelectorAll('.sidebar ul li a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (sidebar.classList.contains('show-links')) {
-                    sidebar.classList.remove('show-links');
-                }
-            });
-        });
         var products = [
             { name: 'AFD7-63 AFDD', image: 'Modular DIN/AFDD/AFD7-63/1.jpg', link: 'AFD7-63.html', category: 'Modular DIN Rail' },
             { name: 'AFD9-40N AFDD', image: 'Modular DIN/AFDD/AFD9-40N/1.jpg', link: 'AFD9-40N.html', category: 'Modular DIN Rail' },
@@ -1636,6 +1620,48 @@
             { name: 'XMT Temperature Controller', image: 'Instruments & Meters/Temp Controler/1.jpg', link: 'XMT.html', category: 'Instruments and Meters' },
             { name: 'MCT Thermocouple', image: 'Instruments & Meters/Thermocouple/1.jpg', link: 'MCT.html', category: 'Instruments and Meters' },
 
+            { name: 'PV Metal Combiner Box', image: 'PV & DC/Combiner Box/FE/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'PV Plastic Combiner Box', image: 'PV & DC/Combiner Box/BS/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'PV Transparent Box', image: 'PV & DC/Combiner Box/TS/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: '1TN PV Connector', image: 'PV & DC/Connector/1TN/2.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: '2TN PV Connector', image: 'PV & DC/Connector/2TN/2.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'MC4 PV Connector', image: 'PV & DC/Connector/MC4/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: '10x38 DC Fuse Link', image: 'PV & DC/FUSE/1038/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: '10x85 DC Fuse Link', image: 'PV & DC/FUSE/1085/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'RT18-32 DC Fuse', image: 'PV & DC/FUSE/32/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'RT18-32X DC Fuse', image: 'PV & DC/FUSE/32X/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'RT18-32H DC Fuse', image: 'PV & DC/FUSE/32H/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'RT18-63 DC Fuse', image: 'PV & DC/FUSE/63/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'RT18-125 DC Fuse', image: 'PV & DC/FUSE/125/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'NT00 DC Fuse & Link', image: 'PV & DC/FUSE/NT/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'IPV1 PV Inverter', image: 'PV & DC/Inverter/IPV1/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'IPV2 PV Inverter', image: 'PV & DC/Inverter/IPV2/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'IPV3 PV Inverter', image: 'PV & DC/Inverter/IPV3/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'IPV4 PV Inverter', image: 'PV & DC/Inverter/IPV4/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'MIP6 PV Pump VFD', image: 'PV & DC/Inverter/M2000/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'DCIS1-32X Isolation Switch', image: 'PV & DC/Isolation Switch/DCIS1-32X/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'DCIS1-55 Isolation Switch', image: 'PV & DC/Isolation Switch/DCIS1-55/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'DCIS2-32X Isolation Switch', image: 'PV & DC/Isolation Switch/DCIS2-32X/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'DCIS4-32X Isolation Switch', image: 'PV & DC/Isolation Switch/DCIS4-32X/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'DCIS-32D Isolation Switch', image: 'PV & DC/Isolation Switch/DCIS-32D/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'DCIS-32P Isolation Switch', image: 'PV & DC/Isolation Switch/DCIS-32P/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'DCIS-32X Isolation Switch', image: 'PV & DC/Isolation Switch/DCIS-32X/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'DCIS-32XD Isolation Switch', image: 'PV & DC/Isolation Switch/DCIS-32XD/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'DCIS-32XP Isolation Switch', image: 'PV & DC/Isolation Switch/DCIS-32XP/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'DCIS-55 Isolation Switch', image: 'PV & DC/Isolation Switch/DCIS-55/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'MCB1-125DC MCB', image: 'PV & DC/MCB1-125/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'MCM3-250DC MCCB', image: 'PV & DC/MCM3-250.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'MCM8-250DC MCCB', image: 'PV & DC/MCM8-250/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'MCM8-400DC MCCB', image: 'PV & DC/MCM8-400/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'MCM8A-250DC MCCB', image: 'PV & DC/MCM8A-250/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'MCM8A-400DC MCCB', image: 'PV & DC/MCM8A-400/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'PV Cable Wire', image: 'PV & DC/PV Cable/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'RS1 Rapid Shutdown Device', image: 'PV & DC/RSD/RS1/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'MRP1 RSD Control Box', image: 'PV & DC/RSD/MRP1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'RS6 Rapid Shutdown Device', image: 'PV & DC/RSD/RS6/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'MCS1-DC SPD', image: 'PV & DC/SPD/MCS1-DC.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+            { name: 'MCS8-DC SPD', image: 'PV & DC/SPD/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
+
             { name: 'HY1.5W Surge Arrester', image: 'Power T&D/Arrester/HY1.5W/1.jpg', link: '#gallery', category: 'Power T&D and Substation' },
             { name: 'HY5W Surge Arrester', image: 'Power T&D/Arrester/HY5W/1.jpg', link: '#gallery', category: 'Power T&D and Substation' },
             { name: 'HY10W Surge Arrester', image: 'Power T&D/Arrester/HY10W/1.jpg', link: '#gallery', category: 'Power T&D and Substation' },
@@ -1729,47 +1755,6 @@
             { name: 'JSJW Voltage Transformer', image: 'Power T&D/VT/JSJW/1.jpg', link: '#gallery', category: 'Power T&D and Substation' },
             { name: 'JSZW3 Voltage Transformer', image: 'Power T&D/VT/JSZW3/1.jpg', link: '#gallery', category: 'Power T&D and Substation' },
             { name: 'VMC-12 Contact Switch-Fuse', image: 'Power T&D/VMC-12.jpg', link: '#gallery', category: 'Power T&D and Substation' },
-
-            { name: 'MIP6 PV Pump VFD', image: 'PV & DC/Inverter/M2000/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'IPV1 PV Inverter', image: 'PV & DC/Inverter/IPV1/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'IPV2 PV Inverter', image: 'PV & DC/Inverter/IPV2/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'IPV3 PV Inverter', image: 'PV & DC/Inverter/IPV3/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'IPV4 PV Inverter', image: 'PV & DC/Inverter/IPV4/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'RS1 Rapid Shutdown Device', image: 'PV & DC/RSD/RS1/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'RS2 Rapid Shutdown Device', image: 'PV & DC/RSD/RS6/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'MRP1 RSD Control Box', image: 'PV & DC/RSD/MRP1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'PV Metal Combiner Box', image: 'PV & DC/Combiner Box/FE/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'PV Plastic Combiner Box', image: 'PV & DC/Combiner Box/BS/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'PV Transparent Box', image: 'PV & DC/Combiner Box/TS/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'PV Cable Wire', image: 'PV & DC/PV Cable/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'ITN PV Connector', image: 'PV & DC/Connector/1TN/2.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: '2TN PV Connector', image: 'PV & DC/Connector/2TN/2.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'MC4 PV Connector', image: 'PV & DC/Connector/MC4/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'DCIS1-32X Isolation Switch', image: 'PV & DC/Isolation Switch/DCIS1-32X/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'DCIS1-55 Isolation Switch', image: 'PV & DC/Isolation Switch/DCIS1-55/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'DCIS2-32X Isolation Switch', image: 'PV & DC/Isolation Switch/DCIS2-32X/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'DCIS4-32X Isolation Switch', image: 'PV & DC/Isolation Switch/DCIS4-32X/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'DCIS-32D Isolation Switch', image: 'PV & DC/Isolation Switch/DCIS-32D/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'DCIS-32P Isolation Switch', image: 'PV & DC/Isolation Switch/DCIS-32P/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'DCIS-32X Isolation Switch', image: 'PV & DC/Isolation Switch/DCIS-32X/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'DCIS-32XD Isolation Switch', image: 'PV & DC/Isolation Switch/DCIS-32XD/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'DCIS-32XP Isolation Switch', image: 'PV & DC/Isolation Switch/DCIS-32XP/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'DCIS-55 Isolation Switch', image: 'PV & DC/Isolation Switch/DCIS-55/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'MSP1-DC SPD', image: 'PV & DC/SPD/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: '10x38 DC Fuse Link', image: 'PV & DC/FUSE/1038/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: '10x85 DC Fuse Link', image: 'PV & DC/FUSE/1085/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'RT18-32 DC Fuse', image: 'PV & DC/FUSE/32/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'RT18-32X DC Fuse', image: 'PV & DC/FUSE/32X/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'RT18-32H DC Fuse', image: 'PV & DC/FUSE/32H/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'RT18-63 DC Fuse', image: 'PV & DC/FUSE/63/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'RT18-125 DC Fuse', image: 'PV & DC/FUSE/125/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'NT00 DC Fuse & Link', image: 'PV & DC/FUSE/NT/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'MCB1-125DC MCB', image: 'PV & DC/MCB1-125/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'MCM3-250DC MCCB', image: 'PV & DC/MCM3-250.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'MCM8-250DC MCCB', image: 'PV & DC/MCM8-250/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'MCM8-400DC MCCB', image: 'PV & DC/MCM8-400/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'MCM8A-250DC MCCB', image: 'PV & DC/MCM8A-250/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
-            { name: 'MCM8A-400DC MCCB', image: 'PV & DC/MCM8A-400/1.jpg', link: '#gallery', category: 'PV and DC Equipments' },
 
             { name: 'BNYF Insulated Disconnector', image: 'Electrical Accessories/BNYF.jpg', link: '#gallery', category: 'Electrical Accessories' },
             { name: 'BV Cold-pressed Terminal', image: 'Electrical Accessories/BV.jpg', link: '#gallery', category: 'Electrical Accessories' },
@@ -1867,10 +1852,10 @@
                 pagination.appendChild(prevPage);
             }
 
-            var maxPagesToShow = window.innerWidth <= 767 ? 3 : 5; // Adjust max pages to show based on screen width
+            var maxPagesToShow = window.innerWidth <= 768 ? 3 : 5; // Adjust max pages to show based on screen width
             var halfPagesToShow = Math.floor(maxPagesToShow / 2);
 
-            if (window.innerWidth <= 767) {
+            if (window.innerWidth <= 768) {
                 // Mobile view: Only show prev, current, next
                 for (var i = currentPage - 1; i <= currentPage + 1; i++) {
                     if (i > 0 && i <= numPages) {
@@ -1952,6 +1937,41 @@
             });
             displayProducts(filteredProducts, 1);
         }
+        
+        const toggleButton = document.querySelector('.toggle-button');
+        const sidebar = document.querySelector('.sidebar');
+
+        toggleButton.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                sidebar.classList.toggle('show-links');
+        
+                // 动态计算最大高度
+                if (sidebar.classList.contains('show-links')) {
+                    const content = sidebar.querySelector('ul');
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                } else {
+                    sidebar.querySelector('ul').style.maxHeight = '0px';
+                }
+            }
+        });
+
+        // 点击外部关闭侧边栏
+        document.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768 && !sidebar.contains(e.target) && !toggleButton.contains(e.target)) {
+                sidebar.classList.remove('show-links');
+                sidebar.querySelector('ul').style.maxHeight = '0px';
+            }
+        });
+
+        // 点击链接时关闭侧边栏
+        document.querySelectorAll('.sidebar ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768 && sidebar.classList.contains('show-links')) {
+                    sidebar.classList.remove('show-links');
+                    sidebar.querySelector('ul').style.maxHeight = '0px';
+                }
+            });
+        });
 
         document.getElementById('search-box').addEventListener('focus', function() {
             document.querySelector('.search-icon').style.color = 'red';
