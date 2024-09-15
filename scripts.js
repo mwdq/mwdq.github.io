@@ -37,6 +37,33 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    var navbarCollapse = document.querySelector('.navbar-collapse');
+    var navbarToggler = document.querySelector('.navbar-toggler');
+    var navbarLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    
+    // 监听菜单项的点击事件
+    navbarLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+            if (navbarCollapse.classList.contains('show')) {
+                navbarCollapse.classList.remove('show');
+                navbarToggler.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
+    
+    // 监听页面任意地方的点击事件
+    document.addEventListener('click', function(event) {
+        var isClickInsideNavbar = navbarCollapse.contains(event.target) || navbarToggler.contains(event.target);
+        
+        // 如果点击的不是导航栏内部，并且导航栏是展开的，关闭导航栏
+        if (!isClickInsideNavbar && navbarCollapse.classList.contains('show')) {
+            navbarCollapse.classList.remove('show');
+            navbarToggler.setAttribute('aria-expanded', 'false');
+        }
+    });
+});
+
 // Show/hide back-to-top button
 $(window).scroll(function () {
   if ($(this).scrollTop() > 1500) {
