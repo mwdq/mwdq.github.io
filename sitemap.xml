@@ -28,1059 +28,300 @@
   <priority>0.80</priority>
 </url>
 
+
 <url>
-  <loc>https://www.nbmwele.com/ADM.html</loc>
-  <lastmod>2024-08-14</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/AFD7-63.html</loc>
-  <lastmod>2024-07-11</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/AFD9-40N.html</loc>
-  <lastmod>2024-07-11</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/BHP-100.html</loc>
-  <lastmod>2024-12-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/BNP.html</loc>
-  <lastmod>2024-08-30</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/BTN.html</loc>
-  <lastmod>2024-08-30</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/Busbar.html</loc>
-  <lastmod>2024-07-11</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/DIN-Rail.html</loc>
-  <lastmod>2024-07-11</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/DZ47-63.html</loc>
-  <lastmod>2024-07-11</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/GEM-60.html</loc>
-  <lastmod>2024-12-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/GSD-60.html</loc>
-  <lastmod>2024-12-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MPL-63.html</loc>
-  <lastmod>2024-12-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/THQ-100.html</loc>
-  <lastmod>2024-12-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/HBOX.html</loc>
-  <lastmod>2024-07-11</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/JBOX.html</loc>
-  <lastmod>2024-07-11</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/KG316T.html</loc>
-  <lastmod>2024-07-11</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/KG317T.html</loc>
-  <lastmod>2024-08-02</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/LBOX.html</loc>
-  <lastmod>2024-07-11</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MBOX.html</loc>
-  <lastmod>2024-07-11</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MCB1-125.html</loc>
-  <lastmod>2024-07-11</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MCB1L-100.html</loc>
-  <lastmod>2024-07-11</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MCB3-125.html</loc>
-  <lastmod>2024-07-11</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MCB5-125.html</loc>
-  <lastmod>2024-10-24</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MCB3L-40.html</loc>
-  <lastmod>2024-07-11</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MCB6R-100.html</loc>
-  <lastmod>2024-07-11</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MCB7R-100.html</loc>
-  <lastmod>2024-07-11</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MCB8R-63.html</loc>
-  <lastmod>2024-07-11</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MCB9R-63.html</loc>
-  <lastmod>2024-07-11</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MCH1-100.html</loc>
-  <lastmod>2024-07-11</lastmod>
+  <loc>https://www.nbmwele.com/AFD1-63.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.nbmwele.com/MCS1-125.html</loc>
-  <lastmod>2024-07-11</lastmod>
+  <lastmod>2024-12-07</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nbmwele.com/MCS3-63.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.nbmwele.com/MCS6-40N.html</loc>
-  <lastmod>2024-07-11</lastmod>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/MD7.html</loc>
-  <lastmod>2024-08-30</lastmod>
+  <loc>https://www.nbmwele.com/MCH1-100.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/MD9.html</loc>
-  <lastmod>2024-08-30</lastmod>
+  <loc>https://www.nbmwele.com/MCH6-100.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/MIR-16.html</loc>
-  <lastmod>2024-07-11</lastmod>
+  <loc>https://www.nbmwele.com/Busbar.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/MRT8.html</loc>
-  <lastmod>2024-07-11</lastmod>
+  <loc>https://www.nbmwele.com/DIN-Rail.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/MRV8.html</loc>
-  <lastmod>2024-07-11</lastmod>
+  <loc>https://www.nbmwele.com/MDB1.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/MSD1-125.html</loc>
-  <lastmod>2024-07-11</lastmod>
+  <loc>https://www.nbmwele.com/MDB2.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/MSD3-125.html</loc>
-  <lastmod>2024-07-11</lastmod>
+  <loc>https://www.nbmwele.com/MDB3.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/MSD6-40N.html</loc>
-  <lastmod>2024-07-11</lastmod>
+  <loc>https://www.nbmwele.com/MDB4.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/MSP1.html</loc>
-  <lastmod>2024-07-11</lastmod>
+  <loc>https://www.nbmwele.com/MDB5.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/MSV1-100.html</loc>
-  <lastmod>2024-07-11</lastmod>
+  <loc>https://www.nbmwele.com/MEB6.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/MV3.html</loc>
-  <lastmod>2024-07-11</lastmod>
+  <loc>https://www.nbmwele.com/MPG7.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/MVC1-63.html</loc>
-  <lastmod>2024-07-11</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MVC3-63.html</loc>
-  <lastmod>2024-07-11</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MVC6-63.html</loc>
-  <lastmod>2024-07-11</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MVC9-100.html</loc>
-  <lastmod>2024-07-11</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/PBOX.html</loc>
-  <lastmod>2024-07-11</lastmod>
+  <loc>https://www.nbmwele.com/MHQ8.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.nbmwele.com/RT18.html</loc>
-  <lastmod>2024-07-11</lastmod>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/SUL180a.html</loc>
-  <lastmod>2024-07-11</lastmod>
+  <loc>https://www.nbmwele.com/MIR-16.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/SUL181d.html</loc>
-  <lastmod>2024-07-11</lastmod>
+  <loc>https://www.nbmwele.com/MSD6-40N.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/SUL181h.html</loc>
-  <lastmod>2024-07-11</lastmod>
+  <loc>https://www.nbmwele.com/SH-Q3.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/TMS5.html</loc>
-  <lastmod>2024-07-11</lastmod>
+  <loc>https://www.nbmwele.com/DZ47-63.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/TP8A16.html</loc>
-  <lastmod>2024-07-11</lastmod>
+  <loc>https://www.nbmwele.com/MCB1-125.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/WBOX.html</loc>
-  <lastmod>2024-07-11</lastmod>
+  <loc>https://www.nbmwele.com/MCB3-125.html</loc>
+  <lastmod>2024-12-07</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nbmwele.com/MCB5-125.html</loc>
+  <lastmod>2024-12-07</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nbmwele.com/MCB6-32N.html</loc>
+  <lastmod>2024-12-07</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nbmwele.com/MCB7-63.html</loc>
+  <lastmod>2024-12-07</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nbmwele.com/MPL-63.html</loc>
+  <lastmod>2024-12-07</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nbmwele.com/BHP-100.html</loc>
+  <lastmod>2024-12-07</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nbmwele.com/THQ-100.html</loc>
+  <lastmod>2024-12-07</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nbmwele.com/GSD-60.html</loc>
+  <lastmod>2024-12-07</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nbmwele.com/GEM-60.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.nbmwele.com/XJ3-D.html</loc>
-  <lastmod>2024-07-11</lastmod>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/MWS6.html</loc>
-  <lastmod>2024-08-17</lastmod>
+  <loc>https://www.nbmwele.com/MCB1L-100.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/MWS9.html</loc>
-  <lastmod>2024-08-17</lastmod>
+  <loc>https://www.nbmwele.com/MCB3L-40.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
-
 <url>
-  <loc>https://www.nbmwele.com/MCM1.html</loc>
-  <lastmod>2024-08-02</lastmod>
+  <loc>https://www.nbmwele.com/MCB6R-100.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/MCM1LE.html</loc>
-  <lastmod>2024-08-02</lastmod>
+  <loc>https://www.nbmwele.com/MCB7R-100.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/MCM3.html</loc>
-  <lastmod>2024-08-02</lastmod>
+  <loc>https://www.nbmwele.com/MCB8R-63.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/MCM7.html</loc>
-  <lastmod>2024-08-02</lastmod>
+  <loc>https://www.nbmwele.com/MCB9R-63.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/MCM8.html</loc>
-  <lastmod>2024-08-02</lastmod>
+  <loc>https://www.nbmwele.com/ADM.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/MCM8LE.html</loc>
-  <lastmod>2024-08-02</lastmod>
+  <loc>https://www.nbmwele.com/BNP.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/MCQ1.html</loc>
-  <lastmod>2024-08-02</lastmod>
+  <loc>https://www.nbmwele.com/BTN.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/MCQ2.html</loc>
-  <lastmod>2024-08-02</lastmod>
+  <loc>https://www.nbmwele.com/MD7.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/MCQ3.html</loc>
-  <lastmod>2024-08-02</lastmod>
+  <loc>https://www.nbmwele.com/MD9.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/MCW1.html</loc>
-  <lastmod>2024-08-02</lastmod>
+  <loc>https://www.nbmwele.com/TMS5.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/MCW3.html</loc>
-  <lastmod>2024-08-02</lastmod>
+  <loc>https://www.nbmwele.com/MSP1.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/MHGL.html</loc>
-  <lastmod>2024-08-02</lastmod>
+  <loc>https://www.nbmwele.com/KG316T.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/MHGLZ1.html</loc>
-  <lastmod>2024-08-02</lastmod>
+  <loc>https://www.nbmwele.com/KG317T.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/MHR17.html</loc>
-  <lastmod>2024-08-02</lastmod>
+  <loc>https://www.nbmwele.com/MRT8.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/MPS1.html</loc>
-  <lastmod>2024-08-02</lastmod>
+  <loc>https://www.nbmwele.com/SUL180a.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/MPS3.html</loc>
-  <lastmod>2024-08-02</lastmod>
+  <loc>https://www.nbmwele.com/SUL181d.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/NT00.html</loc>
-  <lastmod>2024-08-02</lastmod>
+  <loc>https://www.nbmwele.com/SUL181h.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
-
 <url>
-  <loc>https://www.nbmwele.com/230A.html</loc>
-  <lastmod>2024-08-30</lastmod>
+  <loc>https://www.nbmwele.com/TP8A16.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/1000.html</loc>
-  <lastmod>2024-08-30</lastmod>
+  <loc>https://www.nbmwele.com/MVM3.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/3000.html</loc>
-  <lastmod>2024-08-30</lastmod>
+  <loc>https://www.nbmwele.com/MVC1-63.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/CJ19.html</loc>
-  <lastmod>2024-08-30</lastmod>
+  <loc>https://www.nbmwele.com/MVC3-63.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/CJ19i.html</loc>
-  <lastmod>2024-08-30</lastmod>
+  <loc>https://www.nbmwele.com/MVC6-63.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/CJX2.html</loc>
-  <lastmod>2024-08-30</lastmod>
+  <loc>https://www.nbmwele.com/MVC9-100.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/CJX2E.html</loc>
-  <lastmod>2024-08-30</lastmod>
+  <loc>https://www.nbmwele.com/MSV1-100.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nbmwele.com/CJX2F.html</loc>
-  <lastmod>2024-08-30</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/CJX2i.html</loc>
-  <lastmod>2024-08-30</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/CJX2K.html</loc>
-  <lastmod>2024-08-30</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/CJX2S.html</loc>
-  <lastmod>2024-08-30</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/CJX2-s.html</loc>
-  <lastmod>2024-08-30</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/CJX2s-M.html</loc>
-  <lastmod>2024-08-30</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/CJX2Z.html</loc>
-  <lastmod>2024-08-30</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/CKJ5.html</loc>
-  <lastmod>2024-08-30</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/JD-8.html</loc>
-  <lastmod>2024-08-30</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/JD-56.html</loc>
-  <lastmod>2024-08-30</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/JR28.html</loc>
-  <lastmod>2024-08-30</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/JR28S.html</loc>
-  <lastmod>2024-08-30</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/LE6.html</loc>
-  <lastmod>2024-08-30</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MCP1.html</loc>
-  <lastmod>2024-08-30</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MCP6.html</loc>
-  <lastmod>2024-08-30</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MQ7.html</loc>
-  <lastmod>2024-08-30</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MQJ7.html</loc>
-  <lastmod>2024-08-30</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MQR2.html</loc>
-  <lastmod>2024-08-30</lastmod>
-  <priority>0.80</priority>
-</url>
-
-<url>
-  <loc>https://www.nbmwele.com/AD16.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/AD22.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/AZ.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/CD12.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/COB.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/CS-68.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/D4MC.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/D11.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/EP.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/HL.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/HT.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/HTB.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/HTM.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/LAY4.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/LAY5.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/LW28.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/LW28GS.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/ME.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MEA.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MF.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MW.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/PD.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/TZ.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/V-15.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/WL.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/XB5.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/XCK-J.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/XCK-M.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/XCK-P.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/XCK-S.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/XCK-T.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/Z-15.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-
-<url>
-  <loc>https://www.nbmwele.com/55.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/56.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/57.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/58.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/60.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/70.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/AFR.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/AH2.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/AH3.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/ASTP.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/ASY.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/ATDV.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/AVR.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/BK2.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/BZ142.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/DH48.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/DR-30.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/DR-75.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/H3BA.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/H3CR.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/H3Y.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/JBK3.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/JBK5.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/JQX.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/JSM8.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/JVM.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/LPV-20.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/LRS-35.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/LRS-350.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/LY2.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MK3P.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MP.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MS.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MS-15.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MSF-10.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MY2.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/RB.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/S-15.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/S-201.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/S-250.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/S-500.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/SBW.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/SG.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/SSR.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/SSR-1.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/SSR-3.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/SSR-H3.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/ST2P.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/ST3P.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/SVC.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/TB17.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/TGC.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/TH3A.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/TS711.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/TSD.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-
-<url>
-  <loc>https://www.nbmwele.com/BGMJ.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/BSMJ.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/DD52.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/DDS236.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/DDS236-1.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/DDS236-M.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/DDS236-V.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/DDS236-W.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/DDS238.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/DDSY736.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/DTS736.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/DTSY736.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/JKW5C.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/M45.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/M96.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/M96D.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/M266.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MCP.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MCT.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MF47.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MSQ.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/MY60.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/RCT.html</loc>
-  <lastmod>2024-09-01</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.nbmwele.com/XMT.html</loc>
-  <lastmod>2024-09-01</lastmod>
+  <loc>https://www.nbmwele.com/MRV8.html</loc>
+  <lastmod>2024-12-07</lastmod>
   <priority>0.80</priority>
 </url>
 
