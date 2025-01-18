@@ -654,6 +654,11 @@
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>https://www.nbmwele.com/M-600.html</loc>
+  <lastmod>2025-01-18</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://www.nbmwele.com/M-1000.html</loc>
   <lastmod>2024-12-10</lastmod>
   <priority>0.80</priority>
@@ -1071,6 +1076,26 @@
 <url>
   <loc>https://www.nbmwele.com/MSP8-DC.html</loc>
   <lastmod>2024-12-11</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nbmwele.com/IPV5.html</loc>
+  <lastmod>2025-01-18</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nbmwele.com/IPV6.html</loc>
+  <lastmod>2025-01-18</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nbmwele.com/IPV7.html</loc>
+  <lastmod>2025-01-18</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nbmwele.com/IPV8.html</loc>
+  <lastmod>2025-01-18</lastmod>
   <priority>0.80</priority>
 </url>
 
