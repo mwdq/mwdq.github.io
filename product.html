@@ -799,6 +799,16 @@
             transform: scale(1.2);
         }
 
+        .fade-out {
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        .fade-in {
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
         @media (max-width: 991px) {
             .navbar-nav {
                 text-align: center;
@@ -2028,13 +2038,36 @@
         ];
         var productsPerPage = 12;
 
+        function filterProducts(category) {
+           var currentFilteredProducts = products.filter(function(product) {
+                return category === 'all' || product.category === category;
+            });
+
+            // 每次点击分类都重新打乱顺序
+            currentFilteredProducts.sort(() => Math.random() - 0.5);
+
+            displayProducts(currentFilteredProducts, 1);
+        }
+
+                // 随机打乱 products 数组
+        products.sort(() => Math.random() - 0.5);
+
+        // 然后再显示产品
+        displayProducts(products, 1);
+
         function displayProducts(productsArray, page) {
-            var startIndex = (page - 1) * productsPerPage;
-            var endIndex = startIndex + productsPerPage;
-            var productRow = document.getElementById('product-row');
+        var startIndex = (page - 1) * productsPerPage;
+        var endIndex = startIndex + productsPerPage;
+        var productRow = document.getElementById('product-row');
+
+        // 添加淡出动画
+        productRow.classList.add('fade-out');
+        setTimeout(function () {
             productRow.innerHTML = '';
-            for (var i = startIndex; i < Math.min(endIndex, productsArray.length); i++) {
-                var product = productsArray[i];
+    
+            var currentPageItems = productsArray.slice(startIndex, endIndex);
+
+            currentPageItems.forEach(function(product) {
                 var productHTML = `
                     <div class="col-md-3 mb-3">
                         <div class="product-item" onmouseover="changeTextColor(this, 'red')" onmouseout="resetTextColor(this)">
@@ -2044,15 +2077,19 @@
                                     <a href="${product.link}"><i class="fas fa-eye"></i></a>
                                 </div>
                             </div>
-                            <div class="product-name">
-                                ${product.name}
-                            </div>
+                            <div class="product-name">${product.name}</div>
                         </div>
-                    </div>
-                `;
+                    </div>`;
                 productRow.insertAdjacentHTML('beforeend', productHTML);
-            }
+            });
+
             displayPagination(productsArray, page);
+
+            // 动画淡入
+            productRow.classList.remove('fade-out');
+            productRow.classList.add('fade-in');
+            setTimeout(() => productRow.classList.remove('fade-in'), 500);
+        }, 200);
         }
 
         function displayPagination(productsArray, currentPage) {
@@ -2154,13 +2191,6 @@
         function resetTextColor(element) {
             element.querySelector('.product-name').style.color = '';
         }
-
-        function filterProducts(category) {
-            var filteredProducts = products.filter(function(product) {
-                return category === 'all' || product.category === category;
-            });
-            displayProducts(filteredProducts, 1);
-        }
         
         const toggleButton = document.querySelector('.toggle-button');
         const sidebar = document.querySelector('.sidebar');
@@ -2212,8 +2242,6 @@
             });
             displayProducts(filteredProducts, 1);
         });
-
-        displayProducts(products, 1);
     </script>
 </body>
 </html>
