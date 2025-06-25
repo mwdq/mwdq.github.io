@@ -2036,7 +2036,7 @@
             { name: 'A/C Condensate Pump', image: 'Home Appliances/HAS/33.jpg', link: '#gallery', category: 'Home Appliances' },
             { name: 'MWH8 Electric Water Heater', image: 'Home Appliances/HAS/34.jpg', link: '#gallery', category: 'Home Appliances' },
         ];
-        var productsPerPage = 12;
+        var productsPerPage = window.innerWidth <= 768 ? 6 : 12;
 
         function filterProducts(category) {
            var currentFilteredProducts = products.filter(function(product) {
@@ -2225,6 +2225,19 @@
                     sidebar.querySelector('ul').style.maxHeight = '0px';
                 }
             });
+        });
+
+        let lastScrollTop = 0;
+        window.addEventListener("scroll", function () {
+            var sidebar = document.querySelector(".sidebar");
+            var st = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (window.innerWidth <= 768 && st > lastScrollTop) {
+                // 用户向下滑动
+                sidebar.classList.remove("show-links");
+            }
+
+            lastScrollTop = st <= 0 ? 0 : st; // 防止负值
         });
 
         document.getElementById('search-box').addEventListener('focus', function() {
