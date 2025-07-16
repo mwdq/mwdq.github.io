@@ -1,869 +1,1150 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-    content="Discover the leader in electrical equipment manufacturers: Mingway provides high-quality, reliable electrical equipment solutions to meet your needs.">
-    <title>Reliable Energy Solutions Provider | MINGWAY</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover the leader in electrical equipment manufacturers: MEENWE provides high-quality, reliable electrical equipment solutions to meet your needs."
+    />
+    <title>Reliable Energy Solutions Provider | MEENWE</title>
     <link rel="icon" href="img/favicon.ico" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f2f2f2;
-            color: #333;
-            animation: fadeIn 1.5s ease;
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+        color: #333;
+        animation: fadeIn 1.5s ease;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
         }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+        to {
+          opacity: 1;
+        }
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .navbar {
+        background-color: transparent;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        animation: slideDown 1.5s ease forwards;
+        transition: transform 0.5s ease;
+      }
+      @keyframes slideDown {
+        from {
+          top: -100px;
+        }
+        to {
+          top: 0;
+        }
+      }
+      .navbar.hide {
+        transform: translateY(-100%);
+      }
+      .navbar.scrolled {
+        background-color: #fff;
+      }
+      .navbar:hover {
+        background-color: #fff;
+      }
+      .navbar-brand {
+        margin-right: 0;
+        padding: 0 36px;
+      }
+      .navbar-brand img {
+        max-height: 40px;
+        transition: transform 0.3s ease;
+      }
+      .navbar-brand img:hover {
+        transform: scale(1.1);
+      }
+      .navbar-nav {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+      }
+      .navbar-nav .nav-link {
+        color: #333 !important;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        padding: 10px 0;
+        margin: 0 36px;
+        position: relative;
+        transition: color 0.3s ease;
+      }
+      .navbar-nav .nav-link:hover {
+        color: #ff0000 !important;
+      }
+      .navbar-nav .nav-link::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #ff0000;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.3s ease;
+      }
+      .navbar-nav .nav-link:hover::before {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+      .navbar-toggler {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+      .navbar-toggler-icon {
+        font-size: 24px;
+        color: #fff;
+        transition: transform 0.3s ease;
+      }
+      .navbar-toggler-icon .bar {
+        display: block;
+        width: 30px;
+        height: 4px;
+        background-color: #000;
+        margin: 6px auto;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+      .navbar-toggler[aria-expanded="true"]
+        .navbar-toggler-icon
+        .bar:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+      }
+      .navbar-toggler[aria-expanded="true"]
+        .navbar-toggler-icon
+        .bar:nth-child(2) {
+        opacity: 0;
+      }
+      .navbar-toggler[aria-expanded="true"]
+        .navbar-toggler-icon
+        .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+      }
+      .navbar-toggler[aria-expanded="false"]
+        .navbar-toggler-icon
+        .bar:nth-child(1),
+      .navbar-toggler[aria-expanded="false"]
+        .navbar-toggler-icon
+        .bar:nth-child(3) {
+        transform: translateY(0);
+      }
+      .navbar-toggler[aria-expanded="false"]
+        .navbar-toggler-icon
+        .bar:nth-child(2) {
+        opacity: 1;
+      }
+
+      .video-container {
+        position: relative;
+        padding-bottom: 45.8%;
+        overflow: hidden;
+      }
+      .video-container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+      }
+
+      .scroll-down-btn {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.2s ease;
+      }
+      .arrow {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 15px solid #ff0000;
+        animation: arrowMove 1s infinite;
+      }
+      .scroll-down-btn:hover .arrow {
+        border-top-color: #0000ff;
+      }
+      @keyframes arrowMove {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(10px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      .content {
+        padding: 50px 0;
+        text-align: center;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+        color: #333;
+        text-transform: uppercase;
+      }
+
+      .video-button {
+        display: inline-block;
+        background-color: transparent;
+        padding: 10px 20px;
+        border: 2px solid #007bff;
+        border-radius: 30px;
+        transition: transform 0.3s ease, background-color 0.3s ease,
+          color 0.3s ease;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+        color: #007bff;
+      }
+      .video-button:hover {
+        background-color: #007bff;
+        color: #fff;
+        transform: scale(1.05);
+      }
+      .video-button:active {
+        transform: scale(0.95);
+      }
+      .video-button i {
+        margin-right: 5px;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
         }
 
-        html {
-            scroll-behavior: smooth;
+        100% {
+          transform: rotate(360deg);
         }
+      }
+      .play-text {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1rem;
+      }
+      .video-link {
+        text-decoration: none;
+      }
 
-        .navbar {
-            background-color: transparent;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            animation: slideDown 1.5s ease forwards;
-            transition: transform 0.5s ease;
+      .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .gallery img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .carousel-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+
+      .featured-products {
+        padding: 50px 0;
+        background-color: #f9f9f9;
+        text-align: center;
+        animation: fadeIn 1s ease;
+      }
+      .featured-products .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .featured-products h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+      .product-card {
+        display: inline-block;
+        margin: 20px;
+        max-width: 300px;
+        transition: transform 0.3s ease;
+      }
+      .product-card:hover {
+        transform: scale(1.05);
+      }
+      .product-card img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        display: block;
+        margin: 0 auto;
+      }
+      .product-card h3 {
+        font-size: 20px;
+        margin-top: 10px;
+      }
+
+      .owl-prev,
+      .owl-next {
+        position: absolute;
+        top: 35%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.7);
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .owl-prev:hover,
+      .owl-next:hover {
+        background-color: rgba(0, 0, 0, 0.9);
+      }
+      .owl-prev {
+        left: 10px;
+      }
+      .owl-next {
+        right: 10px;
+      }
+
+      .service {
+        text-align: center;
+        margin-bottom: 30px;
+        padding: 20px;
+        border: 2px solid #007bff;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+      }
+      .service:hover {
+        transform: scale(1.05);
+      }
+      .service i {
+        font-size: 3em;
+        margin-bottom: 20px;
+        color: #007bff;
+      }
+      .service h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #333;
+      }
+      .service p {
+        font-size: 16px;
+        margin-bottom: 0;
+        color: #666;
+      }
+
+      .faq-section {
+        background-color: #f9f9f9;
+        padding: 50px 0;
+        text-align: center;
+        animation: fadeIn 1s ease;
+      }
+      .faq-section h2 {
+        margin-bottom: 20px;
+      }
+
+      .card {
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card-header {
+        background-color: #333;
+        color: #fff;
+        padding: 0;
+        border-radius: 10px 10px 0 0;
+      }
+
+      .btn-link {
+        color: #fff;
+        text-decoration: none !important;
+        font-weight: bold;
+        width: 100%;
+        text-align: left;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .btn-link:hover {
+        color: #11ff00;
+      }
+
+      .btn-link:after {
+        content: "\f078"; /* FontAwesome down arrow */
+        font-family: "FontAwesome";
+        font-size: 16px;
+      }
+
+      .btn-link.collapsed:after {
+        content: "\f054"; /* FontAwesome right arrow */
+      }
+
+      .card-body {
+        background-color: #fff;
+        text-align: justify;
+        font-size: 16px;
+        line-height: 1.6;
+        padding: 20px;
+        border-radius: 0 0 10px 10px;
+      }
+
+      .footer {
+        background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+        color: #ffffff;
+        padding: 60px 0;
+        font-family: "Montserrat", sans-serif;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        animation: backgroundAnimation 10s infinite alternate;
+      }
+
+      @keyframes backgroundAnimation {
+        0% {
+          background-position: 0% 50%;
         }
-        @keyframes slideDown {
-            from {
-                top: -100px;
-            }
-            to {
-                top: 0;
-            }
+        100% {
+          background-position: 100% 50%;
         }
-        .navbar.hide {
-            transform: translateY(-100%);
+      }
+
+      .footer-logo {
+        width: auto;
+        transition: transform 0.3s ease-in-out;
+        animation: logoBounce 3s infinite;
+      }
+
+      @keyframes logoBounce {
+        0%,
+        100% {
+          transform: translateY(0);
         }
-        .navbar.scrolled {
-            background-color: #fff;
+        50% {
+          transform: translateY(-10px);
         }
-        .navbar:hover {
-            background-color: #fff;
+      }
+
+      .footer-slogan {
+        font-style: italic;
+        font-size: 1.2em;
+        color: #f0c040;
+        margin-bottom: 20px;
+        transition: color 0.3s ease-in-out;
+        animation: textFade 5s infinite;
+      }
+
+      @keyframes textFade {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+      }
+
+      .footer h4 {
+        margin-bottom: 20px;
+        font-size: 1.5em;
+        color: #f0c040;
+        position: relative;
+        display: inline-block;
+        transition: color 0.3s ease-in-out;
+        animation: textGlow 3s infinite;
+      }
+
+      @keyframes textGlow {
+        0%,
+        100% {
+          text-shadow: 0 0 10px #f0c040;
+        }
+        50% {
+          text-shadow: 0 0 20px #f0c040;
+        }
+      }
+
+      .footer h4::after {
+        content: "";
+        display: block;
+        width: 50%;
+        height: 3px;
+        background: #f0c040;
+        margin-top: 5px;
+        transition: width 0.3s ease-in-out;
+      }
+
+      .footer h4:hover {
+        color: #ffffff;
+      }
+
+      .footer h4:hover::after {
+        width: 100%;
+      }
+
+      .footer p,
+      .footer a {
+        font-size: 1em;
+        color: #cccccc;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .footer a:hover {
+        color: #f0c040;
+        text-decoration: none;
+      }
+
+      .footer ul {
+        padding: 0;
+        list-style-type: none;
+      }
+
+      .footer ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer ul li a {
+        color: #cccccc;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .footer ul li a:hover {
+        color: #f0c040;
+      }
+
+      .footer .social-media ul {
+        padding: 0;
+        list-style-type: none;
+      }
+
+      .footer .social-media ul li {
+        display: inline;
+        margin: 0 10px;
+      }
+
+      .footer .social-media ul li a {
+        font-size: 1.5em;
+        color: #cccccc;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .footer .social-media ul li a:hover {
+        color: #f0c040;
+      }
+
+      #footer-canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+      }
+
+      .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #ffc107;
+        color: white;
+        border: none;
+        padding: 15px 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+        z-index: 1000;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+      .back-to-top:hover {
+        background-color: #ff9800;
+        transform: scale(1.2);
+      }
+
+      @media (max-width: 991px) {
+        .navbar-nav {
+          text-align: center;
+          margin-left: 0;
+        }
+        .navbar-nav .nav-item {
+          display: inline-block;
+          float: none;
+          margin: 0 20px;
         }
         .navbar-brand {
-            margin-right: 0;
-            padding: 0 36px;
+          padding-left: 12px;
         }
-        .navbar-brand img {
-            max-height: 40px;
-            transition: transform 0.3s ease;
-        }
-        .navbar-brand img:hover {
-            transform: scale(1.1);
-        }
-        .navbar-nav {
-            margin-left: auto;
-            display: flex;
-            align-items: center;
-        }
-        .navbar-nav .nav-link {
-            color: #333 !important;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            padding: 10px 0;
-            margin: 0 36px;
-            position: relative;
-            transition: color 0.3s ease;
-        }
-        .navbar-nav .nav-link:hover {
-            color: #ff0000 !important;
-        }
-        .navbar-nav .nav-link::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 2px;
-            background-color: #ff0000;
-            transform: scaleX(0);
-            transform-origin: bottom right;
-            transition: transform 0.3s ease;
-        }
-        .navbar-nav .nav-link:hover::before {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-        }
-        .navbar-toggler {
-            background-color: transparent;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        .navbar-toggler-icon {
-            font-size: 24px;
-            color: #fff;
-            transition: transform 0.3s ease;
-        }
-        .navbar-toggler-icon .bar {
-            display: block;
-            width: 30px;
-            height: 4px;
-            background-color: #000;
-            margin: 6px auto;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon .bar:nth-child(1) {
-            transform: translateY(9px) rotate(45deg);
-        }
-        .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon .bar:nth-child(2) {
-            opacity: 0;
-        }
-        .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon .bar:nth-child(3) {
-            transform: translateY(-9px) rotate(-45deg);
-        }
-        .navbar-toggler[aria-expanded="false"] .navbar-toggler-icon .bar:nth-child(1),
-        .navbar-toggler[aria-expanded="false"] .navbar-toggler-icon .bar:nth-child(3) {
-            transform: translateY(0);
-        }
-        .navbar-toggler[aria-expanded="false"] .navbar-toggler-icon .bar:nth-child(2) {
-            opacity: 1;
-        }
-        
+
         .video-container {
-            position: relative;
-            padding-bottom: 45.8%;
-            overflow: hidden;
+          height: auto;
         }
         .video-container video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            object-fit: cover;
+          height: auto;
+        }
+
+        .col-md-6 {
+          margin-bottom: 20px;
+        }
+        #contact .col-md-6:last-child {
+          margin-top: 20px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .navbar-nav .nav-link {
+          margin: 0;
         }
 
         .scroll-down-btn {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            cursor: pointer;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.2s ease;
-        }
-        .arrow {
-            width: 0;
-            height: 0;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-top: 15px solid #ff0000;
-            animation: arrowMove 1s infinite;
-        }
-        .scroll-down-btn:hover .arrow {
-            border-top-color: #0000ff;
-        }
-        @keyframes arrowMove {
-            0% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(10px);
-            }
-            100% {
-                transform: translateY(0);
-            }
+          bottom: 5px;
         }
 
-        .content {
-            padding: 50px 0;
-            text-align: center;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-            color: #333;
-            text-transform: uppercase;
-        }
-
-        .video-button {
-            display: inline-block;
-            background-color: transparent;
-            padding: 10px 20px;
-            border: 2px solid #007bff;
-            border-radius: 30px;
-            transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: relative;
-            overflow: hidden;
-            color: #007bff;
-        }
-        .video-button:hover {
-            background-color: #007bff;
-            color: #fff;
-            transform: scale(1.05);
-        }
-        .video-button:active {
-            transform: scale(0.95);
-        }
-        .video-button i {
-            margin-right: 5px;
-        }
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-        .play-text {
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 1rem;
-        }
-        .video-link {
-            text-decoration: none;
-        }
-
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .carousel-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        .featured-products {
-            padding: 50px 0;
-            background-color: #f9f9f9;
-            text-align: center;
-            animation: fadeIn 1s ease;
-        }
-        .featured-products .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .featured-products h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-        .product-card {
-            display: inline-block;
-            margin: 20px;
-            max-width: 300px;
-            transition: transform 0.3s ease;
-        }
-        .product-card:hover {
-            transform: scale(1.05);
-        }
-        .product-card img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            display: block;
-            margin: 0 auto;
-        }
-        .product-card h3 {
-            font-size: 20px;
-            margin-top: 10px;
-        }
-
-        .owl-prev,
-        .owl-next {        
-            position: absolute;
-            top: 35%;
-            transform: translateY(-50%);
-            width: 40px;
-            height: 40px;
-            font-size: 20px;
-            color: #fff;
-            background-color: rgba(0, 0, 0, 0.7);
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .owl-prev:hover,
-        .owl-next:hover {
-            background-color: rgba(0, 0, 0, 0.9);
-        }
-        .owl-prev {
-            left: 10px;
-        }
-        .owl-next {
-            right: 10px;
-        }
-        
-        .service {
-            text-align: center;
-            margin-bottom: 30px;
-            padding: 20px;
-            border: 2px solid #007bff;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-        .service:hover {
-            transform: scale(1.05);
-        }
-        .service i {
-            font-size: 3em;
-            margin-bottom: 20px;
-            color: #007bff;
-        }
-        .service h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: #333;
-        }
-        .service p {
-            font-size: 16px;
-            margin-bottom: 0;
-            color: #666;
-        }
-
-        .faq-section {
-            background-color: #f9f9f9;
-            padding: 50px 0;
-            text-align: center;
-            animation: fadeIn 1s ease;
-        }
-        .faq-section h2 {
-            margin-bottom: 20px;
-        }
-
-        .card {
-            margin-bottom: 20px;
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card-header {
-            background-color: #333;
-            color: #fff;
-            padding: 0;
-            border-radius: 10px 10px 0 0;
-        }
-
-        .btn-link {
-            color: #fff;
-            text-decoration: none !important;
-            font-weight: bold;
-            width: 100%;
-            text-align: left;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .btn-link:hover {
-            color: #11ff00;
-        }
-
-        .btn-link:after {
-            content: '\f078'; /* FontAwesome down arrow */
-            font-family: 'FontAwesome';
-            font-size: 16px;
-        }
-
-        .btn-link.collapsed:after {
-            content: '\f054'; /* FontAwesome right arrow */
-        }
-
-        .card-body {
-            background-color: #fff;
-            text-align: justify;
-            font-size: 16px;
-            line-height: 1.6;
-            padding: 20px;
-            border-radius: 0 0 10px 10px;
-        }
-
-        .footer {
-            background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
-            color: #ffffff;
-            padding: 60px 0;
-            font-family: 'Montserrat', sans-serif;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-            animation: backgroundAnimation 10s infinite alternate;
-        }
-
-        @keyframes backgroundAnimation {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 100% 50%; }
-        }
-
-        .footer-logo {
-            width: auto;
-            transition: transform 0.3s ease-in-out;
-            animation: logoBounce 3s infinite;
-        }
-
-        @keyframes logoBounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .footer-slogan {
-            font-style: italic;
-            font-size: 1.2em;
-            color: #f0c040;
-            margin-bottom: 20px;
-            transition: color 0.3s ease-in-out;
-            animation: textFade 5s infinite;
-        }
-
-        @keyframes textFade {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-
-        .footer h4 {
-            margin-bottom: 20px;
-            font-size: 1.5em;
-            color: #f0c040;
-            position: relative;
-            display: inline-block;
-            transition: color 0.3s ease-in-out;
-            animation: textGlow 3s infinite;
-        }
-
-        @keyframes textGlow {
-            0%, 100% { text-shadow: 0 0 10px #f0c040; }
-            50% { text-shadow: 0 0 20px #f0c040; }
-        }
-
-        .footer h4::after {
-            content: '';
-            display: block;
-            width: 50%;
-            height: 3px;
-            background: #f0c040;
-            margin-top: 5px;
-            transition: width 0.3s ease-in-out;
-        }
-
-        .footer h4:hover {
-            color: #ffffff;
-        }
-
-        .footer h4:hover::after {
-            width: 100%;
-        }
-
-        .footer p, .footer a {
-            font-size: 1em;
-            color: #cccccc;
-            transition: color 0.3s ease-in-out;
-        }
-
-        .footer a:hover {
-            color: #f0c040;
-            text-decoration: none;
-        }
-
-        .footer ul {
-            padding: 0;
-            list-style-type: none;
-        }
-
-        .footer ul li {
-            margin-bottom: 10px;
-        }
-
-        .footer ul li a {
-            color: #cccccc;
-            transition: color 0.3s ease-in-out;
-        }
-
-        .footer ul li a:hover {
-            color: #f0c040;
-        }
-
-        .footer .social-media ul {
-            padding: 0;
-            list-style-type: none;
-        }
-
-        .footer .social-media ul li {
-            display: inline;
-            margin: 0 10px;
-        }
-
-        .footer .social-media ul li a {
-            font-size: 1.5em;
-            color: #cccccc;
-            transition: color 0.3s ease-in-out;
-        }
-
-        .footer .social-media ul li a:hover {
-            color: #f0c040;
-        }
-
-        #footer-canvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -2;
-        }
-
-        .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #ffc107;
-            color: white;
-            border: none;
-            padding: 15px 20px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: none;
-            z-index: 1000;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-        .back-to-top:hover {
-            background-color: #ff9800;
-            transform: scale(1.2);
-        }
-
-        @media (max-width: 991px) {
-            .navbar-nav {
-                text-align: center;
-                margin-left: 0;
-            }
-            .navbar-nav .nav-item {
-                display: inline-block;
-                float: none;
-                margin: 0 20px;
-            }
-            .navbar-brand {
-                padding-left: 12px;
-            }
-
-            .video-container {
-                height: auto;
-            }
-            .video-container video {
-                height: auto;
-            }
-
-            .col-md-6 {
-                margin-bottom: 20px;
-            }
-            #contact .col-md-6:last-child {
-                margin-top: 20px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .navbar-nav .nav-link {
-                margin: 0;
-            }
-
-            .scroll-down-btn {
-                bottom: 5px;
-            }
-            
-            .footer p, .footer a {
-                font-size: 14px;
-            }
-        }
+        .footer p,
+        .footer a {
+          font-size: 14px;
+        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="#"><img src="img/logo.png" alt="MWE Logo"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
-                </ul>
-            </div>
+      <div class="container">
+        <a class="navbar-brand" href="#"
+          ><img src="img/logo.png" alt="MWE Logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="product.html">Products</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <!-- Background video -->
-    <div class="video-container" itemscope itemtype="http://schema.org/VideoObject">
-    <meta itemprop="name" content="Background Video">
-    <meta itemprop="description" content="This is a background video for the homepage">
-    <meta itemprop="thumbnailUrl" content="img/background-video-thumbnail.jpg">
-    <meta itemprop="uploadDate" content="2024-05-18T00:00:00+00:00">
-    <video autoplay muted loop itemprop="contentUrl" title="Congratulations on finding an electrical expert!">
-        <source src="img/background-video.mp4" type="video/mp4">
+    <div
+      class="video-container"
+      itemscope
+      itemtype="http://schema.org/VideoObject"
+    >
+      <meta itemprop="name" content="Background Video" />
+      <meta
+        itemprop="description"
+        content="This is a background video for the homepage"
+      />
+      <meta
+        itemprop="thumbnailUrl"
+        content="img/background-video-thumbnail.jpg"
+      />
+      <meta itemprop="uploadDate" content="2024-05-18T00:00:00+00:00" />
+      <video
+        autoplay
+        muted
+        loop
+        itemprop="contentUrl"
+        title="Congratulations on finding an electrical expert!"
+      >
+        <source src="img/background-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
-    </video>
-    <a href="#about" class="scroll-down-btn" aria-label="Read more about Mingway">
+      </video>
+      <a
+        href="#about"
+        class="scroll-down-btn"
+        aria-label="Read more about MEENWE"
+      >
         <div class="arrow"></div>
-    </a>
+      </a>
     </div>
 
     <!-- About us -->
     <div id="about" class="content active">
-        <div class="container">
-            <h2 class="section-title">About MINGWAY</h2>
-            <div class="row">
-                <div class="col-md-12">
-                    <p style="text-align: justify;">
-                        Ningbo Mingway Electric Co., Ltd. (hereinafter referred to as "MINGWAY") is a leading smart energy solutions provider, located in Ningbo City, Zhejiang, China, 315000. Over the past 25 years in the industry, MINGWAY has been adhering to the business policy of "Growth", "Quality", "Efficiency", and "Innovation". At present, the company has more than 50,000 sqm of modern manufacturing bases in Wenzhou and Ningbo with over 600 employees, including over 60 R&D and technical personnel, with its business covering more than 80 countries and regions. MINGWAY has multiple production workshops for mold design, parts manufacturing, welding, and assembly. OEM, ODM, OBM, SKD, CKD and other business cooperation models are supported. We provide customers with a full range of services covering market cultivation, technical training, and factory construction. We will be committed to becoming a globally renowned manufacturer in the power distribution and electrical industry, safeguarding the power safety of global customers, and helping the development of green and digital energy.
-                    </p>
-                    <a href="https://drive.google.com/file/d/18N9Gqdi5_XoMcFFPCtyJXtNbmFNlB3Ls/view?usp=sharing" target="_blank" class="video-link">
-                        <div class="video-button">
-                            <span class="play-text"><i class="fas fa-play-circle"></i> One minute Video</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <h2 style="padding: 20px;">Our Facilities</h2>
-            <div class="row gallery">
-                <div class="col-md-4 mb-4">
-                    <img src="img/gate.png" alt="Company" class="img-fluid" srcset="img/gate.png 1x">
-                    <h4 class="mt-2">MWE Group</h4>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <img src="img/office.png" alt="Office" class="img-fluid" srcset="img/office.png 1x">
-                    <h4 class="mt-2">Office</h4>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <img src="img/conference.png" alt="Conference Room" class="img-fluid" srcset="img/conference.png 1x">
-                    <h4 class="mt-2">Conference Room</h4>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div id="productionCarousel" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="img/production1.png" alt="Production 1" class="img-fluid" srcset="img/production1.png 1x">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/production2.png" alt="Production 2" class="img-fluid" srcset="img/production2.png 2x">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/production3.png" alt="Production 3" class="img-fluid" srcset="img/production3.png 3x">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/production4.png" alt="Production 4" class="img-fluid" srcset="img/production4.png 4x">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/production5.png" alt="Production 5" class="img-fluid" srcset="img/production5.png 5x">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/production6.png" alt="Production 2" class="img-fluid" srcset="img/production2.png 2x">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/production7.png" alt="Production 3" class="img-fluid" srcset="img/production3.png 3x">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/production8.png" alt="Production 4" class="img-fluid" srcset="img/production4.png 4x">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/production9.png" alt="Production 5" class="img-fluid" srcset="img/production5.png 5x">
-                            </div>
-                        </div>
-                        <a class="carousel-control-prev" href="#productionCarousel" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#productionCarousel" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                    <h4 class="mt-2">Production</h4>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div id="testingCarousel" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="img/testing1.png" alt="Testing 1" class="img-fluid" srcset="img/testing1.png 1x">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/testing2.png" alt="Testing 2" class="img-fluid" srcset="img/testing2.png 2x">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/testing3.png" alt="Testing 3" class="img-fluid" srcset="img/testing3.png 3x">
-                            </div>
-                        </div>
-                        <a class="carousel-control-prev" href="#testingCarousel" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#testingCarousel" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                    <h4 class="mt-2">Testing</h4>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div id="rdCarousel" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="img/rd1.png" alt="R&D 1" class="img-fluid" srcset="img/rd1.png 1x">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/rd2.png" alt="R&D 2" class="img-fluid" srcset="img/rd2.png 2x">
-                            </div>
-                        </div>
-                        <a class="carousel-control-prev" href="#rdCarousel" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#rdCarousel" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                    <h4 class="mt-2">R&D</h4>
-                </div>
-            </div>
+      <div class="container">
+        <h2 class="section-title">About MEENWE</h2>
+        <div class="row">
+          <div class="col-md-12">
+            <p style="text-align: justify">
+              MEENWE Electric Co., Ltd. (hereinafter referred to as "MEENWE") is
+              a leading smart energy solutions provider, located in Ningbo City
+              315000, China. Over the past 25 years in the industry, MEENWE has
+              been adhering to the business policy of "Growth", "Quality",
+              "Efficiency", and "Innovation". At present, the company has more
+              than 50,000 sqm of modern manufacturing bases in Wenzhou and
+              Ningbo with over 600 employees, including over 60 R&D and
+              technical personnel, with its business covering more than 80
+              countries and regions. MEENWE has multiple production workshops
+              for mold design, parts manufacturing, welding, and assembly. We
+              support OEM, ODM, OBM, SKD, CKD and other business cooperation
+              models, and provide customers with a full range of services
+              covering market cultivation, technical training, and factory
+              construction. We will be committed to becoming a globally renowned
+              manufacturer in the power distribution and electrical industry,
+              safeguarding the power safety of global customers, and helping the
+              development of green and digital energy.
+            </p>
+            <a
+              href="https://drive.google.com/file/d/18N9Gqdi5_XoMcFFPCtyJXtNbmFNlB3Ls/view?usp=sharing"
+              target="_blank"
+              class="video-link"
+            >
+              <div class="video-button">
+                <span class="play-text"
+                  ><i class="fas fa-play-circle"></i> One minute Video</span
+                >
+              </div>
+            </a>
+          </div>
         </div>
+        <h2 style="padding: 20px">Our Facilities</h2>
+        <div class="row gallery">
+          <div class="col-md-4 mb-4">
+            <img
+              src="img/gate.png"
+              alt="Company"
+              class="img-fluid"
+              srcset="img/gate.png 1x"
+            />
+            <h4 class="mt-2">MWE Group</h4>
+          </div>
+          <div class="col-md-4 mb-4">
+            <img
+              src="img/office.png"
+              alt="Office"
+              class="img-fluid"
+              srcset="img/office.png 1x"
+            />
+            <h4 class="mt-2">Office</h4>
+          </div>
+          <div class="col-md-4 mb-4">
+            <img
+              src="img/conference.png"
+              alt="Conference Room"
+              class="img-fluid"
+              srcset="img/conference.png 1x"
+            />
+            <h4 class="mt-2">Conference Room</h4>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div
+              id="productionCarousel"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="img/production1.png"
+                    alt="Production 1"
+                    class="img-fluid"
+                    srcset="img/production1.png 1x"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="img/production2.png"
+                    alt="Production 2"
+                    class="img-fluid"
+                    srcset="img/production2.png 2x"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="img/production3.png"
+                    alt="Production 3"
+                    class="img-fluid"
+                    srcset="img/production3.png 3x"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="img/production4.png"
+                    alt="Production 4"
+                    class="img-fluid"
+                    srcset="img/production4.png 4x"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="img/production5.png"
+                    alt="Production 5"
+                    class="img-fluid"
+                    srcset="img/production5.png 5x"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="img/production6.png"
+                    alt="Production 2"
+                    class="img-fluid"
+                    srcset="img/production2.png 2x"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="img/production7.png"
+                    alt="Production 3"
+                    class="img-fluid"
+                    srcset="img/production3.png 3x"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="img/production8.png"
+                    alt="Production 4"
+                    class="img-fluid"
+                    srcset="img/production4.png 4x"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="img/production9.png"
+                    alt="Production 5"
+                    class="img-fluid"
+                    srcset="img/production5.png 5x"
+                  />
+                </div>
+              </div>
+              <a
+                class="carousel-control-prev"
+                href="#productionCarousel"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#productionCarousel"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            <h4 class="mt-2">Production</h4>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div
+              id="testingCarousel"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="img/testing1.png"
+                    alt="Testing 1"
+                    class="img-fluid"
+                    srcset="img/testing1.png 1x"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="img/testing2.png"
+                    alt="Testing 2"
+                    class="img-fluid"
+                    srcset="img/testing2.png 2x"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="img/testing3.png"
+                    alt="Testing 3"
+                    class="img-fluid"
+                    srcset="img/testing3.png 3x"
+                  />
+                </div>
+              </div>
+              <a
+                class="carousel-control-prev"
+                href="#testingCarousel"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#testingCarousel"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            <h4 class="mt-2">Testing</h4>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div id="rdCarousel" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="img/rd1.png"
+                    alt="R&D 1"
+                    class="img-fluid"
+                    srcset="img/rd1.png 1x"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="img/rd2.png"
+                    alt="R&D 2"
+                    class="img-fluid"
+                    srcset="img/rd2.png 2x"
+                  />
+                </div>
+              </div>
+              <a
+                class="carousel-control-prev"
+                href="#rdCarousel"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#rdCarousel"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            <h4 class="mt-2">R&D</h4>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Featured products -->
     <div class="featured-products">
       <div class="container">
-          <h2>Featured Components</h2>
+        <h2>Featured Components</h2>
       </div>
       <div class="owl-carousel owl-theme">
         <div class="item">
           <div class="product-card">
-            <a href="MCS1-125"><img src="img/product/1.png" alt="Product 1" /></a>
+            <a href="MCS1-125"
+              ><img src="img/product/1.png" alt="Product 1"
+            /></a>
             <h3>Modular Circuit Breaker</h3>
           </div>
         </div>
         <div class="item">
           <div class="product-card">
-            <a href="MCW8.html"><img src="img/product/2.png" alt="Product 2" /></a>
+            <a href="MCW8.html"
+              ><img src="img/product/2.png" alt="Product 2"
+            /></a>
             <h3>Universal Circuit Breaker</h3>
           </div>
         </div>
         <div class="item">
           <div class="product-card">
-            <a href="MCP6.html"><img src="img/product/3.png" alt="Product 3" /></a>
+            <a href="MCP6.html"
+              ><img src="img/product/3.png" alt="Product 3"
+            /></a>
             <h3>Motor Protection C-Breaker</h3>
           </div>
         </div>
         <div class="item">
           <div class="product-card">
-            <a href="MPS1.html"><img src="img/product/4.png" alt="Product 4" /></a>
+            <a href="MPS1.html"
+              ><img src="img/product/4.png" alt="Product 4"
+            /></a>
             <h3>Automatic Transfer Switch</h3>
           </div>
         </div>
         <div class="item">
           <div class="product-card">
-            <a href="M-3000.html"><img src="img/product/5.png" alt="Product 5" /></a>
+            <a href="M-3000.html"
+              ><img src="img/product/5.png" alt="Product 5"
+            /></a>
             <h3>Frequency Converter</h3>
           </div>
         </div>
         <div class="item">
           <div class="product-card">
-            <a href="MQD7S.html"><img src="img/product/6.png" alt="Product 6" /></a>
+            <a href="MQD7S.html"
+              ><img src="img/product/6.png" alt="Product 6"
+            /></a>
             <h3>Integrated Star-delta Starter</h3>
           </div>
         </div>
         <div class="item">
           <div class="product-card">
-            <a href="MPI.html"><img src="img/product/7.png" alt="Product 7" /></a>
+            <a href="MPI.html"
+              ><img src="img/product/7.png" alt="Product 7"
+            /></a>
             <h3>Pure Sine Wave Inverter</h3>
           </div>
         </div>
         <div class="item">
           <div class="product-card">
-            <a href="DR-75.html"><img src="img/product/8.png" alt="Product 8" /></a>
+            <a href="DR-75.html"
+              ><img src="img/product/8.png" alt="Product 8"
+            /></a>
             <h3>Switching Power Supply</h3>
           </div>
         </div>
         <div class="item">
           <div class="product-card">
-            <a href="MX8F.html"><img src="img/product/9.png" alt="Product 9" /></a>
+            <a href="MX8F.html"
+              ><img src="img/product/9.png" alt="Product 9"
+            /></a>
             <h3>Photovoltaic Combiner Box</h3>
           </div>
         </div>
         <div class="item">
           <div class="product-card">
-            <a href="SC(B)10.html"><img src="img/product/10.png" alt="Product 10" /></a>
+            <a href="SC(B)10.html"
+              ><img src="img/product/10.png" alt="Product 10"
+            /></a>
             <h3>Power Transformer</h3>
           </div>
         </div>
         <div class="item">
           <div class="product-card">
-            <a href="ZN63.html"><img src="img/product/11.png" alt="Product 11" /></a>
+            <a href="ZN63.html"
+              ><img src="img/product/11.png" alt="Product 11"
+            /></a>
             <h3>Vacuum Circuit Breaker</h3>
           </div>
         </div>
         <div class="item">
           <div class="product-card">
-            <a href="MP96.html"><img src="img/product/12.png" alt="Product 12" /></a>
+            <a href="MP96.html"
+              ><img src="img/product/12.png" alt="Product 12"
+            /></a>
             <h3>Switchgear Panel Meter</h3>
           </div>
         </div>
         <div class="item">
           <div class="product-card">
-            <a href="DDS236-D.html"><img src="img/product/13.png" alt="Product 13" /></a>
+            <a href="DDS236-D.html"
+              ><img src="img/product/13.png" alt="Product 13"
+            /></a>
             <h3>DIN Rail Energy Meter</h3>
           </div>
         </div>
         <div class="item">
           <div class="product-card">
-            <a href="LW28.html"><img src="img/product/14.png" alt="Product 14" /></a>
+            <a href="LW28.html"
+              ><img src="img/product/14.png" alt="Product 14"
+            /></a>
             <h3>Industrial changeover Switch</h3>
           </div>
         </div>
         <div class="item">
           <div class="product-card">
-            <a href="AD22.html"><img src="img/product/15.png" alt="Product 15" /></a>
+            <a href="AD22.html"
+              ><img src="img/product/15.png" alt="Product 15"
+            /></a>
             <h3>Panel Indicator Light</h3>
           </div>
         </div>
@@ -873,54 +1154,72 @@
 
     <!-- Services -->
     <div id="services" class="content">
-    <div class="container">
+      <div class="container">
         <h2 class="section-title">Our Services</h2>
         <div class="row">
-            <div class="col-md-4">
-                <div class="service">
-                    <i class="fas fa-lightbulb fa-3x"></i>
-                    <h3>Electrical Solutions</h3>
-                    <p>Comprehensive electrical solutions for industrial and commercial applications.</p>
-                </div>
+          <div class="col-md-4">
+            <div class="service">
+              <i class="fas fa-lightbulb fa-3x"></i>
+              <h3>Electrical Solutions</h3>
+              <p>
+                Comprehensive electrical solutions for industrial and commercial
+                applications.
+              </p>
             </div>
-            <div class="col-md-4">
-                <div class="service">
-                    <i class="fas fa-cogs fa-3x"></i>
-                    <h3>Automation Services</h3>
-                    <p>Advanced automation services to optimize manufacturing processes.</p>
-                </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service">
+              <i class="fas fa-cogs fa-3x"></i>
+              <h3>Automation Services</h3>
+              <p>
+                Advanced automation services to optimize manufacturing
+                processes.
+              </p>
             </div>
-            <div class="col-md-4">
-                <div class="service">
-                    <i class="fas fa-solar-panel fa-3x"></i>
-                    <h3>Solar Energy Solutions</h3>
-                    <p>Integrated solar energy solutions for sustainable power generation.</p>
-                </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service">
+              <i class="fas fa-solar-panel fa-3x"></i>
+              <h3>Solar Energy Solutions</h3>
+              <p>
+                Integrated solar energy solutions for sustainable power
+                generation.
+              </p>
             </div>
-            <!-- Add more services below -->
-            <div class="col-md-4">
-                <div class="service">
-                    <i class="fas fa-bolt fa-3x"></i>
-                    <h3>Power Distribution</h3>
-                    <p>Efficient power distribution systems for industrial and residential sectors.</p>
-                </div>
+          </div>
+          <!-- Add more services below -->
+          <div class="col-md-4">
+            <div class="service">
+              <i class="fas fa-bolt fa-3x"></i>
+              <h3>Power Distribution</h3>
+              <p>
+                Efficient power distribution systems for industrial and
+                residential sectors.
+              </p>
             </div>
-            <div class="col-md-4">
-                <div class="service">
-                    <i class="fas fa-sync-alt fa-3x"></i>
-                    <h3>Energy Management</h3>
-                    <p>Comprehensive energy management solutions for improved efficiency.</p>
-                </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service">
+              <i class="fas fa-sync-alt fa-3x"></i>
+              <h3>Energy Management</h3>
+              <p>
+                Comprehensive energy management solutions for improved
+                efficiency.
+              </p>
             </div>
-            <div class="col-md-4">
-                <div class="service">
-                    <i class="fas fa-globe fa-3x"></i>
-                    <h3>Smart Grid Technologies</h3>
-                    <p>Advanced smart grid technologies for efficient energy distribution.</p>
-                </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service">
+              <i class="fas fa-globe fa-3x"></i>
+              <h3>Smart Grid Technologies</h3>
+              <p>
+                Advanced smart grid technologies for efficient energy
+                distribution.
+              </p>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
     </div>
 
     <!-- Faq -->
@@ -950,7 +1249,11 @@
               data-parent="#faqAccordion"
             >
               <div class="card-body">
-                We specialize in a wide range of electronic components, including capacitors, resistors, relays, switches, and connectors. All our products meet international quality standards and are designed for various industrial and commercial applications.
+                We specialize in a wide range of electronic components,
+                including capacitors, resistors, relays, switches, and
+                connectors. All our products meet international quality
+                standards and are designed for various industrial and commercial
+                applications.
               </div>
             </div>
           </div>
@@ -977,7 +1280,11 @@
               data-parent="#faqAccordion"
             >
               <div class="card-body">
-                Orders can be placed directly through our website, where you can browse our product catalog and select items. Alternatively, you can contact our sales team for personalized assistance. We accept multiple payment methods, including wire transfers and credit cards.
+                Orders can be placed directly through our website, where you can
+                browse our product catalog and select items. Alternatively, you
+                can contact our sales team for personalized assistance. We
+                accept multiple payment methods, including wire transfers and
+                credit cards.
               </div>
             </div>
           </div>
@@ -1004,7 +1311,9 @@
               data-parent="#faqAccordion"
             >
               <div class="card-body">
-                The MOQ varies depending on the product. Generally, there is a minimum order requirement for most items. Specific details are available on the product pages or by contacting our sales team.
+                The MOQ varies depending on the product. Generally, there is a
+                minimum order requirement for most items. Specific details are
+                available on the product pages or by contacting our sales team.
               </div>
             </div>
           </div>
@@ -1031,7 +1340,10 @@
               data-parent="#faqAccordion"
             >
               <div class="card-body">
-                Standard products typically have a lead time of 5-7 business days. For custom orders, the lead time may be longer, and we will provide an estimated delivery date when you place your order.
+                Standard products typically have a lead time of 5-7 business
+                days. For custom orders, the lead time may be longer, and we
+                will provide an estimated delivery date when you place your
+                order.
               </div>
             </div>
           </div>
@@ -1058,7 +1370,10 @@
               data-parent="#faqAccordion"
             >
               <div class="card-body">
-               Yes, we provide global shipping services. We partner with leading logistics companies to ensure your products are delivered safely and promptly. Shipping costs and times vary based on the destination.
+                Yes, we provide global shipping services. We partner with
+                leading logistics companies to ensure your products are
+                delivered safely and promptly. Shipping costs and times vary
+                based on the destination.
               </div>
             </div>
           </div>
@@ -1085,7 +1400,10 @@
               data-parent="#faqAccordion"
             >
               <div class="card-body">
-               All our products come with at least a one-year warranty. Should any issues arise within the warranty period, we offer free repair or replacement services.              </div>
+                All our products come with at least a one-year warranty. Should
+                any issues arise within the warranty period, we offer free
+                repair or replacement services.
+              </div>
             </div>
           </div>
 
@@ -1100,7 +1418,8 @@
                   aria-expanded="false"
                   aria-controls="collapseSeven"
                 >
-                  7. What should I do if I'm not satisfied with the product I received?
+                  7. What should I do if I'm not satisfied with the product I
+                  received?
                 </button>
               </h3>
             </div>
@@ -1111,7 +1430,10 @@
               data-parent="#faqAccordion"
             >
               <div class="card-body">
-               If you're not satisfied with your purchase, please contact us within 7 days of receiving the product. We offer return and exchange services based on the situation.              </div>
+                If you're not satisfied with your purchase, please contact us
+                within 7 days of receiving the product. We offer return and
+                exchange services based on the situation.
+              </div>
             </div>
           </div>
 
@@ -1137,7 +1459,10 @@
               data-parent="#faqAccordion"
             >
               <div class="card-body">
-               Absolutely. Our dedicated technical support team is here to help you with any product-related issues. You can reach out to us for prompt assistance and solutions.              </div>
+                Absolutely. Our dedicated technical support team is here to help
+                you with any product-related issues. You can reach out to us for
+                prompt assistance and solutions.
+              </div>
             </div>
           </div>
 
@@ -1163,7 +1488,10 @@
               data-parent="#faqAccordion"
             >
               <div class="card-body">
-               Technical documentation, including datasheets and user manuals, is available for download on our website. You can find these resources on each product's dedicated page.              </div>
+                Technical documentation, including datasheets and user manuals,
+                is available for download on our website. You can find these
+                resources on each product's dedicated page.
+              </div>
             </div>
           </div>
 
@@ -1189,7 +1517,10 @@
               data-parent="#faqAccordion"
             >
               <div class="card-body">
-               You can reach us via phone, email, or through our online customer service. Visit our "Contact Us" page on the website for detailed contact information.              </div>
+                You can reach us via phone, email, or through our online
+                customer service. Visit our "Contact Us" page on the website for
+                detailed contact information.
+              </div>
             </div>
           </div>
 
@@ -1215,7 +1546,11 @@
               data-parent="#faqAccordion"
             >
               <div class="card-body">
-               Our products are certified to meet international standards such as ISO, CE, RoHS, and more, depending on the specific product. Certification details are available on the product pages or upon request.              </div>
+                Our products are certified to meet international standards such
+                as ISO, CE, RoHS, and more, depending on the specific product.
+                Certification details are available on the product pages or upon
+                request.
+              </div>
             </div>
           </div>
 
@@ -1241,7 +1576,10 @@
               data-parent="#faqAccordion"
             >
               <div class="card-body">
-               Yes, we offer sample requests for most products so you can evaluate the quality before committing to a larger order. Please contact our sales team to discuss sample availability.              </div>
+                Yes, we offer sample requests for most products so you can
+                evaluate the quality before committing to a larger order. Please
+                contact our sales team to discuss sample availability.
+              </div>
             </div>
           </div>
 
@@ -1267,7 +1605,11 @@
               data-parent="#faqAccordion"
             >
               <div class="card-body">
-               We provide tailored solutions to meet specific customer requirements. Whether it's a custom design, material, or packaging, we work closely with our clients to deliver the best solutions.              </div>
+                We provide tailored solutions to meet specific customer
+                requirements. Whether it's a custom design, material, or
+                packaging, we work closely with our clients to deliver the best
+                solutions.
+              </div>
             </div>
           </div>
 
@@ -1293,8 +1635,9 @@
               data-parent="#faqAccordion"
             >
               <div class="card-body">
-               For international customers, we offer flexible payment terms including advance payment, letters of credit, and other secure options. Please contact our finance department for more details.
-
+                For international customers, we offer flexible payment terms
+                including advance payment, letters of credit, and other secure
+                options. Please contact our finance department for more details.
               </div>
             </div>
           </div>
@@ -1321,7 +1664,13 @@
               data-parent="#faqAccordion"
             >
               <div class="card-body">
-               Generally, we hope that dealers can meet the following qualifications: 1. There are some local sales networks; 2. Good technical solution skills; 3. Keep inventory to meet fast delivery time; 4. Have a dedicated team to sell and promote. You are very welcome to tell us your thoughts on the above matters; We also very much hope to create value for you through our products.
+                Generally, we hope that dealers can meet the following
+                qualifications: 1. There are some local sales networks; 2. Good
+                technical solution skills; 3. Keep inventory to meet fast
+                delivery time; 4. Have a dedicated team to sell and promote. You
+                are very welcome to tell us your thoughts on the above matters;
+                We also very much hope to create value for you through our
+                products.
               </div>
             </div>
           </div>
@@ -1331,276 +1680,300 @@
 
     <!-- Contact -->
     <div id="contact" class="content">
-    <div class="container">
-        <h2 class="section-title">Contact MINGWAY</h2>
+      <div class="container">
+        <h2 class="section-title">Contact MEENWE</h2>
         <div class="row">
-            <div class="col-md-6">
-                <p>If you have any questions or would like to discuss potential collaborations, please feel free to contact us using the form below.</p>
-                <form id="contactForm" onsubmit="sendEmail(event)">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
-                </form>
-            </div>
-            <div class="col-md-6">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.579540920728!2d121.51816908015424!3d29.934004559301002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x344d646d01069b03%3A0xce82e39e14088333!2z5Lit5Zu95rWZ5rGf55yB5a6B5rOi5biC5rGf5YyX5Yy65rSq5YW06LevIOmCruaUv-e8lueggTogMzE1MDMz!5e0!3m2!1szh-CN!2s!4v1692450215352!5m2!1szh-CN!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" title="mapFrame"></iframe>
-            </div>
+          <div class="col-md-6">
+            <p>
+              If you have any questions or would like to discuss potential
+              collaborations, please feel free to contact us using the form
+              below.
+            </p>
+            <form id="contactForm" onsubmit="sendEmail(event)">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Your Name"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Your Email"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="subject"
+                  placeholder="Subject"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="5"
+                  placeholder="Your Message"
+                  autocomplete="off"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">
+                Send Message
+              </button>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.579540920728!2d121.51816908015424!3d29.934004559301002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x344d646d01069b03%3A0xce82e39e14088333!2z5Lit5Zu95rWZ5rGf55yB5a6B5rOi5biC5rGf5YyX5Yy65rSq5YW06LevIOmCruaUv-e8lueggTogMzE1MDMz!5e0!3m2!1szh-CN!2s!4v1692450215352!5m2!1szh-CN!2s"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              title="mapFrame"
+            ></iframe>
+          </div>
         </div>
-    </div>
+      </div>
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
-    <div class="container">
-        <div class="row justify-content-between text-center text-md-left mb-5">
-            <div class="col-md-3 mb-5">
-                <img src="img/logo.png" alt="Mingway Logo" class="footer-logo mb-3">
-                <p class="footer-slogan">"Empowering the Future with Advanced Electrical Solutions"</p>
-            </div>
-            <div class="col-md-3 mb-5">
-                <h4>Contact Us</h4>
-                <p><i class="fas fa-map-marker-alt"></i> 7 Hung Hing Road, Ningbo, Zhejiang, China</p>
-                <p><i class="fas fa-envelope"></i> <a href="mailto:info@nbmwele.com">info@nbmwele.com</a></p>
-                <p><i class="fas fa-phone"></i> 86-574-3560921</p>
-            </div>
-            <div class="col-md-4 mb-5">
-                <h4>Business Hours</h4>
-                <p><i class="fas fa-clock"></i> Monday - Friday: 9:00 AM - 5:00 PM</p>
-                <p><i class="fas fa-clock"></i> Saturday: 10:00 AM - 3:00 PM</p>
-                <p><i class="fas fa-clock"></i> Sunday: Closed</p>
-            </div>
-            <div class="col-md-2 mb-5">
-                <h4>Quick Links</h4>
-                <ul class="list-unstyled">
-                    <li><a href="index.html#">Home</a></li>
-                    <li><a href="index.html#about">About Us</a></li>
-                    <li><a href="index.html#services">Services</a></li>
-                    <li><a href="product.html">Products</a></li>
-                    <li><a href="index.html#contact">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="row justify-content-center mb-5">
-            <div class="col-12 text-center">
-                <h4>Follow Us</h4>
-                <ul class="list-inline">
-                    <li class="list-inline-item"><a href="https://www.facebook.com/nbmwele" aria-label="Follow Mingway by Facebook"><i class="fab fa-facebook"></i></a></li>
-                    <li class="list-inline-item"><a href="https://www.x.com/nbmwele" aria-label="Follow Mingway by Twitter"><i class="fab fa-twitter"></i></a></li>
-                    <li class="list-inline-item"><a href="https://www.linkedin.com/in/nbmwele" aria-label="Follow Mingway by LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-                    <li class="list-inline-item"><a href="https://www.instagram.com/nbmwele" aria-label="Follow Mingway by Instagram"><i class="fab fa-instagram"></i></a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 text-center">
-                <p>&copy; 2025 Ningbo Mingway Electric Co., Ltd. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms_of_service.html">Terms of Service</a></p>
-            </div>
-        </div>
-    </div>
-        <canvas id="footer-canvas"></canvas>
-        <div class="back-to-top" id="back-to-top"><i class="fas fa-arrow-up"></i></div>
-    </footer>
-
+    <div id="footer-placeholder"></div>
     <script>
-        const canvas = document.getElementById('footer-canvas');
-        const ctx = canvas.getContext('2d');
+      fetch("/footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("footer-placeholder").innerHTML = html;
+          initFooterParticles();
+
+          // Scroll to top functionality
+          document
+            .getElementById("back-to-top")
+            .addEventListener("click", function () {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+
+          // Show back to top button
+          window.onscroll = function () {
+            var backToTopButton = document.getElementById("back-to-top");
+            if (
+              document.body.scrollTop > 2000 ||
+              document.documentElement.scrollTop > 200
+            ) {
+              backToTopButton.style.display = "block";
+            } else {
+              backToTopButton.style.display = "none";
+            }
+          };
+        });
+
+      function initFooterParticles() {
+        const canvas = document.getElementById("footer-canvas");
+        if (!canvas) return;
+
+        const ctx = canvas.getContext("2d");
         let particles = [];
 
         canvas.width = window.innerWidth;
-        canvas.height = document.querySelector('.footer').offsetHeight;
+        canvas.height = document.querySelector(".footer").offsetHeight;
 
         class Particle {
-            constructor() {
-                this.x = Math.random() * canvas.width;
-                 this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 3 + 1;
-                this.speedX = Math.random() * 1 - 0.5;
-                 this.speedY = Math.random() * 1 - 0.5;
-            }
+          constructor() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.size = Math.random() * 3 + 1;
+            this.speedX = Math.random() * 1 - 0.5;
+            this.speedY = Math.random() * 1 - 0.5;
+          }
 
-            update() {
-               this.x += this.speedX;
-                this.y += this.speedY;
+          update() {
+            this.x += this.speedX;
+            this.y += this.speedY;
+            if (this.size > 0.2) this.size -= 0.1;
+          }
 
-                if (this.size > 0.2) this.size -= 0.1;
-            }
-
-            draw() {
-                ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.closePath();
-                ctx.fill();
-             }
+          draw() {
+            ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.closePath();
+            ctx.fill();
+          }
         }
 
         function init() {
-              particles = [];
-             for (let i = 0; i < 100; i++) {
-                 particles.push(new Particle());
-             }
+          particles = [];
+          for (let i = 0; i < 100; i++) {
+            particles.push(new Particle());
+          }
         }
 
         function animate() {
-           ctx.clearRect(0, 0, canvas.width, canvas.height);
-              particles.forEach(particle => {
-                 particle.update();
-                 particle.draw();
-            });
-             requestAnimationFrame(animate);
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          particles.forEach((particle) => {
+            particle.update();
+            particle.draw();
+          });
+          requestAnimationFrame(animate);
         }
 
         init();
         animate();
 
-        window.addEventListener('resize', function() {
-             canvas.width = window.innerWidth;
-             canvas.height = document.querySelector('.footer').offsetHeight;
-             init();
+        window.addEventListener("resize", function () {
+          canvas.width = window.innerWidth;
+          canvas.height = document.querySelector(".footer").offsetHeight;
+          init();
         });
+      }
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
     <script>
-        // Automatically close navbar collapse when scrolling down on mobile
-        window.addEventListener("scroll", function() {
-            if (window.innerWidth < 992) {
-                var navbarCollapse = document.querySelector('.navbar-collapse');
-                var navbarToggler = document.querySelector('.navbar-toggler');
-                if (navbarCollapse.classList.contains('show')) {
-                    navbarCollapse.classList.remove('show');
-                    navbarToggler.setAttribute('aria-expanded', 'false');
-                }
+      document.addEventListener("DOMContentLoaded", function () {
+        var navbarCollapse = document.querySelector(".navbar-collapse");
+        var navbarToggler = document.querySelector(".navbar-toggler");
+        var navbarLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+        // 监听菜单项的点击事件
+        navbarLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            if (navbarCollapse.classList.contains("show")) {
+              navbarCollapse.classList.remove("show");
+              navbarToggler.setAttribute("aria-expanded", "false");
             }
+          });
         });
 
-        document.addEventListener("DOMContentLoaded", function() {
+        // 监听页面任意地方的点击事件
+        document.addEventListener("click", function (event) {
+          var isClickInsideNavbar =
+            navbarCollapse.contains(event.target) ||
+            navbarToggler.contains(event.target);
+
+          // 如果点击的不是导航栏内部，并且导航栏是展开的，关闭导航栏
+          if (
+            !isClickInsideNavbar &&
+            navbarCollapse.classList.contains("show")
+          ) {
+            navbarCollapse.classList.remove("show");
+            navbarToggler.setAttribute("aria-expanded", "false");
+          }
+        });
+      });
+    </script>
+    <script>
+      // Automatically close navbar collapse when scrolling down on mobile
+      window.addEventListener("scroll", function () {
+        if (window.innerWidth < 992) {
+          var navbarCollapse = document.querySelector(".navbar-collapse");
+          var navbarToggler = document.querySelector(".navbar-toggler");
+          if (navbarCollapse.classList.contains("show")) {
+            navbarCollapse.classList.remove("show");
+            navbarToggler.setAttribute("aria-expanded", "false");
+          }
+        }
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
         var lastScrollTop = 0;
-        var navbar = document.querySelector('.navbar');
+        var navbar = document.querySelector(".navbar");
 
-        window.addEventListener("scroll", function() {
-            var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-            
-            if (currentScroll > lastScrollTop) {
-                // Scroll down
-                navbar.classList.add('hide');
-                navbar.classList.remove('scrolled');
-            } else {
-                // Scroll up
-                navbar.classList.remove('hide');
-                navbar.classList.add('scrolled');
-            }
-            // Add class to change background color when scrolled
-            if (currentScroll > 0) {
-            navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-                lastScrollTop = currentScroll;
-            });
+        window.addEventListener("scroll", function () {
+          var currentScroll =
+            window.pageYOffset || document.documentElement.scrollTop;
+
+          if (currentScroll > lastScrollTop) {
+            // Scroll down
+            navbar.classList.add("hide");
+            navbar.classList.remove("scrolled");
+          } else {
+            // Scroll up
+            navbar.classList.remove("hide");
+            navbar.classList.add("scrolled");
+          }
+          // Add class to change background color when scrolled
+          if (currentScroll > 0) {
+            navbar.classList.add("scrolled");
+          } else {
+            navbar.classList.remove("scrolled");
+          }
+          lastScrollTop = currentScroll;
         });
+      });
 
-        // Owl Carousel
-        $(".owl-carousel").owlCarousel({
-          loop: true,
-          margin: 10,
-          nav: true,
-          navText: [
-            '<i class="fas fa-chevron-left"></i>',
-            '<i class="fas fa-chevron-right"></i>'
-          ],
-          autoplay: true,
-          autoplayTimeout: 2000,
-          autoplayHoverPause: true,
-          responsive: {
-            0: { items: 1 },
-            600: { items: 3 },
-            1000: { items: 5 },
-          },
-        });
+      // Owl Carousel
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        navText: [
+          '<i class="fas fa-chevron-left"></i>',
+          '<i class="fas fa-chevron-right"></i>',
+        ],
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+          0: { items: 1 },
+          600: { items: 3 },
+          1000: { items: 5 },
+        },
+      });
+    </script>
+    <!-- 加载 EmailJS v4 SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      // 初始化 EmailJS v4
+      emailjs.init({
+        publicKey: "hBK__tKlC5mftY_An",
+      });
 
-        // Show back to top button
-        window.onscroll = function() {
-            var backToTopButton = document.getElementById("back-to-top");
-            if (document.body.scrollTop > 2000 || document.documentElement.scrollTop > 200) {
-                backToTopButton.style.display = "block";
-            } else {
-                backToTopButton.style.display = "none";
-            }
+      function sendEmail(event) {
+        event.preventDefault();
+
+        const button = event.target.querySelector("button[type='submit']");
+        button.disabled = true;
+        const originalText = button.innerText;
+        button.innerText = "Sending...";
+
+        const templateParams = {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          subject: document.getElementById("subject").value,
+          message: document.getElementById("message").value,
         };
 
-        // Scroll to top functionality
-        document.getElementById("back-to-top").addEventListener("click", function() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
+        emailjs
+          .send("service_i851fp8", "template_qdjp48r", templateParams)
+          .then((response) => {
+            alert("Message sent successfully!");
+            document.getElementById("contactForm").reset();
+          })
+          .catch((error) => {
+            console.error("EmailJS error:", error);
+            alert("Failed to send message. Please try again later.");
+          })
+          .finally(() => {
+            button.disabled = false;
+            button.innerText = originalText;
+          });
+      }
     </script>
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var navbarCollapse = document.querySelector('.navbar-collapse');
-            var navbarToggler = document.querySelector('.navbar-toggler');
-            var navbarLinks = document.querySelectorAll('.navbar-nav .nav-link');
-    
-            // 监听菜单项的点击事件
-            navbarLinks.forEach(function(link) {
-                link.addEventListener('click', function() {
-                    if (navbarCollapse.classList.contains('show')) {
-                        navbarCollapse.classList.remove('show');
-                        navbarToggler.setAttribute('aria-expanded', 'false');
-                    }
-                });
-            });
-    
-            // 监听页面任意地方的点击事件
-            document.addEventListener('click', function(event) {
-                var isClickInsideNavbar = navbarCollapse.contains(event.target) || navbarToggler.contains(event.target);
-                
-                // 如果点击的不是导航栏内部，并且导航栏是展开的，关闭导航栏
-                if (!isClickInsideNavbar && navbarCollapse.classList.contains('show')) {
-                    navbarCollapse.classList.remove('show');
-                    navbarToggler.setAttribute('aria-expanded', 'false');
-                }
-            });
-        });
-    </script>
-    <script type="text/javascript">
-        (function() {
-            emailjs.init("hBK__tKlC5mftY_An");
-        })();
-
-        function sendEmail(event) {
-            event.preventDefault();
-
-            var templateParams = {
-                name: document.getElementById("name").value,
-                email: document.getElementById("email").value,
-                subject: document.getElementById("subject").value,
-                message: document.getElementById("message").value
-            };
-
-            emailjs.send('service_i851fp8', 'template_qdjp48r', templateParams)
-                .then(function(response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                    alert("Submit successfully");
-                }, function(error) {
-                    console.log('FAILED...', error);
-                    alert("Failed to send email. Please try again later.");
-                });
-        }
-    </script>
-</body>
+  </body>
 </html>

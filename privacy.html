@@ -3,389 +3,450 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Privacy Policy Page of Mingway Electric Group">
-    <title>Privacy Policy | MINGWAY</title>
+    <meta
+      name="description"
+      content="Privacy Policy Page of MEENWE Electric Group"
+    />
+    <title>Privacy Policy | MEENWE</title>
     <link rel="icon" href="img/favicon.ico" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-        body {
-          font-family: Arial, sans-serif;
-          line-height: 1.6;
-          margin: 0;
-          padding: 0;
-          background-color: #f5f5f5;
-          color: #333;
-          animation: fadeIn 1.5s ease;
-        }
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+        color: #333;
+        animation: fadeIn 1.5s ease;
+      }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
         }
+        to {
+          opacity: 1;
+        }
+      }
 
-        html {
-            scroll-behavior: smooth;
-        }
+      html {
+        scroll-behavior: smooth;
+      }
 
-        .navbar {
-            background-color: transparent;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            animation: slideDown 1.5s ease forwards;
-            transition: transform 0.5s ease;
+      .navbar {
+        background-color: transparent;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        animation: slideDown 1.5s ease forwards;
+        transition: transform 0.5s ease;
+      }
+      @keyframes slideDown {
+        from {
+          top: -100px;
         }
-        @keyframes slideDown {
-            from {
-                top: -100px;
-            }
-            to {
-                top: 0;
-            }
+        to {
+          top: 0;
         }
-        .navbar.hide {
-            transform: translateY(-100%);
+      }
+      .navbar.hide {
+        transform: translateY(-100%);
+      }
+      .navbar.scrolled {
+        background-color: #fff;
+      }
+      .navbar:hover {
+        background-color: #fff;
+      }
+      .navbar-brand {
+        margin-right: 0;
+        padding: 0 36px;
+      }
+      .navbar-brand img {
+        max-height: 40px;
+        transition: transform 0.3s ease;
+      }
+      .navbar-brand img:hover {
+        transform: scale(1.1);
+      }
+      .navbar-nav {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+      }
+      .navbar-nav .nav-link {
+        color: #333 !important;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        padding: 10px 0;
+        margin: 0 36px;
+        position: relative;
+        transition: color 0.3s ease;
+      }
+      .navbar-nav .nav-link:hover {
+        color: #ff0000 !important;
+      }
+      .navbar-nav .nav-link::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #ff0000;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.3s ease;
+      }
+      .navbar-nav .nav-link:hover::before {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+      .navbar-toggler {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+      .navbar-toggler-icon {
+        font-size: 24px;
+        color: #fff;
+        transition: transform 0.3s ease;
+      }
+      .navbar-toggler-icon .bar {
+        display: block;
+        width: 30px;
+        height: 4px;
+        background-color: #000;
+        margin: 6px auto;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+      .navbar-toggler[aria-expanded="true"]
+        .navbar-toggler-icon
+        .bar:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+      }
+      .navbar-toggler[aria-expanded="true"]
+        .navbar-toggler-icon
+        .bar:nth-child(2) {
+        opacity: 0;
+      }
+      .navbar-toggler[aria-expanded="true"]
+        .navbar-toggler-icon
+        .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+      }
+      .navbar-toggler[aria-expanded="false"]
+        .navbar-toggler-icon
+        .bar:nth-child(1),
+      .navbar-toggler[aria-expanded="false"]
+        .navbar-toggler-icon
+        .bar:nth-child(3) {
+        transform: translateY(0);
+      }
+      .navbar-toggler[aria-expanded="false"]
+        .navbar-toggler-icon
+        .bar:nth-child(2) {
+        opacity: 1;
+      }
+
+      .header {
+        background-image: url("img/background/bg6.jpg");
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        padding: 100px 0;
+        text-align: center;
+      }
+
+      .header-title {
+        font-size: 48px;
+        margin: 0;
+        animation: fadeInScale 1.5s ease forwards;
+        opacity: 0;
+        transform: scale(0.8);
+      }
+
+      @keyframes fadeInScale {
+        from {
+          opacity: 0;
+          transform: scale(0.8);
         }
-        .navbar.scrolled {
-            background-color: #fff;
+        to {
+          opacity: 1;
+          transform: scale(1);
         }
-        .navbar:hover {
-            background-color: #fff;
+      }
+
+      .footer {
+        background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+        color: #ffffff;
+        padding: 60px 0;
+        font-family: "Montserrat", sans-serif;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        animation: backgroundAnimation 10s infinite alternate;
+      }
+
+      @keyframes backgroundAnimation {
+        0% {
+          background-position: 0% 50%;
+        }
+        100% {
+          background-position: 100% 50%;
+        }
+      }
+
+      .footer-logo {
+        width: auto;
+        transition: transform 0.3s ease-in-out;
+        animation: logoBounce 3s infinite;
+      }
+
+      @keyframes logoBounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .footer-slogan {
+        font-style: italic;
+        font-size: 1.2em;
+        color: #f0c040;
+        margin-bottom: 20px;
+        transition: color 0.3s ease-in-out;
+        animation: textFade 5s infinite;
+      }
+
+      @keyframes textFade {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+      }
+
+      .footer h4 {
+        margin-bottom: 20px;
+        font-size: 1.5em;
+        color: #f0c040;
+        position: relative;
+        display: inline-block;
+        transition: color 0.3s ease-in-out;
+        animation: textGlow 3s infinite;
+      }
+
+      @keyframes textGlow {
+        0%,
+        100% {
+          text-shadow: 0 0 10px #f0c040;
+        }
+        50% {
+          text-shadow: 0 0 20px #f0c040;
+        }
+      }
+
+      .footer h4::after {
+        content: "";
+        display: block;
+        width: 50%;
+        height: 3px;
+        background: #f0c040;
+        margin-top: 5px;
+        transition: width 0.3s ease-in-out;
+      }
+
+      .footer h4:hover {
+        color: #ffffff;
+      }
+
+      .footer h4:hover::after {
+        width: 100%;
+      }
+
+      .footer p,
+      .footer a {
+        font-size: 1em;
+        color: #cccccc;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .footer a:hover {
+        color: #f0c040;
+        text-decoration: none;
+      }
+
+      .footer ul {
+        padding: 0;
+        list-style-type: none;
+      }
+
+      .footer ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer ul li a {
+        color: #cccccc;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .footer ul li a:hover {
+        color: #f0c040;
+      }
+
+      .footer .social-media ul {
+        padding: 0;
+        list-style-type: none;
+      }
+
+      .footer .social-media ul li {
+        display: inline;
+        margin: 0 10px;
+      }
+
+      .footer .social-media ul li a {
+        font-size: 1.5em;
+        color: #cccccc;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .footer .social-media ul li a:hover {
+        color: #f0c040;
+      }
+
+      #footer-canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+      }
+
+      .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #ffc107;
+        color: white;
+        border: none;
+        padding: 15px 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+        z-index: 1000;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+      .back-to-top:hover {
+        background-color: #ff9800;
+        transform: scale(1.2);
+      }
+
+      @media (max-width: 991px) {
+        .navbar-nav {
+          text-align: center;
+          margin-left: 0;
+        }
+        .navbar-nav .nav-item {
+          display: inline-block;
+          float: none;
+          margin: 0 20px;
         }
         .navbar-brand {
-            margin-right: 0;
-            padding: 0 36px;
+          padding-left: 12px;
         }
-        .navbar-brand img {
-            max-height: 40px;
-            transition: transform 0.3s ease;
-        }
-        .navbar-brand img:hover {
-            transform: scale(1.1);
-        }
-        .navbar-nav {
-            margin-left: auto;
-            display: flex;
-            align-items: center;
-        }
-        .navbar-nav .nav-link {
-            color: #333 !important;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            padding: 10px 0;
-            margin: 0 36px;
-            position: relative;
-            transition: color 0.3s ease;
-        }
-        .navbar-nav .nav-link:hover {
-            color: #ff0000 !important;
-        }
-        .navbar-nav .nav-link::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 2px;
-            background-color: #ff0000;
-            transform: scaleX(0);
-            transform-origin: bottom right;
-            transition: transform 0.3s ease;
-        }
-        .navbar-nav .nav-link:hover::before {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-        }
-        .navbar-toggler {
-            background-color: transparent;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        .navbar-toggler-icon {
-            font-size: 24px;
-            color: #fff;
-            transition: transform 0.3s ease;
-        }
-        .navbar-toggler-icon .bar {
-            display: block;
-            width: 30px;
-            height: 4px;
-            background-color: #000;
-            margin: 6px auto;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon .bar:nth-child(1) {
-            transform: translateY(9px) rotate(45deg);
-        }
-        .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon .bar:nth-child(2) {
-            opacity: 0;
-        }
-        .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon .bar:nth-child(3) {
-            transform: translateY(-9px) rotate(-45deg);
-        }
-        .navbar-toggler[aria-expanded="false"] .navbar-toggler-icon .bar:nth-child(1),
-        .navbar-toggler[aria-expanded="false"] .navbar-toggler-icon .bar:nth-child(3) {
-            transform: translateY(0);
-        }
-        .navbar-toggler[aria-expanded="false"] .navbar-toggler-icon .bar:nth-child(2) {
-            opacity: 1;
-        }
+      }
 
+      @media (max-width: 767px) {
         .header {
-           background-image: url("img/background/bg6.jpg");
-           background-size: cover;
-           background-position: center;
-           color: #fff;
-           padding: 100px 0;
-           text-align: center;
-       }
-
-       .header-title {
-           font-size: 48px;
-           margin: 0;
-           animation: fadeInScale 1.5s ease forwards;
-           opacity: 0;
-           transform: scale(0.8);
-       }
-
-       @keyframes fadeInScale {
-           from {
-               opacity: 0;
-               transform: scale(0.8);
-           }
-           to {
-               opacity: 1;
-               transform: scale(1);
-           }
-       }
-
-       .footer {
-            background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
-            color: #ffffff;
-            padding: 60px 0;
-            font-family: 'Montserrat', sans-serif;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-            animation: backgroundAnimation 10s infinite alternate;
+          padding: 68px 0;
+        }
+        .header-title {
+          font-size: 36px;
         }
 
-        @keyframes backgroundAnimation {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 100% 50%; }
+        .navbar-nav .nav-link {
+          margin: 0;
         }
-
-        .footer-logo {
-            width: auto;
-            transition: transform 0.3s ease-in-out;
-            animation: logoBounce 3s infinite;
+        .header-title {
+          font-size: 36px;
         }
-
-        @keyframes logoBounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+        .footer p,
+        .footer a {
+          font-size: 14px;
         }
-
-        .footer-slogan {
-            font-style: italic;
-            font-size: 1.2em;
-            color: #f0c040;
-            margin-bottom: 20px;
-            transition: color 0.3s ease-in-out;
-            animation: textFade 5s infinite;
-        }
-
-        @keyframes textFade {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-
-        .footer h4 {
-            margin-bottom: 20px;
-            font-size: 1.5em;
-            color: #f0c040;
-            position: relative;
-            display: inline-block;
-            transition: color 0.3s ease-in-out;
-            animation: textGlow 3s infinite;
-        }
-
-        @keyframes textGlow {
-            0%, 100% { text-shadow: 0 0 10px #f0c040; }
-            50% { text-shadow: 0 0 20px #f0c040; }
-        }
-
-        .footer h4::after {
-            content: '';
-            display: block;
-            width: 50%;
-            height: 3px;
-            background: #f0c040;
-            margin-top: 5px;
-            transition: width 0.3s ease-in-out;
-        }
-
-        .footer h4:hover {
-            color: #ffffff;
-        }
-
-        .footer h4:hover::after {
-            width: 100%;
-        }
-
-        .footer p, .footer a {
-            font-size: 1em;
-            color: #cccccc;
-            transition: color 0.3s ease-in-out;
-        }
-
-        .footer a:hover {
-            color: #f0c040;
-            text-decoration: none;
-        }
-
-        .footer ul {
-            padding: 0;
-            list-style-type: none;
-        }
-
-        .footer ul li {
-            margin-bottom: 10px;
-        }
-
-        .footer ul li a {
-            color: #cccccc;
-            transition: color 0.3s ease-in-out;
-        }
-
-        .footer ul li a:hover {
-            color: #f0c040;
-        }
-
-        .footer .social-media ul {
-            padding: 0;
-            list-style-type: none;
-        }
-
-        .footer .social-media ul li {
-            display: inline;
-            margin: 0 10px;
-        }
-
-        .footer .social-media ul li a {
-            font-size: 1.5em;
-            color: #cccccc;
-            transition: color 0.3s ease-in-out;
-        }
-
-        .footer .social-media ul li a:hover {
-            color: #f0c040;
-        }
-
-        #footer-canvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -2;
-        }
-
-        .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #ffc107;
-            color: white;
-            border: none;
-            padding: 15px 20px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: none;
-            z-index: 1000;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-        .back-to-top:hover {
-            background-color: #ff9800;
-            transform: scale(1.2);
-        }
-
-       @media (max-width: 991px) {
-            .navbar-nav {
-                text-align: center;
-                margin-left: 0;
-            }
-            .navbar-nav .nav-item {
-                display: inline-block;
-                float: none;
-                margin: 0 20px;
-            }
-            .navbar-brand {
-                padding-left: 12px;
-            }
-       }
-
-       @media (max-width: 767px) {
-            .header {
-                padding: 68px 0;
-            }
-            .header-title {
-                font-size: 36px;
-            }
-            
-            .navbar-nav .nav-link {
-                margin: 0;
-            }
-            .header-title {
-                font-size: 36px;
-            }
-            .footer p, .footer a {
-                font-size: 14px;
-            }
-       }
+      }
     </style>
   </head>
   <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="#"><img src="img/logo.png" alt="MWE Logo"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
     <!-- Header -->
     <header class="header">
-        <div class="container text-center">
-            <h1 class="header-title">Privacy Policy</h1>
+      <div class="container text-center">
+        <h1 class="header-title">Privacy Policy</h1>
+      </div>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="#"
+            ><img src="img/logo.png" alt="MWE Logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#about">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#contact">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="product.html">Products</a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </nav>
     </header>
-    
+
     <div class="container" style="margin-top: 40px">
       <h4 style="text-align: center">PRIVACY STATEMENT</h4>
       <p>
@@ -396,9 +457,9 @@
         immediately.
       </p>
       <p>
-        Mingway Electric Corporation (hereinafter refer to “Mingway”) values
-        your privacy and is committed to protect your personal data. The words
-        “Mingway” and “We” refer to the entities collecting and processing your
+        MEENWE Electric Corporation (hereinafter refer to “MEENWE”) values your
+        privacy and is committed to protect your personal data. The words
+        “MEENWE” and “We” refer to the entities collecting and processing your
         personal data.
       </p>
       <p>
@@ -464,7 +525,7 @@
             </li>
             <li>
               <strong>Third Party We Share Data With:</strong> For the purpose
-              of the website, we may share your personal data within our Mingway
+              of the website, we may share your personal data within our MEENWE
               company; To comply with laws and policies, we provide your data to
               the related government agencies; Other objects you agree.
             </li>
@@ -495,11 +556,11 @@
             <li>
               <strong>Links To Other Websites:</strong> This website may contain
               links to other websites, which are provided solely as convenience
-              to you and not as an endorsement by Mingway of the contents of
-              such other websites; Mingway is not responsible for the content of
-              any other websites and does not make any representations or
-              warranties regarding any other websites or the contents or
-              materials of such websites.
+              to you and not as an endorsement by MEENWE of the contents of such
+              other websites; MEENWE is not responsible for the content of any
+              other websites and does not make any representations or warranties
+              regarding any other websites or the contents or materials of such
+              websites.
             </li>
           </ul>
         </li>
@@ -555,7 +616,7 @@
             Address: Units 2-78, building 007, 7 Hung Hing Road, Jiangbei
             District, Ningbo, Zhejiang, PR China 315000
           </p>
-          <p style="margin-bottom: 40px;">
+          <p style="margin-bottom: 40px">
             Email:
             <a style="text-decoration-line: none" href="mailto:info@nbmwele.com"
               >info@nbmwele.com</a
@@ -566,200 +627,169 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
-    <div class="container">
-        <div class="row justify-content-between text-center text-md-left mb-5">
-            <div class="col-md-3 mb-5">
-                <img src="img/logo.png" alt="Mingway Logo" class="footer-logo mb-3">
-                <p class="footer-slogan">"Empowering the Future with Advanced Electrical Solutions"</p>
-            </div>
-            <div class="col-md-3 mb-5">
-                <h4>Contact Us</h4>
-                <p><i class="fas fa-map-marker-alt"></i> 7 Hung Hing Road, Ningbo, Zhejiang, China</p>
-                <p><i class="fas fa-envelope"></i> <a href="mailto:info@nbmwele.com">info@nbmwele.com</a></p>
-                <p><i class="fas fa-phone"></i> 86-574-3560921</p>
-            </div>
-            <div class="col-md-4 mb-5">
-                <h4>Business Hours</h4>
-                <p><i class="fas fa-clock"></i> Monday - Friday: 9:00 AM - 5:00 PM</p>
-                <p><i class="fas fa-clock"></i> Saturday: 10:00 AM - 3:00 PM</p>
-                <p><i class="fas fa-clock"></i> Sunday: Closed</p>
-            </div>
-            <div class="col-md-2 mb-5">
-                <h4>Quick Links</h4>
-                <ul class="list-unstyled">
-                    <li><a href="index.html#">Home</a></li>
-                    <li><a href="index.html#about">About Us</a></li>
-                    <li><a href="index.html#services">Services</a></li>
-                    <li><a href="product.html">Products</a></li>
-                    <li><a href="index.html#contact">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="row justify-content-center mb-5">
-            <div class="col-12 text-center">
-                <h4>Follow Us</h4>
-                <ul class="list-inline">
-                    <li class="list-inline-item"><a href="https://www.facebook.com/nbmwele" aria-label="Follow Mingway by Facebook"><i class="fab fa-facebook"></i></a></li>
-                    <li class="list-inline-item"><a href="https://www.x.com/nbmwele" aria-label="Follow Mingway by Twitter"><i class="fab fa-twitter"></i></a></li>
-                    <li class="list-inline-item"><a href="https://www.linkedin.com/in/nbmwele" aria-label="Follow Mingway by LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-                    <li class="list-inline-item"><a href="https://www.instagram.com/nbmwele" aria-label="Follow Mingway by Instagram"><i class="fab fa-instagram"></i></a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 text-center">
-                <p>&copy; 2025 Ningbo Mingway Electric Co., Ltd. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms_of_service.html">Terms of Service</a></p>
-            </div>
-        </div>
-    </div>
-        <canvas id="footer-canvas"></canvas>
-        <div class="back-to-top" id="back-to-top"><i class="fas fa-arrow-up"></i></div>
-    </footer>
-
+    <div id="footer-placeholder"></div>
     <script>
-        const canvas = document.getElementById('footer-canvas');
-        const ctx = canvas.getContext('2d');
+      fetch("/footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("footer-placeholder").innerHTML = html;
+          initFooterParticles();
+
+          // Scroll to top functionality
+          document
+            .getElementById("back-to-top")
+            .addEventListener("click", function () {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+
+          // Show back to top button
+          window.onscroll = function () {
+            var backToTopButton = document.getElementById("back-to-top");
+            if (
+              document.body.scrollTop > 2000 ||
+              document.documentElement.scrollTop > 200
+            ) {
+              backToTopButton.style.display = "block";
+            } else {
+              backToTopButton.style.display = "none";
+            }
+          };
+        });
+
+      function initFooterParticles() {
+        const canvas = document.getElementById("footer-canvas");
+        if (!canvas) return;
+
+        const ctx = canvas.getContext("2d");
         let particles = [];
 
         canvas.width = window.innerWidth;
-        canvas.height = document.querySelector('.footer').offsetHeight;
+        canvas.height = document.querySelector(".footer").offsetHeight;
 
         class Particle {
-            constructor() {
-                this.x = Math.random() * canvas.width;
-                 this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 3 + 1;
-                this.speedX = Math.random() * 1 - 0.5;
-                 this.speedY = Math.random() * 1 - 0.5;
-            }
+          constructor() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.size = Math.random() * 3 + 1;
+            this.speedX = Math.random() * 1 - 0.5;
+            this.speedY = Math.random() * 1 - 0.5;
+          }
 
-            update() {
-               this.x += this.speedX;
-                this.y += this.speedY;
+          update() {
+            this.x += this.speedX;
+            this.y += this.speedY;
+            if (this.size > 0.2) this.size -= 0.1;
+          }
 
-                if (this.size > 0.2) this.size -= 0.1;
-            }
-
-            draw() {
-                ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.closePath();
-                ctx.fill();
-             }
+          draw() {
+            ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.closePath();
+            ctx.fill();
+          }
         }
 
         function init() {
-              particles = [];
-             for (let i = 0; i < 100; i++) {
-                 particles.push(new Particle());
-             }
+          particles = [];
+          for (let i = 0; i < 100; i++) {
+            particles.push(new Particle());
+          }
         }
 
         function animate() {
-           ctx.clearRect(0, 0, canvas.width, canvas.height);
-              particles.forEach(particle => {
-                 particle.update();
-                 particle.draw();
-            });
-             requestAnimationFrame(animate);
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          particles.forEach((particle) => {
+            particle.update();
+            particle.draw();
+          });
+          requestAnimationFrame(animate);
         }
 
         init();
         animate();
 
-        window.addEventListener('resize', function() {
-             canvas.width = window.innerWidth;
-             canvas.height = document.querySelector('.footer').offsetHeight;
-             init();
+        window.addEventListener("resize", function () {
+          canvas.width = window.innerWidth;
+          canvas.height = document.querySelector(".footer").offsetHeight;
+          init();
         });
+      }
     </script>
-
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        // Automatically close navbar collapse when scrolling down on mobile
-        window.addEventListener("scroll", function() {
-            if (window.innerWidth < 992) {
-                var navbarCollapse = document.querySelector('.navbar-collapse');
-                var navbarToggler = document.querySelector('.navbar-toggler');
-                if (navbarCollapse.classList.contains('show')) {
-                    navbarCollapse.classList.remove('show');
-                    navbarToggler.setAttribute('aria-expanded', 'false');
-                }
+      document.addEventListener("DOMContentLoaded", function () {
+        var navbarCollapse = document.querySelector(".navbar-collapse");
+        var navbarToggler = document.querySelector(".navbar-toggler");
+        var navbarLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+        // 监听菜单项的点击事件
+        navbarLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            if (navbarCollapse.classList.contains("show")) {
+              navbarCollapse.classList.remove("show");
+              navbarToggler.setAttribute("aria-expanded", "false");
             }
+          });
         });
 
-        document.addEventListener("DOMContentLoaded", function() {
-        var lastScrollTop = 0;
-        var navbar = document.querySelector('.navbar');
+        // 监听页面任意地方的点击事件
+        document.addEventListener("click", function (event) {
+          var isClickInsideNavbar =
+            navbarCollapse.contains(event.target) ||
+            navbarToggler.contains(event.target);
 
-        window.addEventListener("scroll", function() {
-            var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-            
-            if (currentScroll > lastScrollTop) {
-                // Scroll down
-                navbar.classList.add('hide');
-                navbar.classList.remove('scrolled');
-            } else {
-                // Scroll up
-                navbar.classList.remove('hide');
-                navbar.classList.add('scrolled');
-            }
-            // Add class to change background color when scrolled
-            if (currentScroll > 0) {
-            navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-            lastScrollTop = currentScroll;
-            });
+          // 如果点击的不是导航栏内部，并且导航栏是展开的，关闭导航栏
+          if (
+            !isClickInsideNavbar &&
+            navbarCollapse.classList.contains("show")
+          ) {
+            navbarCollapse.classList.remove("show");
+            navbarToggler.setAttribute("aria-expanded", "false");
+          }
         });
-
-        // Show back to top button
-        window.onscroll = function() {
-            var backToTopButton = document.getElementById("back-to-top");
-            if (document.body.scrollTop > 2000 || document.documentElement.scrollTop > 200) {
-                backToTopButton.style.display = "block";
-            } else {
-                backToTopButton.style.display = "none";
-            }
-        };
-
-        // Scroll to top functionality
-        document.getElementById("back-to-top").addEventListener("click", function() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
+      });
     </script>
-    
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var navbarCollapse = document.querySelector('.navbar-collapse');
-            var navbarToggler = document.querySelector('.navbar-toggler');
-            var navbarLinks = document.querySelectorAll('.navbar-nav .nav-link');
-    
-            // 监听菜单项的点击事件
-            navbarLinks.forEach(function(link) {
-                link.addEventListener('click', function() {
-                    if (navbarCollapse.classList.contains('show')) {
-                        navbarCollapse.classList.remove('show');
-                        navbarToggler.setAttribute('aria-expanded', 'false');
-                    }
-                });
-            });
-    
-            // 监听页面任意地方的点击事件
-            document.addEventListener('click', function(event) {
-                var isClickInsideNavbar = navbarCollapse.contains(event.target) || navbarToggler.contains(event.target);
-                
-                // 如果点击的不是导航栏内部，并且导航栏是展开的，关闭导航栏
-                if (!isClickInsideNavbar && navbarCollapse.classList.contains('show')) {
-                    navbarCollapse.classList.remove('show');
-                    navbarToggler.setAttribute('aria-expanded', 'false');
-                }
-            });
+      // Automatically close navbar collapse when scrolling down on mobile
+      window.addEventListener("scroll", function () {
+        if (window.innerWidth < 992) {
+          var navbarCollapse = document.querySelector(".navbar-collapse");
+          var navbarToggler = document.querySelector(".navbar-toggler");
+          if (navbarCollapse.classList.contains("show")) {
+            navbarCollapse.classList.remove("show");
+            navbarToggler.setAttribute("aria-expanded", "false");
+          }
+        }
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var lastScrollTop = 0;
+        var navbar = document.querySelector(".navbar");
+
+        window.addEventListener("scroll", function () {
+          var currentScroll =
+            window.pageYOffset || document.documentElement.scrollTop;
+
+          if (currentScroll > lastScrollTop) {
+            // Scroll down
+            navbar.classList.add("hide");
+            navbar.classList.remove("scrolled");
+          } else {
+            // Scroll up
+            navbar.classList.remove("hide");
+            navbar.classList.add("scrolled");
+          }
+          // Add class to change background color when scrolled
+          if (currentScroll > 0) {
+            navbar.classList.add("scrolled");
+          } else {
+            navbar.classList.remove("scrolled");
+          }
+          lastScrollTop = currentScroll;
         });
+      });
     </script>
   </body>
 </html>

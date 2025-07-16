@@ -1,3 +1,5 @@
 User-agent: *
+Disallow: /header.html
+Disallow: /footer.html
 Disallow: /privacy.html
 Disallow: /terms_of_service.html
