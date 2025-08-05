@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /go.html
 Disallow: /header.html
 Disallow: /footer.html
 Disallow: /privacy.html
